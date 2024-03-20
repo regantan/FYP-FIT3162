@@ -1,0 +1,541 @@
+Restaurant,star_rating,no_reviews,cuisine,url
+Adesso Vineria-bistrot,5.0,220,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d25107357-Reviews-Adesso_Vineria_bistrot-Rome_Lazio.html
+La Fata Ignorante - Rooftop Restaurant & Bar,4.5,"6,098","Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3598856-Reviews-La_Fata_Ignorante_Rooftop_Restaurant_Bar-Rome_Lazio.html
+Ad Hoc Ristorante (Circo Massimo),5.0,385,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d24800830-Reviews-Ad_Hoc_Ristorante_Circo_Massimo-Rome_Lazio.html
+Bono Bottega Nostrana - San Pietro,5.0,"1,449","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d18850657-Reviews-Bono_Bottega_Nostrana_San_Pietro-Rome_Lazio.html
+Bar Palomba,4.5,219,"Italian, Cafe",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d8508268-Reviews-Bar_Palomba-Rome_Lazio.html
+Bono Bottega Nostrana - Piazza di Spagna,5.0,"1,406","Italian, Bar",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23317756-Reviews-Bono_Bottega_Nostrana_Piazza_di_Spagna-Rome_Lazio.html
+Pasta e Vino - Torre Argentina,5.0,640,"Italian, Romana",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d25381440-Reviews-Pasta_e_Vino_Torre_Argentina-Rome_Lazio.html
+Pinsitaly Trevi,5.0,"1,733","Italian, Fast Food",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d17412951-Reviews-Pinsitaly_Trevi-Rome_Lazio.html
+Ad Hoc Ristorante (Piazza del Popolo),4.5,"6,779","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1381800-Reviews-Ad_Hoc_Ristorante_Piazza_del_Popolo-Rome_Lazio.html
+Caligola Osteria Sincera,5.0,379,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d25099605-Reviews-Caligola_Osteria_Sincera-Rome_Lazio.html
+Osteria Da Fortunata - Baullari,5.0,"2,225","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d24969655-Reviews-Osteria_Da_Fortunata_Baullari-Rome_Lazio.html
+Arrosticinando,5.0,356,"Italian, Barbecue",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d19468079-Reviews-Arrosticinando-Rome_Lazio.html
+CasaManco,5.0,537,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d11793251-Reviews-CasaManco-Rome_Lazio.html
+Mi'ndujo - Tuscolana,5.0,422,"Italian, Bar",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23653867-Reviews-Mi_ndujo_Tuscolana-Rome_Lazio.html
+Bufalero,5.0,"2,253","Italian, American",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d17409780-Reviews-Bufalero-Rome_Lazio.html
+Pasta e Vino - Largo Arenula,5.0,"1,320","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d24098935-Reviews-Pasta_e_Vino_Largo_Arenula-Rome_Lazio.html
+Ambrosia Rooftop Restaurant & Bar,4.5,"1,870","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3674983-Reviews-Ambrosia_Rooftop_Restaurant_Bar-Rome_Lazio.html
+CiPASSO,5.0,"2,894","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d14121704-Reviews-CiPASSO-Rome_Lazio.html
+Sesamo Trastevere,5.0,480,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d15182046-Reviews-Sesamo_Trastevere-Rome_Lazio.html
+Il Fantino,5.0,131,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d25452005-Reviews-Il_Fantino-Rome_Lazio.html
+"""DOC"" Cruderia EnoBistrot",5.0,533,"Italian, Bar",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23564258-Reviews-DOC_Cruderia_EnoBistrot-Rome_Lazio.html
+That's Amore Barbecue Boccea,5.0,592,"American, Steakhouse",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23416783-Reviews-That_s_Amore_Barbecue_Boccea-Rome_Lazio.html
+Il Ferro e il Fuoco,5.0,139,"Italian, International",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d15244722-Reviews-Il_Ferro_e_il_Fuoco-Rome_Lazio.html
+Pizzeria Mammapà,5.0,194,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3741350-Reviews-Pizzeria_Mammapa-Rome_Lazio.html
+Ornelli Black Angus Steakhouse,4.5,"1,072","Steakhouse, Grill",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2206695-Reviews-Ornelli_Black_Angus_Steakhouse-Rome_Lazio.html
+Quel Che C'è Laboratorio di Cucina,5.0,361,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12882786-Reviews-Quel_Che_C_e_Laboratorio_di_Cucina-Rome_Lazio.html
+Mi'ndujo - Via Catania,5.0,801,"Italian, Bar",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23133014-Reviews-Mi_ndujo_Via_Catania-Rome_Lazio.html
+The Loft,5.0,"1,206","Italian, Brew Pub",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12708072-Reviews-The_Loft-Rome_Lazio.html
+Mi'Ndujo - Aura,5.0,"1,181","Italian, Bar",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d19746395-Reviews-Mi_Ndujo_Aura-Rome_Lazio.html
+Trecaffè Leone IV,5.0,259,"Italian, Bar",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d19775517-Reviews-Trecaffe_Leone_IV-Rome_Lazio.html
+Lyo,5.0,162,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d9702232-Reviews-Lyo-Rome_Lazio.html
+I Goliardi Roma,5.0,326,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23098357-Reviews-I_Goliardi_Roma-Rome_Lazio.html
+Bistrò Salentino,5.0,263,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d15811619-Reviews-Bistro_Salentino-Rome_Lazio.html
+Ai Cocci,4.5,611,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d15244534-Reviews-Ai_Cocci-Rome_Lazio.html
+Pizza E Mozzarella,5.0,"2,194","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d4437197-Reviews-Pizza_E_Mozzarella-Rome_Lazio.html
+La Nicchia Cafe,5.0,163,Italian,https://www.tripadvisor.com.my/Restaurant_Review-g187791-d20806328-Reviews-La_Nicchia_Cafe-Rome_Lazio.html
+Hostaria Antica Roma,4.5,"1,345","Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d798157-Reviews-Hostaria_Antica_Roma-Rome_Lazio.html
+Francesco Forti Ricevimenti,5.0,204,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d4777570-Reviews-Francesco_Forti_Ricevimenti-Rome_Lazio.html
+Er Pizzicarolo,5.0,735,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12537849-Reviews-Er_Pizzicarolo-Rome_Lazio.html
+Steel Talenti Roma,5.0,162,Italian,https://www.tripadvisor.com.my/Restaurant_Review-g187791-d25277512-Reviews-Steel_Talenti_Roma-Rome_Lazio.html
+Tonnarello San Pietro,5.0,134,"Italian, Romana",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d27126511-Reviews-Tonnarello_San_Pietro-Rome_Lazio.html
+Tonnarello Scala,5.0,"1,272","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23483706-Reviews-Tonnarello_Scala-Rome_Lazio.html
+Pizzium - Roma Via Alessandria,5.0,230,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d24798445-Reviews-Pizzium_Roma_Via_Alessandria-Rome_Lazio.html
+Mi'ndujo - Monti,5.0,775,"Italian, Bar",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23257808-Reviews-Mi_ndujo_Monti-Rome_Lazio.html
+Bentu & Soi,4.5,967,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1869629-Reviews-Bentu_Soi-Rome_Lazio.html
+Ristorante Arlù,4.5,"3,219","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1034543-Reviews-Ristorante_Arlu-Rome_Lazio.html
+Ramè Sushi Naturale Italiano,5.0,174,"Japanese, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d21391837-Reviews-Rame_Sushi_Naturale_Italiano-Rome_Lazio.html
+StuPisci,5.0,554,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d19469371-Reviews-StuPisci-Rome_Lazio.html
+Mi'Ndujo - Euroma2,5.0,655,"Italian, Fast Food",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23406310-Reviews-Mi_Ndujo_Euroma2-Rome_Lazio.html
+Vuliò,5.0,"1,454","Italian, Fast Food",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d13954167-Reviews-Vulio-Rome_Lazio.html
+Dejavu,5.0,273,"Italian, Sushi",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d13124346-Reviews-Dejavu-Rome_Lazio.html
+Ombre Rosse,4.5,"9,636","Italian, Bar",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1934264-Reviews-Ombre_Rosse-Rome_Lazio.html
+Pizzium - Roma Via Livorno,5.0,309,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d25336828-Reviews-Pizzium_Roma_Via_Livorno-Rome_Lazio.html
+Mare Terra,4.5,421,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d4308001-Reviews-Mare_Terra-Rome_Lazio.html
+PePPO a Cinecittà,5.0,235,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d25467281-Reviews-PePPO_a_Cinecitta-Rome_Lazio.html
+PanDivino - Focacceria Taperia,5.0,883,"Italian, Spanish",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2093433-Reviews-PanDivino_Focacceria_Taperia-Rome_Lazio.html
+RIONE XIV bistrot,5.0,"1,119","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12459745-Reviews-RIONE_XIV_bistrot-Rome_Lazio.html
+Scialla The Original Streetfood,5.0,612,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d10117957-Reviews-Scialla_The_Original_Streetfood-Rome_Lazio.html
+Virginiae,4.5,"2,619","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1894666-Reviews-Virginiae-Rome_Lazio.html
+EGG,4.5,"1,663","Italian, Fast Food",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d6774611-Reviews-EGG-Rome_Lazio.html
+Pane e Salame,5.0,"8,425","Italian, Street Food",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d10044289-Reviews-Pane_e_Salame-Rome_Lazio.html
+Er Marchese,5.0,103,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d25360035-Reviews-Er_Marchese-Rome_Lazio.html
+La Tavernetta 29 Da Tony E Andrea,5.0,"6,426","Romana, Lazio",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12415719-Reviews-La_Tavernetta_29_Da_Tony_E_Andrea-Rome_Lazio.html
+Hosteria La Pietra Pertusa,5.0,178,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d9712381-Reviews-Hosteria_La_Pietra_Pertusa-Rome_Lazio.html
+Pizza Zizza Caffetteria Birreria Desserteria,5.0,"3,486","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d7983637-Reviews-Pizza_Zizza_Caffetteria_Birreria_Desserteria-Rome_Lazio.html
+Mama Eat Roma borgo pio,4.5,"1,220","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d7684656-Reviews-Mama_Eat_Roma_borgo_pio-Rome_Lazio.html
+Mimì e Cocò,4.5,"10,167","Italian, Romana",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1210614-Reviews-Mimi_e_Coco-Rome_Lazio.html
+Bacetto Bistrot,5.0,174,"Seafood, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d17678155-Reviews-Bacetto_Bistrot-Rome_Lazio.html
+Óikos Trattoria Moderna,5.0,137,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d24180057-Reviews-Oikos_Trattoria_Moderna-Rome_Lazio.html
+Giaró,5.0,186,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d19283944-Reviews-Giaro-Rome_Lazio.html
+Pasta e Vino - Via Florida,5.0,"2,993","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23651120-Reviews-Pasta_e_Vino_Via_Florida-Rome_Lazio.html
+Ristorante Crispi 19,4.5,"3,304","Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1380808-Reviews-Ristorante_Crispi_19-Rome_Lazio.html
+Kisa Cuisine & Lounge,5.0,538,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12988015-Reviews-Kisa_Cuisine_Lounge-Rome_Lazio.html
+Pasta E Vino  - Palombella,5.0,135,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d26805150-Reviews-Pasta_E_Vino_Palombella-Rome_Lazio.html
+Pizzeria Italia dal 1987,5.0,349,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2221994-Reviews-Pizzeria_Italia_dal_1987-Rome_Lazio.html
+Prosciutteria Alcolica,5.0,119,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23674855-Reviews-Prosciutteria_Alcolica-Rome_Lazio.html
+Vox Populi,5.0,221,"Italian, Bar",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d6720557-Reviews-Vox_Populi-Rome_Lazio.html
+Amerina la Pizzetta,5.0,203,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d19961573-Reviews-Amerina_la_Pizzetta-Rome_Lazio.html
+Rione 13,4.5,"2,090","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12423010-Reviews-Rione_13-Rome_Lazio.html
+Platea Pizzeria,5.0,128,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d20255983-Reviews-Platea_Pizzeria-Rome_Lazio.html
+Osteria da Fortunata - Cancelleria,4.5,"1,103","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12557336-Reviews-Osteria_da_Fortunata_Cancelleria-Rome_Lazio.html
+Locanda Alla Romana,5.0,275,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23255382-Reviews-Locanda_Alla_Romana-Rome_Lazio.html
+L'altra Guancia,5.0,344,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d24076013-Reviews-L_altra_Guancia-Rome_Lazio.html
+Spaghetti,4.5,"1,358","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12338196-Reviews-Spaghetti-Rome_Lazio.html
+La Divina Da Giulio,5.0,161,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23161559-Reviews-La_Divina_Da_Giulio-Rome_Lazio.html
+Grano - la cucina di Traiano,5.0,797,Pizza,https://www.tripadvisor.com.my/Restaurant_Review-g187791-d14939269-Reviews-Grano_la_cucina_di_Traiano-Rome_Lazio.html
+Osteria da Fortunata - Rinascimento,4.5,"2,053","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d19865695-Reviews-Osteria_da_Fortunata_Rinascimento-Rome_Lazio.html
+Don's - Meats & Spirits,5.0,277,"American, Steakhouse",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d25150423-Reviews-Don_s_Meats_Spirits-Rome_Lazio.html
+Mimi e Coco Trast,5.0,"2,405","Italian, Bar",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d16832354-Reviews-Mimi_e_Coco_Trast-Rome_Lazio.html
+La Bocca Di Roma,5.0,115,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d25185075-Reviews-La_Bocca_Di_Roma-Rome_Lazio.html
+El Maiz Venezuelan Street Food,5.0,380,"Latin, Venezuelan",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12063432-Reviews-El_Maiz_Venezuelan_Street_Food-Rome_Lazio.html
+Gezin Pub,5.0,266,"Brew Pub, Pub",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d17707406-Reviews-Gezin_Pub-Rome_Lazio.html
+La Baguetteria del Valle,5.0,299,"Italian, Deli",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d10266275-Reviews-La_Baguetteria_del_Valle-Rome_Lazio.html
+Cantina & Cucina,4.5,"17,574","Italian, European",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2094750-Reviews-Cantina_Cucina-Rome_Lazio.html
+Il Ritrovo,5.0,396,"Mediterranean, Romana",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d13985834-Reviews-Il_Ritrovo-Rome_Lazio.html
+Ai Bozzi da Giovanni,4.5,"1,873","Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1012247-Reviews-Ai_Bozzi_da_Giovanni-Rome_Lazio.html
+FASSANGUE_ La Bottega,5.0,355,"Italian, French",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d15549792-Reviews-FASSANGUE_La_Bottega-Rome_Lazio.html
+VIDA - Living Restaurant & Wine Bar,4.5,"1,421","Italian, Steakhouse",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3544568-Reviews-VIDA_Living_Restaurant_Wine_Bar-Rome_Lazio.html
+Grazia & Graziella,4.5,"24,962","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d4020129-Reviews-Grazia_Graziella-Rome_Lazio.html
+Il Tamburello di Pulcinella,4.5,"1,596","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d8076107-Reviews-Il_Tamburello_di_Pulcinella-Rome_Lazio.html
+Byblos,5.0,73,"Italian, Lebanese",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d25390836-Reviews-Byblos-Rome_Lazio.html
+Dumpling Bar,4.5,"1,131","Chinese, Asian",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12642772-Reviews-Dumpling_Bar-Rome_Lazio.html
+Osti Matti,4.5,710,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d11911590-Reviews-Osti_Matti-Rome_Lazio.html
+La Piccola Cuccagna,4.0,"1,689","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1011258-Reviews-La_Piccola_Cuccagna-Rome_Lazio.html
+7 Cereali,5.0,576,"Pizza, Healthy",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d16864977-Reviews-7_Cereali-Rome_Lazio.html
+JiaMo Lab,5.0,128,"Chinese, Asian",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d20054697-Reviews-JiaMo_Lab-Rome_Lazio.html
+Goki Sushi Experience San Paolo,5.0,496,"Chinese, Japanese",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d24965793-Reviews-Goki_Sushi_Experience_San_Paolo-Rome_Lazio.html
+VII Coorte,4.5,"2,478","Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d5858490-Reviews-VII_Coorte-Rome_Lazio.html
+Mercato Hostaria,4.5,"1,814","Italian, Bar",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2054369-Reviews-Mercato_Hostaria-Rome_Lazio.html
+Ninkasi,5.0,825,"Italian, Steakhouse",https://www.tripadvisor.com.my/Restaurant_Review-g21118196-d9788312-Reviews-Ninkasi-Vermicino_Frascati_Province_of_Rome_Lazio.html
+Scorpacciata Romana,5.0,556,"Pizza, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d19543728-Reviews-Scorpacciata_Romana-Rome_Lazio.html
+Il Tagliere Toscano Navona,4.5,"1,447","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12419022-Reviews-Il_Tagliere_Toscano_Navona-Rome_Lazio.html
+Pipero Roma,4.5,897,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12562602-Reviews-Pipero_Roma-Rome_Lazio.html
+Mi'Ndujo - Ponte Milvio,5.0,612,"Italian, Bar",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d21356933-Reviews-Mi_Ndujo_Ponte_Milvio-Rome_Lazio.html
+Ristorante Dogma,5.0,143,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23938252-Reviews-Ristorante_Dogma-Rome_Lazio.html
+Angelo Ristorante Trattoria - Bar,5.0,225,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d21226764-Reviews-Angelo_Ristorante_Trattoria_Bar-Rome_Lazio.html
+Pizza Florida,4.5,"1,394","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1863797-Reviews-Pizza_Florida-Rome_Lazio.html
+Tanti Baci Restaurant,4.5,260,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d5850652-Reviews-Tanti_Baci_Restaurant-Rome_Lazio.html
+Rosamunda's,5.0,374,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d13148446-Reviews-Rosamunda_s-Rome_Lazio.html
+Tiberino,4.5,"1,647","Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d8605474-Reviews-Tiberino-Rome_Lazio.html
+Pizzium - Roma Viale Newton,4.5,304,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d24798424-Reviews-Pizzium_Roma_Viale_Newton-Rome_Lazio.html
+Dar Bello de Nonna Osteria Romana,4.5,449,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12644711-Reviews-Dar_Bello_de_Nonna_Osteria_Romana-Rome_Lazio.html
+'Gusto,3.5,"4,274","Italian, Northern-Italian",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d696421-Reviews-Gusto-Rome_Lazio.html
+Tira e Molla,4.5,"5,446","Italian, Bar",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12473957-Reviews-Tira_e_Molla-Rome_Lazio.html
+Passioni di Pasta all'Uovo,5.0,279,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d8417953-Reviews-Passioni_di_Pasta_all_Uovo-Rome_Lazio.html
+Greco Romano,4.5,288,"Mediterranean, Greek",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d14177682-Reviews-Greco_Romano-Rome_Lazio.html
+Su & Giu Cucina Romana,4.5,"3,715","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2320420-Reviews-Su_Giu_Cucina_Romana-Rome_Lazio.html
+Taverna Tintoretto,5.0,406,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d21494598-Reviews-Taverna_Tintoretto-Rome_Lazio.html
+Vecchia Trastevere,4.5,"1,067","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d6549083-Reviews-Vecchia_Trastevere-Rome_Lazio.html
+L'Osteria degli Avvocati,5.0,334,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d21359993-Reviews-L_Osteria_degli_Avvocati-Rome_Lazio.html
+Cucineria Duca Re,5.0,363,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g799532-d12981278-Reviews-Cucineria_Duca_Re-Guidonia_Montecelio_Province_of_Rome_Lazio.html
+Mama Eat Roma Trastevere,4.5,"4,088","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2358486-Reviews-Mama_Eat_Roma_Trastevere-Rome_Lazio.html
+La Prezzemolina,4.5,683,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d10082007-Reviews-La_Prezzemolina-Rome_Lazio.html
+Sottocasa Food,5.0,167,"Italian, Bar",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d11831780-Reviews-Sottocasa_Food-Rome_Lazio.html
+Ristorante Pizzeria Andrea,4.5,887,Italian,https://www.tripadvisor.com.my/Restaurant_Review-g187791-d6364117-Reviews-Ristorante_Pizzeria_Andrea-Rome_Lazio.html
+Otello,4.5,"14,684","Italian, Romana",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3666269-Reviews-Otello-Rome_Lazio.html
+Chiancheria Gourmet Roma,4.5,977,"Italian, Steakhouse",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d16700611-Reviews-Chiancheria_Gourmet_Roma-Rome_Lazio.html
+Ristorante Dai Miei,5.0,225,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23405968-Reviews-Ristorante_Dai_Miei-Rome_Lazio.html
+Essenza Wine Bar,4.5,774,"Italian, Brew Pub",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d10200439-Reviews-Essenza_Wine_Bar-Rome_Lazio.html
+Coming Out,4.5,"4,267","Italian, Bar",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1163967-Reviews-Coming_Out-Rome_Lazio.html
+Nannarella,4.5,"15,565","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d14173461-Reviews-Nannarella-Rome_Lazio.html
+L'Estro del Pesce,5.0,288,"Seafood, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d17332788-Reviews-L_Estro_del_Pesce-Rome_Lazio.html
+Pescado Seafood Restaurant Guida Gambero Rosso 2024,5.0,243,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d21374971-Reviews-Pescado_Seafood_Restaurant_Guida_Gambero_Rosso_2024-Rome_Lazio.html
+La Tana,4.5,716,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d4215688-Reviews-La_Tana-Rome_Lazio.html
+Pinsere,4.5,"4,273","Pizza, Street Food",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3570028-Reviews-Pinsere-Rome_Lazio.html
+Armando e il Conte,5.0,280,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d15114276-Reviews-Armando_e_il_Conte-Rome_Lazio.html
+Pizza della Madonna dei Monti,5.0,272,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d20309207-Reviews-Pizza_della_Madonna_dei_Monti-Rome_Lazio.html
+Enoteca Trastevere,4.5,"3,778","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1483757-Reviews-Enoteca_Trastevere-Rome_Lazio.html
+Quanto Basta Slow Restaurant,5.0,519,"French, International",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d11719251-Reviews-Quanto_Basta_Slow_Restaurant-Rome_Lazio.html
+Tonnarello,4.5,"37,542","Italian, Romana",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d13443832-Reviews-Tonnarello-Rome_Lazio.html
+Est Artigiani del Gusto,4.5,"1,910","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3901814-Reviews-Est_Artigiani_del_Gusto-Rome_Lazio.html
+Aqualunae Bistrot,5.0,632,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d15669108-Reviews-Aqualunae_Bistrot-Rome_Lazio.html
+saltimbocca,4.5,"2,904","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d7646558-Reviews-Saltimbocca-Rome_Lazio.html
+ONE SENSE by Valla,4.5,228,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d14802992-Reviews-ONE_SENSE_by_Valla-Rome_Lazio.html
+Pinsa 'Mpò,4.5,"1,507","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2470293-Reviews-Pinsa_Mpo-Rome_Lazio.html
+Cafè Memè International Bistrot,4.5,415,International,https://www.tripadvisor.com.my/Restaurant_Review-g187791-d10554509-Reviews-Cafe_Meme_International_Bistrot-Rome_Lazio.html
+La Nuova Piazzetta,4.5,"2,353","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1877802-Reviews-La_Nuova_Piazzetta-Rome_Lazio.html
+Sfiziarte - The Art of Food,5.0,"1,078","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d10546545-Reviews-Sfiziarte_The_Art_of_Food-Rome_Lazio.html
+Life Ristorante,4.5,"4,328","Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d790167-Reviews-Life_Ristorante-Rome_Lazio.html
+Food Factory,5.0,174,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d11993401-Reviews-Food_Factory-Rome_Lazio.html
+Grano Trattoria,4.5,374,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23774692-Reviews-Grano_Trattoria-Rome_Lazio.html
+Il Laboratorio della Pizza,5.0,508,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d13288162-Reviews-Il_Laboratorio_della_Pizza-Rome_Lazio.html
+Piro - Osteria di Pesce,5.0,492,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d15080431-Reviews-Piro_Osteria_di_Pesce-Rome_Lazio.html
+Osteria del Grillo,5.0,83,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d26364258-Reviews-Osteria_del_Grillo-Rome_Lazio.html
+Arrosticino Pane & Vino,4.5,296,"Italian, Barbecue",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12180836-Reviews-Arrosticino_Pane_Vino-Rome_Lazio.html
+Tora Sushi & Asian Cuisine,4.5,902,"Japanese, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12505900-Reviews-Tora_Sushi_Asian_Cuisine-Rome_Lazio.html
+Bono Bottega Nostrana - Monti,4.5,465,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23820454-Reviews-Bono_Bottega_Nostrana_Monti-Rome_Lazio.html
+Vinsanto,4.5,213,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23301762-Reviews-Vinsanto-Rome_Lazio.html
+Ponte e Parione,4.5,"2,749","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1553916-Reviews-Ponte_e_Parione-Rome_Lazio.html
+Domusteak,4.5,904,"Italian, Steakhouse",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2058748-Reviews-Domusteak-Rome_Lazio.html
+Sfiziami Italian Bistrot,4.5,311,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d10481245-Reviews-Sfiziami_Italian_Bistrot-Rome_Lazio.html
+Gli Specialisti,4.5,838,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1967777-Reviews-Gli_Specialisti-Rome_Lazio.html
+Almatò,5.0,174,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d19806208-Reviews-Almato-Rome_Lazio.html
+Origano Campo de' Fiori,4.5,"1,696","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d9595196-Reviews-Origano_Campo_de_Fiori-Rome_Lazio.html
+Osteria La Sol Fa,4.5,"1,566","Mediterranean, Romana",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1547754-Reviews-Osteria_La_Sol_Fa-Rome_Lazio.html
+Baguetteria del Fico,4.5,"1,698","Italian, Brew Pub",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3571857-Reviews-Baguetteria_del_Fico-Rome_Lazio.html
+Feelsgood,5.0,109,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d19333900-Reviews-Feelsgood-Rome_Lazio.html
+Borghiciana Pastificio Artigianale,4.5,"1,531","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d13995487-Reviews-Borghiciana_Pastificio_Artigianale-Rome_Lazio.html
+Pinsa e Gusto,4.5,297,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d6962421-Reviews-Pinsa_e_Gusto-Rome_Lazio.html
+Mordi e Vai,4.5,815,"Italian, Fast Food",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3662985-Reviews-Mordi_e_Vai-Rome_Lazio.html
+Il Panzotto,5.0,584,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d13511277-Reviews-Il_Panzotto-Rome_Lazio.html
+le Cicale di Veio,4.5,665,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1946109-Reviews-Le_Cicale_di_Veio-Rome_Lazio.html
+Angeli Rock,4.5,"1,562","Pizza, Pub",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d7251359-Reviews-Angeli_Rock-Rome_Lazio.html
+Vecchia Osteria Del Gelsomino,4.5,"1,027","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1017179-Reviews-Vecchia_Osteria_Del_Gelsomino-Rome_Lazio.html
+Feffo,4.5,263,"Italian, Cafe",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d15114307-Reviews-Feffo-Rome_Lazio.html
+Birreria Martini Esperienza Tedesca,4.5,537,"German, Central European",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1882585-Reviews-Birreria_Martini_Esperienza_Tedesca-Rome_Lazio.html
+Gustamundo-sede aurelio,4.5,354,"Mexican, African",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12332385-Reviews-Gustamundo_sede_aurelio-Rome_Lazio.html
+I Gladiatori,4.0,754,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2219241-Reviews-I_Gladiatori-Rome_Lazio.html
+Tosca - Trattoria Pinseria al Viminale 33 Roma,4.5,325,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23572905-Reviews-Tosca_Trattoria_Pinseria_al_Viminale_33_Roma-Rome_Lazio.html
+Agrodolce,4.5,916,"Italian, Healthy",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d817038-Reviews-Agrodolce-Rome_Lazio.html
+Popeye Pizza,4.5,304,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d5539659-Reviews-Popeye_Pizza-Rome_Lazio.html
+Saltimbocca San Lorenzo,4.5,221,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d21317794-Reviews-Saltimbocca_San_Lorenzo-Rome_Lazio.html
+Unik Restaurant,4.5,415,"Italian, Romana",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23428089-Reviews-Unik_Restaurant-Rome_Lazio.html
+LABottega Pastificio con Cucina,4.5,544,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d8516817-Reviews-LABottega_Pastificio_con_Cucina-Rome_Lazio.html
+Tocco Ferro,4.5,317,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d15619822-Reviews-Tocco_Ferro-Rome_Lazio.html
+I Sofa Bar Restaurant,4.5,854,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1750004-Reviews-I_Sofa_Bar_Restaurant-Rome_Lazio.html
+Osteria del Cavaliere,4.5,"1,860","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2298454-Reviews-Osteria_del_Cavaliere-Rome_Lazio.html
+Osteria Padì,4.5,634,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d15076178-Reviews-Osteria_Padi-Rome_Lazio.html
+Pizzeria Mediterranea,4.5,370,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3710431-Reviews-Pizzeria_Mediterranea-Rome_Lazio.html
+Sapore di Roma Fonte Meravigliosa,4.5,105,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d26554724-Reviews-Sapore_di_Roma_Fonte_Meravigliosa-Rome_Lazio.html
+Rosemary - Terra e Sapori,4.5,801,"Italian, International",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12010527-Reviews-Rosemary_Terra_e_Sapori-Rome_Lazio.html
+La Porta Del Principe,4.5,760,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3562615-Reviews-La_Porta_Del_Principe-Rome_Lazio.html
+MiVà,4.5,"2,363","Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d8673207-Reviews-MiVa-Rome_Lazio.html
+Reserva Restaurante y Cocteles,5.0,131,Barbecue,https://www.tripadvisor.com.my/Restaurant_Review-g187791-d17780966-Reviews-Reserva_Restaurante_y_Cocteles-Rome_Lazio.html
+Berninetta since 1930,4.5,242,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1745014-Reviews-Berninetta_since_1930-Rome_Lazio.html
+Imàgo,4.5,"1,239","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1061460-Reviews-Imago-Rome_Lazio.html
+Ristorante dei Musei,4.5,"2,502","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2661865-Reviews-Ristorante_dei_Musei-Rome_Lazio.html
+Che Pasta!,4.5,320,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d11620506-Reviews-Che_Pasta-Rome_Lazio.html
+Pizzeria Romana Al Taglio,4.5,411,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d10525827-Reviews-Pizzeria_Romana_Al_Taglio-Rome_Lazio.html
+Evo Hosteria,4.5,401,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d13833952-Reviews-Evo_Hosteria-Rome_Lazio.html
+CULT Burger Attitude,4.5,719,"American, Steakhouse",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d13007525-Reviews-CULT_Burger_Attitude-Rome_Lazio.html
+Garden Risto,4.5,777,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d8092956-Reviews-Garden_Risto-Rome_Lazio.html
+Griglieria Maremmana Bio,5.0,69,"Italian, Steakhouse",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d25147796-Reviews-Griglieria_Maremmana_Bio-Rome_Lazio.html
+Masto,4.5,569,"Italian, International",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d10478263-Reviews-Masto-Rome_Lazio.html
+Vanda,4.5,372,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23262182-Reviews-Vanda-Rome_Lazio.html
+La Valle del Sacco,4.5,"2,020","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2420961-Reviews-La_Valle_del_Sacco-Rome_Lazio.html
+La Locanda Di Pietro,4.5,"1,413","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d7379338-Reviews-La_Locanda_Di_Pietro-Rome_Lazio.html
+"Ristorante Luigi, Cantina E Cucina",4.5,116,"Italian, International",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d26263484-Reviews-Ristorante_Luigi_Cantina_E_Cucina-Rome_Lazio.html
+Peppo al Cosimato,4.5,"1,192","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d14837905-Reviews-Peppo_al_Cosimato-Rome_Lazio.html
+La Pace Del Palato,4.5,996,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d793850-Reviews-La_Pace_Del_Palato-Rome_Lazio.html
+Trieste Pizza,4.5,"1,115","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d9788403-Reviews-Trieste_Pizza-Rome_Lazio.html
+Taverna Lucifero,4.5,831,Italian,https://www.tripadvisor.com.my/Restaurant_Review-g187791-d8661532-Reviews-Taverna_Lucifero-Rome_Lazio.html
+Contrario - Vineria Con Cucina,4.5,339,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d15245122-Reviews-Contrario_Vineria_Con_Cucina-Rome_Lazio.html
+Osteria Luci in cucina,4.5,180,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d19240927-Reviews-Osteria_Luci_in_cucina-Rome_Lazio.html
+Pasta e Vino Osteria,4.5,"5,935","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d14780203-Reviews-Pasta_e_Vino_Osteria-Rome_Lazio.html
+Il Ragno d'Oro,4.5,"3,620","Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1214622-Reviews-Il_Ragno_d_Oro-Rome_Lazio.html
+Colline Emiliane,4.5,"2,049","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d696516-Reviews-Colline_Emiliane-Rome_Lazio.html
+Acquolina Ristorante,4.5,785,Mediterranean,https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12579348-Reviews-Acquolina_Ristorante-Rome_Lazio.html
+Ristorante Sandalia,4.5,478,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d14455950-Reviews-Ristorante_Sandalia-Rome_Lazio.html
+Il Ristoro dal Patriota,4.5,"4,385","Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3965958-Reviews-Il_Ristoro_dal_Patriota-Rome_Lazio.html
+Antica Osteria Rugantino,4.5,988,Romana,https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1746527-Reviews-Antica_Osteria_Rugantino-Rome_Lazio.html
+Polpetta Trastevere,4.5,"1,577","Italian, International",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d19600446-Reviews-Polpetta_Trastevere-Rome_Lazio.html
+Blend Food & Drink,4.5,174,"Italian, Bar",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d13412509-Reviews-Blend_Food_Drink-Rome_Lazio.html
+Donkey Punch,4.5,278,"Italian, Bar",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d4284093-Reviews-Donkey_Punch-Rome_Lazio.html
+Pizzium - Roma via Piave,4.5,"1,057","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d15210674-Reviews-Pizzium_Roma_via_Piave-Rome_Lazio.html
+Schietto Cucina alla Mano,4.5,366,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d10223522-Reviews-Schietto_Cucina_alla_Mano-Rome_Lazio.html
+Breakfast Club Roma,5.0,89,"Bars & Pubs, Bar",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23260000-Reviews-Breakfast_Club_Roma-Rome_Lazio.html
+Il Segreto,4.5,572,"Italian, Romana",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d11814234-Reviews-Il_Segreto-Rome_Lazio.html
+Mariuccia,4.5,"2,048","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2291843-Reviews-Mariuccia-Rome_Lazio.html
+Enqutatash African Restaurant,4.5,862,"African, Ethiopian",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1315705-Reviews-Enqutatash_African_Restaurant-Rome_Lazio.html
+Cybo,4.5,"2,301","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1501113-Reviews-Cybo-Rome_Lazio.html
+Fres&co Coronari,4.5,567,Italian,https://www.tripadvisor.com.my/Restaurant_Review-g187791-d8632688-Reviews-Fres_co_Coronari-Rome_Lazio.html
+La Locanda del Gatto Nero,4.5,"1,981","Italian, Steakhouse",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1989102-Reviews-La_Locanda_del_Gatto_Nero-Rome_Lazio.html
+Vero Food - Ludovisi,4.5,189,"Italian, Cafe",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d9568046-Reviews-Vero_Food_Ludovisi-Rome_Lazio.html
+La Fraschetta di Castel Sant'Angelo,4.5,"3,213","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d6547132-Reviews-La_Fraschetta_di_Castel_Sant_Angelo-Rome_Lazio.html
+Bar San Marcello,4.5,290,"Italian, Cafe",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d4759514-Reviews-Bar_San_Marcello-Rome_Lazio.html
+Metis,5.0,86,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d25045527-Reviews-Metis-Rome_Lazio.html
+Cantina Belsiana,4.5,"1,461","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d7390005-Reviews-Cantina_Belsiana-Rome_Lazio.html
+Italy Food Ristorante,4.5,460,"Italian, Barbecue",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d7078944-Reviews-Italy_Food_Ristorante-Rome_Lazio.html
+Barbarossa BeerFood,5.0,143,"Italian, American",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12029047-Reviews-Barbarossa_BeerFood-Rome_Lazio.html
+Caffetteria Sonnino,5.0,69,"Italian, Cafe",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12434129-Reviews-Caffetteria_Sonnino-Rome_Lazio.html
+Sughero,4.5,422,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d9722659-Reviews-Sughero-Rome_Lazio.html
+MILE Restaurant,4.5,460,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d9569941-Reviews-MILE_Restaurant-Rome_Lazio.html
+Stile Benaco,4.5,903,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d8342377-Reviews-Stile_Benaco-Rome_Lazio.html
+Cuoco & Camicia,4.5,"1,026","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2391713-Reviews-Cuoco_Camicia-Rome_Lazio.html
+Osteria da Fortunata - Pellegrino,4.5,"14,565","Italian, Romana",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3185400-Reviews-Osteria_da_Fortunata_Pellegrino-Rome_Lazio.html
+La Taverna del Vicolo,4.5,365,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2598871-Reviews-La_Taverna_del_Vicolo-Rome_Lazio.html
+Pizzeria La Boccaccia,4.5,881,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2397388-Reviews-Pizzeria_La_Boccaccia-Rome_Lazio.html
+Osteria29,4.5,375,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d7759406-Reviews-Osteria29-Rome_Lazio.html
+Dema Restaurant,4.5,442,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2618366-Reviews-Dema_Restaurant-Rome_Lazio.html
+Io e Valter Pizzeria Le Torri,4.5,412,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d4402897-Reviews-Io_e_Valter_Pizzeria_Le_Torri-Rome_Lazio.html
+Old Bear,4.5,"1,273","Italian, International",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1403936-Reviews-Old_Bear-Rome_Lazio.html
+Dar Bruttone,4.5,"2,831","Mediterranean, Romana",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1164091-Reviews-Dar_Bruttone-Rome_Lazio.html
+Forno Feliziani,4.5,731,"Italian, Cafe",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3217054-Reviews-Forno_Feliziani-Rome_Lazio.html
+Casa Prati,4.5,776,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d14156319-Reviews-Casa_Prati-Rome_Lazio.html
+Meridionale - Trattoria a Trastevere,4.5,"2,246",Mediterranean,https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1749493-Reviews-Meridionale_Trattoria_a_Trastevere-Rome_Lazio.html
+Viva,4.5,387,"Seafood, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d15309642-Reviews-Viva-Rome_Lazio.html
+Ristorante Chiaroscuro,4.5,842,Central-Italian,https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12211955-Reviews-Ristorante_Chiaroscuro-Rome_Lazio.html
+Tiuni Osteria Contemporanea,4.5,210,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d14183782-Reviews-Tiuni_Osteria_Contemporanea-Rome_Lazio.html
+Per Me Giulio Terrinoni,4.5,853,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d9582411-Reviews-Per_Me_Giulio_Terrinoni-Rome_Lazio.html
+Ristorante Nerone,4.5,"1,777","Italian, Romana",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12413109-Reviews-Ristorante_Nerone-Rome_Lazio.html
+Clorofilla,4.5,305,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d15136995-Reviews-Clorofilla-Rome_Lazio.html
+Giordi,4.5,738,"Bars & Pubs, Italian",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d21382667-Reviews-Giordi-Rome_Lazio.html
+Il Barroccio,4.0,"1,496","Italian, Romana",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1830724-Reviews-Il_Barroccio-Rome_Lazio.html
+Ristorante Vladimiro,4.5,"1,892","Italian, Romana",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1867636-Reviews-Ristorante_Vladimiro-Rome_Lazio.html
+Porta Castello,4.5,"1,487","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1151305-Reviews-Porta_Castello-Rome_Lazio.html
+Zampagna,4.5,683,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1719183-Reviews-Zampagna-Rome_Lazio.html
+Er Polpetta dal 1987,4.5,"1,056","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d17464677-Reviews-Er_Polpetta_dal_1987-Rome_Lazio.html
+Osteria Fratelli Mori,4.0,"1,465","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d939672-Reviews-Osteria_Fratelli_Mori-Rome_Lazio.html
+Goose,4.5,"1,635","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1516161-Reviews-Goose-Rome_Lazio.html
+Sapori e Delizie,4.5,"1,985","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3222955-Reviews-Sapori_e_Delizie-Rome_Lazio.html
+Il Gabriello,4.5,"2,429","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1066539-Reviews-Il_Gabriello-Rome_Lazio.html
+Sofia,4.5,"1,376","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2625154-Reviews-Sofia-Rome_Lazio.html
+Ristorante L’Isola,4.5,365,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1987052-Reviews-Ristorante_L_Isola-Rome_Lazio.html
+Taverna dei Migliori,4.5,"1,923","Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3134650-Reviews-Taverna_dei_Migliori-Rome_Lazio.html
+Ristorante Il Piccolo Mondo,4.5,"2,177","Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1811609-Reviews-Ristorante_Il_Piccolo_Mondo-Rome_Lazio.html
+Pizza in Trevi,4.5,"2,257","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d4258943-Reviews-Pizza_in_Trevi-Rome_Lazio.html
+Trattoria Da Zacca ar 20,4.5,294,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d13505744-Reviews-Trattoria_Da_Zacca_ar_20-Rome_Lazio.html
+Agriturismo San Germano,5.0,123,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d20999512-Reviews-Agriturismo_San_Germano-Rome_Lazio.html
+Matermatuta,4.5,"1,732","Seafood, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1026600-Reviews-Matermatuta-Rome_Lazio.html
+Il Pastaio di Roma,4.5,"1,683","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d6675026-Reviews-Il_Pastaio_di_Roma-Rome_Lazio.html
+"Osteria Romana ""Vinelli e Fornelli""",4.5,363,"Italian, Romana",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3529980-Reviews-Osteria_Romana_Vinelli_e_Fornelli-Rome_Lazio.html
+Bottega Tredici,4.5,499,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d15274619-Reviews-Bottega_Tredici-Rome_Lazio.html
+Piccolo Arancio,4.5,"3,560","Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d802537-Reviews-Piccolo_Arancio-Rome_Lazio.html
+I Pizzicaroli,4.5,"1,882","Italian, Street Food",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d9561238-Reviews-I_Pizzicaroli-Rome_Lazio.html
+Alfredo e Ada,4.5,"1,291","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2314520-Reviews-Alfredo_e_Ada-Rome_Lazio.html
+Tacito,4.5,792,"Pizza, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d14098721-Reviews-Tacito-Rome_Lazio.html
+Taverna Agape,4.5,566,"Seafood, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d15630908-Reviews-Taverna_Agape-Rome_Lazio.html
+Il Tempio di Minerva,4.5,"3,096","Italian, Healthy",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1632970-Reviews-Il_Tempio_di_Minerva-Rome_Lazio.html
+Mozzichi Prêt-à-porter,5.0,73,"Gastropub, Street Food",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d21055507-Reviews-Mozzichi_Pret_a_porter-Rome_Lazio.html
+Re-Bio,4.5,710,"Italian, International",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2328311-Reviews-Re_Bio-Rome_Lazio.html
+Inforno Pizza & Bistrò,4.5,172,"Italian, Steakhouse",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d25011213-Reviews-Inforno_Pizza_Bistro-Rome_Lazio.html
+Ristorante Amedeo,4.5,"3,300","Italian, Romana",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d8073112-Reviews-Ristorante_Amedeo-Rome_Lazio.html
+Ristorante Perpetual,4.5,265,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d19732637-Reviews-Ristorante_Perpetual-Rome_Lazio.html
+Stadlin,4.5,358,"Italian, Brew Pub",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d8370621-Reviews-Stadlin-Rome_Lazio.html
+La Scaletta,4.0,"2,263","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1649014-Reviews-La_Scaletta-Rome_Lazio.html
+Trattoria Casa Mia In Trastevere,4.5,"1,146","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d9792149-Reviews-Trattoria_Casa_Mia_In_Trastevere-Rome_Lazio.html
+Pasta In Corso,4.5,"1,135","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d13477527-Reviews-Pasta_In_Corso-Rome_Lazio.html
+MISTO Mixology & Cibarie,4.5,192,"Bars & Pubs, International",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12442655-Reviews-MISTO_Mixology_Cibarie-Rome_Lazio.html
+Sushi Doku Bar,4.5,702,"Japanese, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d9976688-Reviews-Sushi_Doku_Bar-Rome_Lazio.html
+1990 Accademia Del Gusto,4.5,276,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d8683838-Reviews-1990_Accademia_Del_Gusto-Rome_Lazio.html
+Sushita,4.5,251,"Japanese, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d14149448-Reviews-Sushita-Rome_Lazio.html
+Poldo e Gianna Osteria,4.5,"1,691","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d9744711-Reviews-Poldo_e_Gianna_Osteria-Rome_Lazio.html
+Jaipur - Ristorante Indiano,4.5,789,"Indian, Asian",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d795702-Reviews-Jaipur_Ristorante_Indiano-Rome_Lazio.html
+Elettroforno Frontoni,4.5,438,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d7732809-Reviews-Elettroforno_Frontoni-Rome_Lazio.html
+Vecchia Locanda,4.5,703,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1392036-Reviews-Vecchia_Locanda-Rome_Lazio.html
+Bosco Officine del Tartufo,4.5,314,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d14075881-Reviews-Bosco_Officine_del_Tartufo-Rome_Lazio.html
+Himalaya's Kashmir,4.5,"3,809","Indian, Asian",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d795692-Reviews-Himalaya_s_Kashmir-Rome_Lazio.html
+Pizzeria da Giustina,4.5,268,Pizza,https://www.tripadvisor.com.my/Restaurant_Review-g187791-d4610705-Reviews-Pizzeria_da_Giustina-Rome_Lazio.html
+Trattoria Accattone,4.5,422,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d7351896-Reviews-Trattoria_Accattone-Rome_Lazio.html
+La Gattabuia,4.5,"2,811","Italian, Barbecue",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2037698-Reviews-La_Gattabuia-Rome_Lazio.html
+La Terrazza,4.5,291,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d798098-Reviews-La_Terrazza-Rome_Lazio.html
+La Pergola,4.5,"2,651","Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d806462-Reviews-La_Pergola-Rome_Lazio.html
+Nativa,4.5,125,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d18902902-Reviews-Nativa-Rome_Lazio.html
+Zerosettantacinque,4.5,"1,726","Pizza, International",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1904989-Reviews-Zerosettantacinque-Rome_Lazio.html
+Le Caveau,4.5,955,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1583145-Reviews-Le_Caveau-Rome_Lazio.html
+Pasta in Corso Pantheon,4.5,195,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d25157279-Reviews-Pasta_in_Corso_Pantheon-Rome_Lazio.html
+Enoteca La Torre,4.5,522,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d4891217-Reviews-Enoteca_La_Torre-Rome_Lazio.html
+Il cavalluccio marino,4.5,"1,249",Seafood,https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2177512-Reviews-Il_cavalluccio_marino-Rome_Lazio.html
+Babette,4.5,"2,218","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d815279-Reviews-Babette-Rome_Lazio.html
+Sapori Sardi,4.5,812,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1034639-Reviews-Sapori_Sardi-Rome_Lazio.html
+Annapoorna INDIA - Ristorante indiano a Roma,4.5,201,Indian,https://www.tripadvisor.com.my/Restaurant_Review-g187791-d18841350-Reviews-Annapoorna_INDIA_Ristorante_indiano_a_Roma-Rome_Lazio.html
+Rosso Tiziano,4.5,470,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3162621-Reviews-Rosso_Tiziano-Rome_Lazio.html
+Delizie e Sapori,4.5,"1,212","Pizza, International",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2181568-Reviews-Delizie_e_Sapori-Rome_Lazio.html
+Rosa cibo italiano,5.0,66,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d17654187-Reviews-Rosa_cibo_italiano-Rome_Lazio.html
+Papa Rex,4.5,"1,790","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2399899-Reviews-Papa_Rex-Rome_Lazio.html
+Tischi Toschi Roma,4.5,353,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d10384618-Reviews-Tischi_Toschi_Roma-Rome_Lazio.html
+Bull Steak,4.5,"1,832","Italian, Steakhouse",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1022964-Reviews-Bull_Steak-Rome_Lazio.html
+Arcade and Food,4.5,690,"Italian, Steakhouse",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d15673085-Reviews-Arcade_and_Food-Rome_Lazio.html
+Zizzi Pizza,4.5,"1,291","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3934906-Reviews-Zizzi_Pizza-Rome_Lazio.html
+Le Virtù in Tavola,4.5,926,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1309248-Reviews-Le_Virtu_in_Tavola-Rome_Lazio.html
+Fraschetteria Giampiccolo,4.5,894,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d8657097-Reviews-Fraschetteria_Giampiccolo-Rome_Lazio.html
+Knick Knack Yoda,4.5,691,"Street Food, Central-Italian",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3342394-Reviews-Knick_Knack_Yoda-Rome_Lazio.html
+Beerstyle,5.0,127,"American, Brew Pub",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d8637808-Reviews-Beerstyle-Rome_Lazio.html
+Osteria Pocci,4.5,357,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d10720854-Reviews-Osteria_Pocci-Rome_Lazio.html
+Culinaria,4.5,"1,567","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d7934734-Reviews-Culinaria-Rome_Lazio.html
+Ristorante Lin,4.5,799,"Chinese, Zhejiang",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d6016745-Reviews-Ristorante_Lin-Rome_Lazio.html
+Trattoria Cecio,4.5,"2,434","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1605472-Reviews-Trattoria_Cecio-Rome_Lazio.html
+Pizza e Arrosticini,4.5,293,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d13387714-Reviews-Pizza_e_Arrosticini-Rome_Lazio.html
+Al Vicolo 9,4.5,132,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d24096426-Reviews-Al_Vicolo_9-Rome_Lazio.html
+Klass Restaurant,4.5,"1,158","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d13203746-Reviews-Klass_Restaurant-Rome_Lazio.html
+STREATART,4.5,434,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d7210796-Reviews-STREATART-Rome_Lazio.html
+La Coccinella Raffinata,4.5,661,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g19413240-d7897004-Reviews-La_Coccinella_Raffinata-Ciampino_Ciampino_Province_of_Rome_Lazio.html
+Ai Tre Tartufi,4.5,"1,091","Italian, Cafe",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2213002-Reviews-Ai_Tre_Tartufi-Rome_Lazio.html
+La Dispensa dei Mellini,4.5,579,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1980844-Reviews-La_Dispensa_dei_Mellini-Rome_Lazio.html
+Sa Tanca Crostaceria,4.5,"1,874","Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1173533-Reviews-Sa_Tanca_Crostaceria-Rome_Lazio.html
+Babbo's,4.0,"1,904","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1115555-Reviews-Babbo_s-Rome_Lazio.html
+Ristorante Savoia,4.5,793,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12027974-Reviews-Ristorante_Savoia-Rome_Lazio.html
+I Monticiani,4.5,"1,327","Italian, Steakhouse",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3198349-Reviews-I_Monticiani-Rome_Lazio.html
+i Clementini,4.5,"2,280","Romana, Lazio",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1789073-Reviews-I_Clementini-Rome_Lazio.html
+Acacie e Pepe - Cucina e cicchetti,4.5,163,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d15558141-Reviews-Acacie_e_Pepe_Cucina_e_cicchetti-Rome_Lazio.html
+La Nduja,4.5,"2,441","Pizza, Barbecue",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1130366-Reviews-La_Nduja-Rome_Lazio.html
+Marco G,4.5,"2,380","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1821172-Reviews-Marco_G-Rome_Lazio.html
+Le Tavernelle,4.5,"1,804","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1199809-Reviews-Le_Tavernelle-Rome_Lazio.html
+Patty Bistrò,4.5,183,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d15667357-Reviews-Patty_Bistro-Rome_Lazio.html
+La Soffitta Renovatio,4.5,"2,733","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1034629-Reviews-La_Soffitta_Renovatio-Rome_Lazio.html
+Antica Osteria di Pietra,4.5,834,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d20259907-Reviews-Antica_Osteria_di_Pietra-Rome_Lazio.html
+Saloon del Panino - Portuense,4.5,350,"Italian, American",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d6179752-Reviews-Saloon_del_Panino_Portuense-Rome_Lazio.html
+Rimessa Roscioli Ristorante,4.5,"1,039","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d13367989-Reviews-Rimessa_Roscioli_Ristorante-Rome_Lazio.html
+La Pentolaccia,4.5,"1,653","Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1034627-Reviews-La_Pentolaccia-Rome_Lazio.html
+Trattoria Re di Roma,4.5,"1,664","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2321865-Reviews-Trattoria_Re_di_Roma-Rome_Lazio.html
+Ce Stamo a Pensà,4.5,"1,484","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d10109712-Reviews-Ce_Stamo_a_Pensa-Rome_Lazio.html
+Finger,4.5,964,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d7360769-Reviews-Finger-Rome_Lazio.html
+Il Desiderio Preso Per La Coda,4.5,365,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1007446-Reviews-Il_Desiderio_Preso_Per_La_Coda-Rome_Lazio.html
+Ristorante Pinseria Al 39 Da Massimo,4.5,"1,040","Italian, Romana",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2370641-Reviews-Ristorante_Pinseria_Al_39_Da_Massimo-Rome_Lazio.html
+Vinea,4.5,306,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d13378452-Reviews-Vinea-Rome_Lazio.html
+Pizzeria Antica Stabia,4.5,"1,182","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3225095-Reviews-Pizzeria_Antica_Stabia-Rome_Lazio.html
+Apuleius,4.5,509,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1034542-Reviews-Apuleius-Rome_Lazio.html
+Cantina 26,4.5,"1,871","Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d7283833-Reviews-Cantina_26-Rome_Lazio.html
+Porto Cervara Roma,4.5,665,"Seafood, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d7694675-Reviews-Porto_Cervara_Roma-Rome_Lazio.html
+Pizzeria Il Grano,4.5,839,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d7685702-Reviews-Pizzeria_Il_Grano-Rome_Lazio.html
+320 Gradi,4.5,606,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12180860-Reviews-320_Gradi-Rome_Lazio.html
+Trattoria Coriolano,4.5,391,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1034586-Reviews-Trattoria_Coriolano-Rome_Lazio.html
+Pirandello19,4.5,152,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d20941096-Reviews-Pirandello19-Rome_Lazio.html
+Caramella,4.5,772,"Italian, Brew Pub",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d13794710-Reviews-Caramella-Rome_Lazio.html
+Lepri Braceria Enoteca,4.5,281,"Italian, Steakhouse",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d9749526-Reviews-Lepri_Braceria_Enoteca-Rome_Lazio.html
+La Bottega di Cesare,4.5,621,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2419151-Reviews-La_Bottega_di_Cesare-Rome_Lazio.html
+La Rosa Rossa,4.5,"1,110","Italian, Healthy",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2100938-Reviews-La_Rosa_Rossa-Rome_Lazio.html
+Benso,4.5,"1,322","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d5223269-Reviews-Benso-Rome_Lazio.html
+La Treggia,4.5,498,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1569435-Reviews-La_Treggia-Rome_Lazio.html
+Bar La Licata,4.5,925,"Italian, Bar",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3340828-Reviews-Bar_La_Licata-Rome_Lazio.html
+Ristorante Tema,4.5,"2,095","Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1175620-Reviews-Ristorante_Tema-Rome_Lazio.html
+La Famiglia,4.0,"3,098","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1034619-Reviews-La_Famiglia-Rome_Lazio.html
+Divin Ostilia Wine Bar,4.5,"1,212","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2395767-Reviews-Divin_Ostilia_Wine_Bar-Rome_Lazio.html
+Osteria Corsetti 1921,4.5,"1,427","Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d801283-Reviews-Osteria_Corsetti_1921-Rome_Lazio.html
+Status Quo,5.0,78,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23117242-Reviews-Status_Quo-Rome_Lazio.html
+Cucina del Mercato,4.5,137,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d14176535-Reviews-Cucina_del_Mercato-Rome_Lazio.html
+Pizzium - Roma Via Baldo Degli Ubaldi,4.5,313,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23409191-Reviews-Pizzium_Roma_Via_Baldo_Degli_Ubaldi-Rome_Lazio.html
+La Cucina Nazionale,4.5,"3,001","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1176222-Reviews-La_Cucina_Nazionale-Rome_Lazio.html
+Dietrolangolo,4.5,390,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d10164804-Reviews-Dietrolangolo-Rome_Lazio.html
+Trattoria della Stampa,4.5,557,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2092218-Reviews-Trattoria_della_Stampa-Rome_Lazio.html
+Ristorante Campisi,4.5,457,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d4174123-Reviews-Ristorante_Campisi-Rome_Lazio.html
+Movie Restaurant,4.5,"1,032","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d13783786-Reviews-Movie_Restaurant-Rome_Lazio.html
+Gandhi 2 Ristorante Indiano,4.5,303,"Indian, International",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d15242188-Reviews-Gandhi_2_Ristorante_Indiano-Rome_Lazio.html
+My BagS,4.5,448,"Italian, Fast Food",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d4588281-Reviews-My_BagS-Rome_Lazio.html
+Ristorante da Romolo alla Mole Adriana,4.5,"1,603",Italian,https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1583392-Reviews-Ristorante_da_Romolo_alla_Mole_Adriana-Rome_Lazio.html
+Ristorante Wine Bar De' Penitenzieri,4.5,660,"Italian, Bar",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d5569432-Reviews-Ristorante_Wine_Bar_De_Penitenzieri-Rome_Lazio.html
+Ristorante St. Ana,4.5,"1,296","Romana, Lazio",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1884051-Reviews-Ristorante_St_Ana-Rome_Lazio.html
+"Mejo "" Cucina Romana """,5.0,84,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23727548-Reviews-Mejo_Cucina_Romana-Rome_Lazio.html
+That's Amore Restaurant by Fabio Bongianni,4.5,"8,322","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1207928-Reviews-That_s_Amore_Restaurant_by_Fabio_Bongianni-Rome_Lazio.html
+Restaurant Pizzeria Golfo di Napoli,4.5,488,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3589645-Reviews-Restaurant_Pizzeria_Golfo_di_Napoli-Rome_Lazio.html
+Saluzzo al Nove,4.5,694,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2647068-Reviews-Saluzzo_al_Nove-Rome_Lazio.html
+Renato e Luisa,4.5,"1,327","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d814239-Reviews-Renato_e_Luisa-Rome_Lazio.html
+Ganesha India,4.5,528,Indian,https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2295715-Reviews-Ganesha_India-Rome_Lazio.html
+Barnum Cafè,4.5,680,"Bar, Cafe",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3626857-Reviews-Barnum_Cafe-Rome_Lazio.html
+Osteria Del Borgo,4.5,949,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3747162-Reviews-Osteria_Del_Borgo-Rome_Lazio.html
+La Locanda,4.0,"1,631","Pizza, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2173927-Reviews-La_Locanda-Rome_Lazio.html
+Origano Trevi,4.5,"2,348","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d4553019-Reviews-Origano_Trevi-Rome_Lazio.html
+Pesci Fritti Trattoria,4.5,747,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1818473-Reviews-Pesci_Fritti_Trattoria-Rome_Lazio.html
+Mun Sushi Bar,4.5,171,"Japanese, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d15294552-Reviews-Mun_Sushi_Bar-Rome_Lazio.html
+Ristorante Puntarella,4.5,285,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23777831-Reviews-Ristorante_Puntarella-Rome_Lazio.html
+Casale del Fornaccio,4.5,704,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2373386-Reviews-Casale_del_Fornaccio-Rome_Lazio.html
+Casa Sanchez,4.5,254,"Mexican, Healthy",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d15663190-Reviews-Casa_Sanchez-Rome_Lazio.html
+Osteria 22quattro,4.5,814,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2200507-Reviews-Osteria_22quattro-Rome_Lazio.html
+Chattanooga Saloon,4.5,622,"Mexican, American",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d13986096-Reviews-Chattanooga_Saloon-Rome_Lazio.html
+20e20 Osteria Enoteca,4.5,630,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2091739-Reviews-20e20_Osteria_Enoteca-Rome_Lazio.html
+Casette di Campagna,4.0,"2,242","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1180890-Reviews-Casette_di_Campagna-Rome_Lazio.html
+Le Grondici,4.5,659,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2547509-Reviews-Le_Grondici-Rome_Lazio.html
+Controluce,4.5,795,"Italian, Romana",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1654096-Reviews-Controluce-Rome_Lazio.html
+200 Gradi,4.5,"3,477","Italian, Brew Pub",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2177441-Reviews-200_Gradi-Rome_Lazio.html
+La Pratolina,4.5,"2,208","Mediterranean, Romana",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d801156-Reviews-La_Pratolina-Rome_Lazio.html
+Prosciutteria Cantina Dei Papi - Trastevere,4.5,"2,772","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d7361389-Reviews-Prosciutteria_Cantina_Dei_Papi_Trastevere-Rome_Lazio.html
+Waraku,4.5,784,"Japanese, Asian",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d4297416-Reviews-Waraku-Rome_Lazio.html
+Il Fellini,4.5,"1,501","Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3546639-Reviews-Il_Fellini-Rome_Lazio.html
+Ristorante Palmieri,4.5,567,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12473781-Reviews-Ristorante_Palmieri-Rome_Lazio.html
+Osteria Paquino,4.5,519,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1034645-Reviews-Osteria_Paquino-Rome_Lazio.html
+Comodo Mercato Trevi,4.5,218,"Italian, American",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d24924635-Reviews-Comodo_Mercato_Trevi-Rome_Lazio.html
+Spirito Divino,4.5,"1,233","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d786085-Reviews-Spirito_Divino-Rome_Lazio.html
+Osteria Numerosette,4.5,590,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1863293-Reviews-Osteria_Numerosette-Rome_Lazio.html
+Giulia Restaurant,4.5,249,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12590145-Reviews-Giulia_Restaurant-Rome_Lazio.html
+Ristorante Mazze,4.5,497,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d13433946-Reviews-Ristorante_Mazze-Rome_Lazio.html
+Trapizzino Trilussa,4.5,581,"Italian, Street Food",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12949034-Reviews-Trapizzino_Trilussa-Rome_Lazio.html
+Il Porto Di Ripetta,4.5,"1,249","Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1440167-Reviews-Il_Porto_Di_Ripetta-Rome_Lazio.html
+Ristorante Cotto,4.5,"3,235","Italian, Romana",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d7312335-Reviews-Ristorante_Cotto-Rome_Lazio.html
+Fiaschetteria Marini,4.5,601,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2081651-Reviews-Fiaschetteria_Marini-Rome_Lazio.html
+Meat,4.5,601,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d4495144-Reviews-Meat-Rome_Lazio.html
+Sushisen,4.5,"2,182","Japanese, Healthy",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d793647-Reviews-Sushisen-Rome_Lazio.html
+Sciue Sciue,4.5,"1,252","Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1812495-Reviews-Sciue_Sciue-Rome_Lazio.html
+Brucio - La Romana,4.5,271,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d24045626-Reviews-Brucio_La_Romana-Rome_Lazio.html
+Pantha Rei,4.0,"1,763","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1897893-Reviews-Pantha_Rei-Rome_Lazio.html
+Pork'n'Roll Pub,4.5,855,"Bars & Pubs, Italian",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d5041843-Reviews-Pork_n_Roll_Pub-Rome_Lazio.html
+Ristorante Indiano Bombay,4.0,496,"Indian, Asian",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d795687-Reviews-Ristorante_Indiano_Bombay-Rome_Lazio.html
+Pizzeria Loffredo,4.5,"2,028","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3494494-Reviews-Pizzeria_Loffredo-Rome_Lazio.html
+Enoteca e Taverna Capranica,4.5,810,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2556190-Reviews-Enoteca_e_Taverna_Capranica-Rome_Lazio.html
+Altrogiro,4.5,370,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d10496316-Reviews-Altrogiro-Rome_Lazio.html
+Er Faciolaro,4.0,"2,522","Italian, Romana",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1524454-Reviews-Er_Faciolaro-Rome_Lazio.html
+Mangio,4.5,151,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d15287776-Reviews-Mangio-Rome_Lazio.html
+Dar Sor Olimpio al Drago,4.5,"1,188","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1918332-Reviews-Dar_Sor_Olimpio_al_Drago-Rome_Lazio.html
+Taverna Angelica,4.5,696,Contemporary,https://www.tripadvisor.com.my/Restaurant_Review-g187791-d798090-Reviews-Taverna_Angelica-Rome_Lazio.html
+Ristorante Bernini,4.5,"1,650",N/A,https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1569388-Reviews-Ristorante_Bernini-Rome_Lazio.html
+Hostaria Ago e Lillo Roma,4.5,"1,142","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d10229881-Reviews-Hostaria_Ago_e_Lillo_Roma-Rome_Lazio.html
+Ristorante Divo Food & Drinks,4.5,606,"Italian, American",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12592940-Reviews-Ristorante_Divo_Food_Drinks-Rome_Lazio.html
+Trattoria Sapori di Casa,4.5,"1,225","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2648146-Reviews-Trattoria_Sapori_di_Casa-Rome_Lazio.html
+Trattoria Strozzaquintino,4.5,503,Mediterranean,https://www.tripadvisor.com.my/Restaurant_Review-g187791-d5890472-Reviews-Trattoria_Strozzaquintino-Rome_Lazio.html
+Habemus pinsa,4.5,525,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d8099247-Reviews-Habemus_pinsa-Rome_Lazio.html
+La Pecora Pazza,4.5,505,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2362899-Reviews-La_Pecora_Pazza-Rome_Lazio.html
+Mastro Pizza & Ciccia,4.5,"1,910","Pizza, Grill",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d801771-Reviews-Mastro_Pizza_Ciccia-Rome_Lazio.html
+Antica Hostaria Romanesca,4.5,"1,347","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1854787-Reviews-Antica_Hostaria_Romanesca-Rome_Lazio.html
+Ma che siete venuti a fa,4.5,780,"Brew Pub, Pub",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1165443-Reviews-Ma_che_siete_venuti_a_fa-Rome_Lazio.html
+Antico Mulino a Vejo,4.5,334,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d6454627-Reviews-Antico_Mulino_a_Vejo-Rome_Lazio.html
+The Burger Factory,4.5,646,"American, Barbecue",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3544068-Reviews-The_Burger_Factory-Rome_Lazio.html
+Ristorante E Pizzeria AL Braciere,4.5,808,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1550101-Reviews-Ristorante_E_Pizzeria_AL_Braciere-Rome_Lazio.html
+Casetta di Trastevere,4.0,"3,359","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d801767-Reviews-Casetta_di_Trastevere-Rome_Lazio.html
+Polpetta Gazometro,4.5,"1,045","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3873638-Reviews-Polpetta_Gazometro-Rome_Lazio.html
+Antico Arco,4.5,"1,773","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d696449-Reviews-Antico_Arco-Rome_Lazio.html
+Ristorante La Tavernetta 48,4.5,"1,781","Italian, Romana",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2310539-Reviews-Ristorante_La_Tavernetta_48-Rome_Lazio.html
+Bar San Calisto,4.5,740,Cafe,https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2225310-Reviews-Bar_San_Calisto-Rome_Lazio.html
+Ristorante Portobello,4.5,"1,553","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2364502-Reviews-Ristorante_Portobello-Rome_Lazio.html
+L'Insalata Ricca - Trastevere,4.5,313,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3580991-Reviews-L_Insalata_Ricca_Trastevere-Rome_Lazio.html
+Bistrot del Mare,4.5,368,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1861416-Reviews-Bistrot_del_Mare-Rome_Lazio.html
+La Trattoriola di Luca,4.5,"1,110","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d6756017-Reviews-La_Trattoriola_di_Luca-Rome_Lazio.html
+Forno Da Milvio,4.5,731,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2668013-Reviews-Forno_Da_Milvio-Rome_Lazio.html
+Trattoria Valentino,4.5,454,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1027158-Reviews-Trattoria_Valentino-Rome_Lazio.html
+Panino Sistino,4.5,240,"Italian, Fast Food",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d8708017-Reviews-Panino_Sistino-Rome_Lazio.html
+I Belcastro,4.5,455,"Pizza, Neapolitan",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d9832067-Reviews-I_Belcastro-Rome_Lazio.html
+Casa del Gusto,4.5,259,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12971392-Reviews-Casa_del_Gusto-Rome_Lazio.html
+Bistrot Luce,4.5,219,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12186402-Reviews-Bistrot_Luce-Rome_Lazio.html
+Olio d'Oliva,4.5,326,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2454010-Reviews-Olio_d_Oliva-Rome_Lazio.html
+Le Bistrot,4.5,745,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d780551-Reviews-Le_Bistrot-Rome_Lazio.html
+Il Convivio Troiani,4.5,807,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d696591-Reviews-Il_Convivio_Troiani-Rome_Lazio.html
+Cambio Trastevere,4.5,359,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d18931166-Reviews-Cambio_Trastevere-Rome_Lazio.html
+Il Falchetto,4.5,"2,035","Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2316025-Reviews-Il_Falchetto-Rome_Lazio.html
+Da Tonino,4.0,"2,208","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1977611-Reviews-Da_Tonino-Rome_Lazio.html
+Mangia e Trevi,4.5,329,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d19961731-Reviews-Mangia_e_Trevi-Rome_Lazio.html
+L'Angolo Divino,4.5,560,"Mediterranean, European",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1089459-Reviews-L_Angolo_Divino-Rome_Lazio.html
+Popina Trattoria,4.5,164,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d19213642-Reviews-Popina_Trattoria-Rome_Lazio.html
+Il Marchese del Grill,4.5,718,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g675714-d1192583-Reviews-Il_Marchese_del_Grill-Ciampino_Province_of_Rome_Lazio.html
+Ristorante Pizzeria i Fratelli,4.5,"1,681","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1986865-Reviews-Ristorante_Pizzeria_i_Fratelli-Rome_Lazio.html
+Al Viminale,4.5,783,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1012828-Reviews-Al_Viminale-Rome_Lazio.html
+Trattoria Monti,4.5,"1,434","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d793216-Reviews-Trattoria_Monti-Rome_Lazio.html
+Pizzeria I Gemelli,5.0,211,Pizza,https://www.tripadvisor.com.my/Restaurant_Review-g187791-d4085056-Reviews-Pizzeria_I_Gemelli-Rome_Lazio.html
+PizzaRotondo,5.0,117,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g804282-d23673261-Reviews-PizzaRotondo-Fonte_Nuova_Province_of_Rome_Lazio.html
+Casa Bleve,4.5,"1,096","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1009780-Reviews-Casa_Bleve-Rome_Lazio.html
+Achille al Pantheon,4.5,"1,839","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3501893-Reviews-Achille_al_Pantheon-Rome_Lazio.html
+Magno,4.5,308,"Italian, Bar",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d15121034-Reviews-Magno-Rome_Lazio.html
+Rifugio Romano,4.5,"2,275",N/A,https://www.tripadvisor.com.my/Restaurant_Review-g187791-d10079644-Reviews-Rifugio_Romano-Rome_Lazio.html
+La Taverna dei Monti,4.5,"2,983","Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d758358-Reviews-La_Taverna_dei_Monti-Rome_Lazio.html
+Piccolo Buco,4.5,"3,751","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1554123-Reviews-Piccolo_Buco-Rome_Lazio.html
+Hosteria Romana,4.5,"3,506","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1035927-Reviews-Hosteria_Romana-Rome_Lazio.html
+Ristorante Livello1,4.5,723,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d10300692-Reviews-Ristorante_Livello1-Rome_Lazio.html
+I Belloni,4.5,"1,111","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g675714-d2071194-Reviews-I_Belloni-Ciampino_Province_of_Rome_Lazio.html
+Il Boncompagni,4.5,840,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3506554-Reviews-Il_Boncompagni-Rome_Lazio.html
+Elle Effe Restaurant,4.5,927,"Seafood, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3983060-Reviews-Elle_Effe_Restaurant-Rome_Lazio.html
+I Panizzeri,4.5,992,"Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2184228-Reviews-I_Panizzeri-Rome_Lazio.html
+La Fraschetta di Mastro Giorgio,4.0,"1,158","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d781963-Reviews-La_Fraschetta_di_Mastro_Giorgio-Rome_Lazio.html
+Pasta!,5.0,101,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d19710322-Reviews-Pasta-Rome_Lazio.html
+Da Fabrizio al 56,4.5,349,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d13431648-Reviews-Da_Fabrizio_al_56-Rome_Lazio.html
+Il Nuovo Faro,4.5,465,"Italian, Cafe",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1899836-Reviews-Il_Nuovo_Faro-Rome_Lazio.html
+Astemio Wine & Food,4.5,406,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d11905346-Reviews-Astemio_Wine_Food-Rome_Lazio.html
+Ristorante San Carlo,4.5,399,"Seafood, Contemporary",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3742539-Reviews-Ristorante_San_Carlo-Rome_Lazio.html
+Hosteria La Stazione,4.5,784,"Italian, Romana",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d12091818-Reviews-Hosteria_La_Stazione-Rome_Lazio.html
+Il Tarallo,4.5,388,"Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3934963-Reviews-Il_Tarallo-Rome_Lazio.html
+La Ciambella,4.5,"1,279","Italian, Romana",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3893224-Reviews-La_Ciambella-Rome_Lazio.html
+Bottega Trattoria De Santis,4.5,738,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2002406-Reviews-Bottega_Trattoria_De_Santis-Rome_Lazio.html
+Alle fratte di trastevere,4.5,"2,333","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d696629-Reviews-Alle_fratte_di_trastevere-Rome_Lazio.html
+Locanda Giulietta e Romeo,4.5,"1,667","Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d9885533-Reviews-Locanda_Giulietta_e_Romeo-Rome_Lazio.html
+Aroma Osteria Flaminio,4.5,387,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d10847447-Reviews-Aroma_Osteria_Flaminio-Rome_Lazio.html
+Forno Campo de' Fiori,4.5,"2,051","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2093186-Reviews-Forno_Campo_de_Fiori-Rome_Lazio.html
+The Gustami,5.0,87,"Chinese, Japanese",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23841803-Reviews-The_Gustami-Rome_Lazio.html
+Stile Osteria,4.5,482,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d11930493-Reviews-Stile_Osteria-Rome_Lazio.html
+Makasar Bistrot,4.5,385,"Italian, Brew Pub",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3573939-Reviews-Makasar_Bistrot-Rome_Lazio.html
+Meat & Bake,5.0,80,"Italian, Steakhouse",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d23450755-Reviews-Meat_Bake-Rome_Lazio.html
+Birreria Marconi,4.5,685,"Italian, Bar",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1913836-Reviews-Birreria_Marconi-Rome_Lazio.html
+Bisteccheria da Mario,4.5,478,"Italian, Steakhouse",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2545843-Reviews-Bisteccheria_da_Mario-Rome_Lazio.html
+Le Quattro Monete,4.5,716,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2179420-Reviews-Le_Quattro_Monete-Rome_Lazio.html
+Hostaria Farnese,4.5,750,"Italian, Romana",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1600246-Reviews-Hostaria_Farnese-Rome_Lazio.html
+Osteria Pesce Fritto e Baccala,4.5,694,"Italian, Seafood",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d2198885-Reviews-Osteria_Pesce_Fritto_e_Baccala-Rome_Lazio.html
+Ristorante Santa Cristina al Quirinale,4.5,"1,038","Italian, Mediterranean",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d1513361-Reviews-Ristorante_Santa_Cristina_al_Quirinale-Rome_Lazio.html
+Layalina,4.5,247,"Lebanese, Barbecue",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d21067897-Reviews-Layalina-Rome_Lazio.html
+Ristorante Taberna Patrizi e Plebei,4.0,"3,062","Italian, Pizza",https://www.tripadvisor.com.my/Restaurant_Review-g187791-d3420409-Reviews-Ristorante_Taberna_Patrizi_e_Plebei-Rome_Lazio.html
