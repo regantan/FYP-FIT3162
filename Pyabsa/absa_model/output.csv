@@ -1,0 +1,1391 @@
+review_id,term_actual,term_predicted,opinion_actual,opinion_predicted,aspect_actual,aspect_predicted,sentiment_actual,sentiment_predicted,review_len
+0,food,NA,various type,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,69
+0,NULL,NA,memorable,NA,RESTAURANT#GENERAL,NA,positive,NA,69
+0,Marcus,Marcus,great,great guide,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,69
+0,experience,NA,worth trying,NA,RESTAURANT#GENERAL,NA,positive,NA,69
+1,quality,quality,average,average,FOOD#QUALITY,FOOD#QUALITY,neutral,positive,19
+1,dishes,dishes,average,average,FOOD#QUALITY,FOOD#QUALITY,neutral,positive,19
+1,prices,prices,high,high,FOOD#PRICES,FOOD#QUALITY,negative,positive,19
+1,Services,Services,perfect,perfect,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,19
+1,waitress,waitress,perfect,perfect,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,19
+2,Samosa Chaat,Samosa Chaat,"perfect blend of sweet, sour and spicy","perfect blend of sweet, sour and spicy",FOOD#QUALITY,FOOD#QUALITY,positive,positive,233
+2,samosa chunks,samosa chunks,heavenly,heavenly,FOOD#QUALITY,FOOD#QUALITY,positive,positive,233
+2,Channa Bhatura,Channa Bhatura,crispy,"perfect blend of sweet, sour and spicy",FOOD#QUALITY,FOOD#QUALITY,positive,positive,233
+2,Channa Bhatura,NA,tender texture,NA,FOOD#QUALITY,NA,positive,NA,233
+2,Channa Bhatura,NA,rightly spiced,NA,FOOD#QUALITY,NA,positive,NA,233
+2,Parantha with Palak Paneer,Parantha with Palak Paneer,enjoyed every bite of my tongue tantalizing,heavenly,FOOD#QUALITY,FOOD#QUALITY,positive,positive,233
+2,Pranic Juice,NA,amazing,NA,DRINKS#QUALITY,NA,positive,NA,233
+2,Pranic Juice,NA,refreshed and awake,NA,DRINKS#STYLE_OPTIONS,NA,positive,NA,233
+2,NULL,NA,delicious,NA,FOOD#QUALITY,NA,positive,NA,233
+2,NULL,NA,value for money,NA,FOOD#PRICES,NA,positive,NA,233
+2,NA,Cheese Spinach,NA,enjoyed every bite of my tongue tantalizing,NA,FOOD#QUALITY,NA,positive,233
+2,NA,pranic juice,NA,enjoyed every bite of my tongue tantalizing,NA,FOOD#QUALITY,NA,positive,233
+2,NA,pranic juice,NA,enjoyed every bite of my tongue tantalizing,NA,FOOD#QUALITY,NA,positive,233
+3,ambience,ambience,inviting, inviting,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,38
+3,ambience,NA,relaxed,NA,AMBIENCE#GENERAL,NA,positive,NA,38
+3,ambience,NA,romantic,NA,AMBIENCE#GENERAL,NA,positive,NA,38
+3,service,NA,good,NA,SERVICE#GENERAL,NA,positive,NA,38
+3,ribeye pork steak,ribeye pork steak,tender,good,FOOD#QUALITY,SERVICE#GENERAL,positive,positive,38
+3,ribeye pork steak,NA,succulent,NA,FOOD#QUALITY,NA,positive,NA,38
+3,ribeye pork steak,NA,unevenly salted,NA,FOOD#QUALITY,NA,negative,NA,38
+3,NULL,NULL,nice,tender,RESTAURANT#GENERAL,FOOD#QUALITY,positive,positive,38
+3,NA,Service,NA,relaxed,NA,AMBIENCE#GENERAL,NA,positive,38
+4,environment,environment,Love,love,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,20
+4,food,food,love,love,FOOD#QUALITY,FOOD#QUALITY,positive,positive,20
+4,Imperial Canton broth,Imperial Canton broth,Live,live,FOOD#QUALITY,FOOD#QUALITY,positive,positive,20
+5,atmosphere,atmosphere,Liked,Liked,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,20
+5,food,food,delicious,delicious,FOOD#QUALITY,FOOD#QUALITY,positive,positive,20
+5,drinks,drinks,delicious,delicious,DRINKS#QUALITY,FOOD#QUALITY,positive,positive,20
+5,Staff,NA,friendly,NA,SERVICE#GENERAL,NA,positive,NA,20
+5,NA,staff,NA,friendly,NA,SERVICE#GENERAL,NA,positive,20
+6,atmosphere,atmosphere,nice,nice,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,negative,240
+6,staff,staff,professional,professional,SERVICE#GENERAL,SERVICE#GENERAL,positive,negative,240
+6,staff,staff,knowledgeable,unprofessional,SERVICE#GENERAL,SERVICE#GENERAL,positive,negative,240
+6,appetizers,NA,above their main course,NA,FOOD#QUALITY,NA,positive,NA,240
+6,pre-main,NA,above their main course,NA,FOOD#QUALITY,NA,positive,NA,240
+6,main course,NA,NULL,NA,FOOD#QUALITY,NA,negative,NA,240
+6,steak,NA,NULL,NA,FOOD#QUALITY,NA,negative,NA,240
+6,NULL,NA,great,NA,FOOD#QUALITY,NA,positive,NA,240
+6,staff,NA,attitude,NA,SERVICE#GENERAL,NA,negative,NA,240
+7,kubideh kebab,kubideh kebab,favourite,favourite,FOOD#QUALITY,FOOD#QUALITY,positive,positive,19
+7,shik kebab,shik kebab,favourite,favourite,FOOD#QUALITY,FOOD#QUALITY,positive,positive,19
+8,service,service,detailed,detailed,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,17
+8,bbq pak food,bbq pak food,good,good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,17
+8,mango lassi,NA,improve,NA,DRINKS#QUALITY,NA,negative,NA,17
+8,NA,moon lassi,NA,improve,NA,FOOD#QUALITY,NA,positive,17
+9,Matcha dessert,Matcha dessert,delicious,delicious,FOOD#QUALITY,FOOD#QUALITY,positive,positive,25
+9,services,services,good,good,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,25
+9,environment,environment,good,good,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,25
+9,worker,worker,friendly,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,25
+9,worker,NA,kind,NA,SERVICE#GENERAL,NA,positive,NA,25
+9,worker,NA,patience,NA,SERVICE#GENERAL,NA,positive,NA,25
+9,worker,NA,happy,NA,SERVICE#GENERAL,NA,positive,NA,25
+10,red snapper congee,red snapper congee,NULL,not worth It,FOOD#QUALITY,FOOD#QUALITY,negative,negative,77
+10,Soybean drink,Soybean drink,taste of gelatin,thicker,DRINKS#QUALITY,FOOD#QUALITY,negative,negative,77
+10,NULL,NULL,Not Worth ItNothing special,over price,RESTAURANT#GENERAL,SERVICE#GENERAL,negative,negative,77
+10,NULL,NA,over price,NA,RESTAURANT#PRICES,NA,negative,NA,77
+10,NULL,NA,foreign workers who act like robots,NA,SERVICE#GENERAL,NA,negative,NA,77
+10,NULL,NA,cut cost,NA,FOOD#STYLE_OPTIONS,NA,negative,NA,77
+10,NULL,NA,NULL,NA,FOOD#QUALITY,NA,negative,NA,77
+10,NA,soybean drink,NA,taste of gelatin,NA,FOOD#QUALITY,NA,negative,77
+10,NA,gelatin,NA,taste of Soybean drink,NA,FOOD#STYLE_OPTIONS,NA,negative,77
+11,sushi,sushi,under done,good,FOOD#QUALITY,FOOD#QUALITY,negative,negative,122
+11,sushi,sushi,not very fresh,fresh,FOOD#QUALITY,FOOD#QUALITY,negative,negative,122
+11,NULL,NA,good,NA,FOOD#QUALITY,NA,positive,NA,122
+11,spread,NA,good,NA,FOOD#QUALITY,NA,positive,NA,122
+11,NULL,NA,good,NA,RESTAURANT#GENERAL,NA,positive,NA,122
+11,NA,sushi,NA,under done,NA,FOOD#QUALITY,NA,negative,122
+11,NA,rice,NA,under done,NA,FOOD#QUALITY,NA,negative,122
+11,NA,food,NA,good,NA,FOOD#QUALITY,NA,positive,122
+12,food,food,good,good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,22
+12,view,view,beautiful,beautiful,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,22
+12,staff,NA,helpful,NA,SERVICE#GENERAL,NA,positive,NA,22
+12,staff,NA,friendly,NA,SERVICE#GENERAL,NA,positive,NA,22
+12,NA,staff Myna,NA,helpful,NA,SERVICE#GENERAL,NA,positive,22
+13,butter prawns,butter prawns,excellently cooked,excellently cooked,FOOD#QUALITY,FOOD#QUALITY,positive,positive,75
+13,lemongrass chicken,lemongrass chicken,excellently cooked,excellently cooked,FOOD#QUALITY,FOOD#QUALITY,positive,positive,75
+13,banana fritter,banana fritter,fab,fab,FOOD#QUALITY,FOOD#QUALITY,positive,positive,75
+13,Service,Service,prompt,prompt,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,75
+13,Service,NA,well attended,NA,SERVICE#GENERAL,NA,positive,NA,75
+13,ambience,NA,excellent vibe,NA,AMBIENCE#GENERAL,NA,positive,NA,75
+13,NULL,NULL,welcoming,recommended,RESTAURANT#GENERAL,AMBIENCE#GENERAL,positive,positive,75
+13,NULL,NA,recommended,NA,RESTAURANT#GENERAL,NA,positive,NA,75
+13,NA,waiter Jonathan,NA,well attended,NA,SERVICE#GENERAL,NA,positive,75
+14,risotto,risotto,terrible,decent,FOOD#QUALITY,FOOD#QUALITY,negative,negative,223
+14,NULL,NULL,mediocre,NULL,FOOD#QUALITY,AMBIENCE#GENERAL,negative,negative,223
+14,NULL,NULL,NULL,NULL,SERVICE#GENERAL,AMBIENCE#GENERAL,negative,negative,223
+14,dishes,NA,NULL,NA,SERVICE#GENERAL,NA,negative,NA,223
+15,food,food,excellent,excellent,FOOD#QUALITY,FOOD#QUALITY,positive,positive,114
+15,coffee,coffee,excellent,excellent,DRINKS#QUALITY,FOOD#QUALITY,positive,positive,114
+15,NULL,NULL,fresh,excellent,FOOD#QUALITY,AMBIENCE#GENERAL,positive,negative,114
+15,NULL,NULL,tasty,NULL,FOOD#QUALITY,AMBIENCE#GENERAL,positive,negative,114
+15,NULL,NULL,well presented,NULL,FOOD#STYLE_OPTIONS,AMBIENCE#GENERAL,positive,negative,114
+15,decor,NA,NULL,NA,AMBIENCE#GENERAL,NA,negative,NA,114
+15,fan noise,NA,loud,NA,AMBIENCE#GENERAL,NA,negative,NA,114
+15,toilets,NA,not clean,NA,AMBIENCE#GENERAL,NA,negative,NA,114
+15,floors,NA,painted a dirty grey,NA,AMBIENCE#GENERAL,NA,negative,NA,114
+15,walls,NA,painted a dirty grey,NA,AMBIENCE#GENERAL,NA,negative,NA,114
+15,menu cards,NA,tatty,NA,FOOD#STYLE_OPTIONS,NA,negative,NA,114
+15,NA,air con,NA,unbelievable,NA,AMBIENCE#GENERAL,NA,positive,114
+16,Xiao Long Pao,Xiao Long Pao,best,best,FOOD#QUALITY,FOOD#QUALITY,positive,positive,75
+16,Chee Cheong Fun,Chee Cheong Fun,crispy duck,OK,FOOD#QUALITY,FOOD#QUALITY,positive,positive,75
+16,Service,Service,attentive,attentive,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,75
+16,NULL,NULL,OK,NULL,FOOD#QUALITY,AMBIENCE#GENERAL,neutral,positive,75
+16,NULL,NA,nothing spectacular,NA,FOOD#QUALITY,NA,neutral,NA,75
+16,NULL,NA,attentive,NA,SERVICE#GENERAL,NA,positive,NA,75
+17,Ribeye,Ribeye,perfect,perfect,FOOD#QUALITY,FOOD#QUALITY,positive,positive,104
+17,Sirloin Steak,Sirloin Steak,bit too rare,a bit too rare,FOOD#QUALITY,FOOD#QUALITY,negative,positive,104
+17,NULL,NULL,friendly,good,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,104
+17,NULL,NULL,helpful,good,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,104
+17,Fried Banana Fritters,NA,delicious,NA,FOOD#QUALITY,NA,positive,NA,104
+17,Cream Brulae,NA,delicious,NA,FOOD#QUALITY,NA,positive,NA,104
+17,NULL,NULL,perfect,good,FOOD#QUALITY,SERVICE#GENERAL,positive,positive,104
+17,NA,NULL,NA,good,NA,SERVICE#GENERAL,NA,positive,104
+18,ambience,ambience,nice,nice,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,18
+18,waiters,waiters,good service,good service,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,18
+18,prices,NA,affordable,NA,PRICES#GENERAL,NA,positive,NA,18
+18,NA,Price,NA,affordable,NA,AMBIENCE#GENERAL,NA,positive,18
+18,NA,food,NA,affordable,NA,FOOD#QUALITY,NA,positive,18
+19,vegies,vegies,salty,salty,FOOD#QUALITY,FOOD#QUALITY,negative,negative,75
+19,NULL,NA,good,NA,FOOD#QUALITY,NA,positive,NA,75
+19,owner,owner,friendly,friendly,SERVICE#GENERAL,FOOD#QUALITY,positive,negative,75
+19,serve,NA,fast,NA,SERVICE#GENERAL,NA,positive,NA,75
+19,NULL,NA,acceptable,NA,FOOD#PRICES,NA,positive,NA,75
+19,NULL,NA,crowded,NA,RESTAURANT#GENERAL,NA,negative,NA,75
+19,parking lot,parking lot,Huge,crowded,RESTAURANT#MISCELLANEOUS,SERVICE#GENERAL,positive,positive,75
+20,Pizza,Pizza,Best,Best,FOOD#QUALITY,FOOD#QUALITY,positive,positive,37
+20,foods,foods,Best,Best,FOOD#QUALITY,FOOD#QUALITY,positive,positive,37
+20,drink,drink,good,good,DRINKS#QUALITY,DRINKS#QUALITY,positive,positive,37
+20,Music,Music,happy,happy,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,37
+20,Quivo,Quivo,enjoy,good,RESTAURANT#GENERAL,AMBIENCE#GENERAL,positive,positive,37
+20,Quivo,NA,good,NA,RESTAURANT#GENERAL,NA,positive,NA,37
+20,Quivo,NA,happy,NA,AMBIENCE#GENERAL,NA,positive,NA,37
+21,environment,environment,Lovely,lovely,AMBIENCE#GENERAL,RESTAURANT#GENERAL,positive,positive,25
+21,environment,NA,cosy,NA,AMBIENCE#GENERAL,NA,positive,NA,25
+21,selection of Asian curries,selection of Asian curries,great,great,FOOD#QUALITY,FOOD#QUALITY,positive,positive,25
+21,selection of noodles,NA,great,NA,FOOD#QUALITY,NA,positive,NA,25
+21,selection of Japanese dishes,NA,great,NA,FOOD#QUALITY,NA,positive,NA,25
+21,selection of Western dishes,NA,great,NA,FOOD#QUALITY,NA,positive,NA,25
+21,desserts,desserts,Excellent,excellent,FOOD#QUALITY,FOOD#QUALITY,positive,positive,25
+21,coffee,coffee,Excellent,excellent,DRINKS#QUALITY,FOOD#QUALITY,positive,positive,25
+21,pricing,NA,reasonable,NA,FOOD#PRICES,NA,positive,NA,25
+21,pricing,NA,reasonable,NA,DRINKS#PRICES,NA,positive,NA,25
+21,service,service,Wonderful,wonderful,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,25
+21,NA,noodles,NA,great,NA,FOOD#QUALITY,NA,positive,25
+21,NA,Japanese and Western dishes,NA,excellent,NA,FOOD#QUALITY,NA,positive,25
+21,NA,prices,NA,reasonable,NA,FOOD#PRICES,NA,positive,25
+22,staffs,NA,friendly,NA,SERVICE#GENERAL,NA,positive,NA,23
+22,coffee latte,coffee latte,average ok,average ok,DRINKS#QUALITY,FOOD#QUALITY,neutral,positive,23
+22,bread,bread,NULL,average ok,FOOD#QUALITY,FOOD#QUALITY,neutral,negative,23
+22,almond croissant,almond croissant,too sweet,too sweet,FOOD#QUALITY,FOOD#QUALITY,negative,negative,23
+22,NA,Staffs,NA,friendly,NA,SERVICE#GENERAL,NA,positive,23
+23,decoration,decoration,impressive,impressive,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,68
+23,decoration,NA,impressive,NA,RESTAURANT#GENERAL,NA,positive,NA,68
+23,ambience,ambience,good,good,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,68
+23,selection of the food,selection of the food,good,good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,68
+23,Chee Cheong fun with the crispy duck,Chee Cheong fun with the crispy duck,good,good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,68
+23,Chee Cheong fun with the crispy duck,NA,good,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,68
+23,Dim Sum selection,Dim Sum selection,OK,OK,FOOD#QUALITY,AMBIENCE#GENERAL,neutral,positive,68
+23,staff services,staff services,good,good,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,68
+24,waitress Yna,waitress Yna,best,best,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,56
+24,NULL,NA,favorite,NA,RESTAURANT#GENERAL,NA,positive,NA,56
+24,food,food,good,good,FOOD#QUALITY,SERVICE#GENERAL,positive,positive,56
+24,drinks,drinks,good,good,DRINKS#QUALITY,FOOD#QUALITY,positive,positive,56
+25,sashimi,sashimi,top notch,top notch,FOOD#QUALITY,FOOD#QUALITY,positive,positive,70
+25,BBQ skewers,NA,pretty decent,NA,FOOD#QUALITY,NA,positive,NA,70
+25,NULL,NA,reasonable,NA,FOOD#PRICES,NA,positive,NA,70
+25,private rooms,private rooms,amazing,amazing,AMBIENCE#GENERAL,RESTAURANT#GENERAL,positive,positive,70
+25,NA,bbq skewers,NA,decent,NA,FOOD#QUALITY,NA,positive,70
+25,NA,private rooms,NA,amazing,NA,RESTAURANT#GENERAL,NA,positive,70
+26,salmon,salmon,cooked really well,cooked really well,FOOD#QUALITY,FOOD#QUALITY,positive,positive,123
+26,Creme brûlée,NA,extremely enjoyable,NA,FOOD#QUALITY,NA,positive,NA,123
+26,service,service,efficient,efficient,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,123
+26,service,NA,attentive,NA,SERVICE#GENERAL,NA,positive,NA,123
+26,atmosphere,NA,tranquil,NA,AMBIENCE#GENERAL,NA,positive,NA,123
+26,atmosphere,NA,enjoyable,NA,AMBIENCE#GENERAL,NA,positive,NA,123
+26,parking,parking,difficult to find,accommodating,LOCATION#GENERAL,AMBIENCE#GENERAL,negative,negative,123
+26,parking attendants,NA,abrupt,NA,SERVICE#GENERAL,NA,negative,NA,123
+26,parking attendants,NA,annoying,NA,SERVICE#GENERAL,NA,negative,NA,123
+26,NA,creme brûlée,NA,extremely enjoyable,NA,FOOD#QUALITY,NA,positive,123
+26,NA,restaurant,NA,attentive,NA,AMBIENCE#GENERAL,NA,positive,123
+26,NA,people purporting to be parking attendants,NA,abundant,NA,SERVICE#GENERAL,NA,negative,123
+27,chicken hanith,chicken hanith,amazing,amazing,FOOD#QUALITY,FOOD#QUALITY,positive,positive,98
+27,dips @ tanouleh,dips @ tanouleh,amazing,amazing,FOOD#QUALITY,FOOD#QUALITY,positive,positive,98
+27,hummus,hummus,amazing,amazing,FOOD#QUALITY,FOOD#QUALITY,positive,positive,98
+27,Kanuffa,NA,amazing,NA,FOOD#QUALITY,NA,positive,NA,98
+27,Kanuffa,NA,amazing,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,98
+27,caramel,NA,amazing,NA,FOOD#QUALITY,NA,positive,NA,98
+27,Atasha,NA,warm,NA,SERVICE#GENERAL,NA,positive,NA,98
+27,NULL,NA,warm,NA,SERVICE#GENERAL,NA,positive,NA,98
+27,NA,Drinks @ tanouleh,NA,amazing,NA,DRINKS#QUALITY,NA,positive,98
+27,NA,hummus,NA,amazing,NA,DRINKS#QUALITY,NA,positive,98
+28,NULL,NA,NULL,NA,SERVICE#GENERAL,NA,negative,NA,477
+28,NA,no scallops,NA,no scallops,NA,FOOD#QUALITY,NA,negative,477
+28,NA,crab meat,NA,not available,NA,FOOD#QUALITY,NA,negative,477
+28,NA,seafood,NA,not available,NA,FOOD#QUALITY,NA,negative,477
+28,NA,duck paté,NA,not available,NA,FOOD#QUALITY,NA,negative,477
+28,NA,crab meat,NA,not available,NA,FOOD#QUALITY,NA,negative,477
+28,NA,main course,NA,not available,NA,FOOD#QUALITY,NA,negative,477
+29,Mutton Poriyal,NA,dry,NA,FOOD#QUALITY,NA,negative,NA,112
+29,Mutton Poriyal,NA,salty,NA,FOOD#QUALITY,NA,negative,NA,112
+29,Negombo Prawn,NA,excellent,NA,FOOD#QUALITY,NA,positive,NA,112
+29,NULL,NULL,pleasant,salty,AMBIENCE#GENERAL,FOOD#QUALITY,positive,negative,112
+29,NULL,NULL,good,excellent,FOOD#STYLE_OPTIONS,FOOD#QUALITY,positive,negative,112
+29,NULL,NULL,great,good,SERVICE#GENERAL,FOOD#QUALITY,positive,negative,112
+29,music,NA,good,NA,AMBIENCE#GENERAL,NA,positive,NA,112
+29,menu,NA,Extensive,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,112
+29,salt,NA,heavy,NA,FOOD#QUALITY,NA,negative,NA,112
+29,NA,mutton,NA,dry,NA,FOOD#QUALITY,NA,negative,112
+29,NA,NULL,NA,great,NA,FOOD#QUALITY,NA,negative,112
+29,NA,NULL,NA,full,NA,FOOD#QUALITY,NA,negative,112
+30,owner,owner,friendly,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,69
+30,owner,NA,talkative,NA,SERVICE#GENERAL,NA,positive,NA,69
+30,food,NA,amazing,NA,FOOD#QUALITY,NA,positive,NA,69
+30,food,NA,excellent,NA,FOOD#QUALITY,NA,positive,NA,69
+30,NULL,NULL,good,talkative,RESTAURANT#GENERAL,SERVICE#GENERAL,positive,positive,69
+31,chicken wings,chicken wings,stunninh,stunninh,FOOD#QUALITY,FOOD#QUALITY,positive,positive,29
+31,chicken wings,NA,nice taste,NA,FOOD#QUALITY,NA,positive,NA,29
+31,food,food,great,great,FOOD#QUALITY,FOOD#QUALITY,positive,positive,29
+31,NA,taste,NA,nice,NA,FOOD#QUALITY,NA,positive,29
+32,steaks,steaks,good value,good value,FOOD#PRICES,FOOD#QUALITY,positive,positive,104
+32,steaks,NA,tender,NA,FOOD#QUALITY,NA,positive,NA,104
+32,NULL,NA,mixed,NA,RESTAURANT#GENERAL,NA,positive,NA,104
+32,waiting staff,waiting staff,Fun,Fun,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,104
+32,acoustic guitar /singer,acoustic guitar /singer,good,Fun,AMBIENCE#GENERAL,SERVICE#GENERAL,positive,positive,104
+32,NULL,NA,good range,NA,DRINKS#STYLE_OPTIONS,NA,positive,NA,104
+32,juices,NA,good,NA,DRINKS#QUALITY,NA,positive,NA,104
+32,juices,NA,good,NA,FOOD#QUALITY,NA,positive,NA,104
+32,NULL,NA,nice,NA,AMBIENCE#GENERAL,NA,positive,NA,104
+32,NA,wine,NA,Fun,NA,SERVICE#GENERAL,NA,positive,104
+32,NA,acoustic guitar /singer,NA,Fun,NA,SERVICE#GENERAL,NA,positive,104
+32,NA,acoustic guitar /singer,NA,Fun,NA,SERVICE#GENERAL,NA,positive,104
+32,NA,acoustic guitar /singer,NA,Fun,NA,SERVICE#GENERAL,NA,positive,104
+32,NA,acoustic guitar /singer,NA,Fun,NA,SERVICE#GENERAL,NA,positive,104
+32,NA,acoustic guitar /singer,NA,Fun,NA,SERVICE#GEN,NA,positive,104
+33,Peking duck,NA,excellent,NA,FOOD#QUALITY,NA,positive,NA,160
+33,service,service,great,great,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,160
+33,wait staff,wait staff,some did not speak English,not speaking English,SERVICE#GENERAL,SERVICE#GENERAL,negative,negative,160
+33,NULL,NULL,disappointed,not available,FOOD#QUALITY,SERVICE#GENERAL,negative,negative,160
+34,beef curry dishes,beef curry dishes,NULL,better,FOOD#QUALITY,FOOD#QUALITY,positive,positive,156
+34,coconut juice,coconut juice,NULL,perfect,DRINKS#STYLE_OPTIONS,FOOD#QUALITY,positive,positive,156
+34,service,service,quick,quick,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,156
+34,service,NA,courteous,NA,SERVICE#GENERAL,NA,positive,NA,156
+34,staff,staff,friendly,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,156
+34,staff,NA,attentive,NA,SERVICE#GENERAL,NA,positive,NA,156
+34,food,food,cooked to perfection,attentive,FOOD#QUALITY,FOOD#QUALITY,positive,positive,156
+34,food,NA,tender,NA,FOOD#QUALITY,NA,positive,NA,156
+34,food,NA,full of flavour,NA,FOOD#QUALITY,NA,positive,NA,156
+34,NULL,NULL,cosy,perfect,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,156
+34,NA,NULL,NA,cosy,NA,AMBIENCE#GENERAL,NA,positive,156
+35,octopus,octopus,very good,good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,135
+35,octopus,NA,extremely tender,NA,FOOD#QUALITY,NA,positive,NA,135
+35,mushroom,mushroom,loved,good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,135
+35,chicken wing,chicken wing,tasteless,deboned,FOOD#QUALITY,FOOD#QUALITY,negative,negative,135
+35,red rice,red rice,good,good,FOOD#QUALITY,FOOD#QUALITY,positive,negative,135
+35,red rice,red rice,tasted as a good risotto,good,FOOD#QUALITY,FOOD#QUALITY,positive,negative,135
+35,NULL,NA,annoying,NA,SERVICE#GENERAL,NA,negative,NA,135
+35,bill,NA,separate,NA,SERVICE#GENERAL,NA,negative,NA,135
+36,oyster,oyster,best,best,FOOD#QUALITY,FOOD#QUALITY,positive,positive,31
+36,salmon,salmon,great,best,FOOD#QUALITY,FOOD#QUALITY,positive,positive,31
+36,salmon,salmon,perfectly cook,perfectly cook,FOOD#QUALITY,FOOD#QUALITY,positive,positive,31
+37,Nasi Lemak,Nasi Lemak,best,best,FOOD#QUALITY,FOOD#QUALITY,positive,positive,136
+37,sambal,sambal,sweeter,sweeter,FOOD#QUALITY,FOOD#QUALITY,positive,positive,136
+38,ambience,ambience,nice,nice,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,22
+38,food,food,good,taste good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,22
+38,waiters,waiters,friendly,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,22
+38,NULL,NA,free hockey parking,NA,RESTAURANT#MISCELLANEOUS,NA,positive,NA,22
+38,NA,free hockey parking,NA,great,NA,SERVICE#GENERAL,NA,positive,22
+39,staff,staff,Helpful,Helpful,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,33
+39,NULL,NA,cater,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,33
+39,Decor,Decor,traditional,traditional south Indian,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,33
+39,Decor,NA,unique,NA,AMBIENCE#GENERAL,NA,positive,NA,33
+39,Food,Food,nice,nice,FOOD#QUALITY,FOOD#QUALITY,positive,positive,33
+39,Atmosphere,Atmosphere,quiet,homely,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,33
+39,Atmosphere,NA,homely,NA,AMBIENCE#GENERAL,NA,positive,NA,33
+40,Hana,NA,friendlist,NA,SERVICE#GENERAL,NA,positive,NA,31
+40,Hana,NA,nicest,NA,SERVICE#GENERAL,NA,positive,NA,31
+40,Hana,NA,served with care and love,NA,SERVICE#GENERAL,NA,positive,NA,31
+40,NULL,NA,good,NA,FOOD#QUALITY,NA,positive,NA,31
+40,NULL,NA,foood,NA,FOOD#QUALITY,NA,positive,NA,31
+40,NULL,NA,Atmosphere,NA,AMBIENCE#GENERAL,NA,positive,NA,31
+40,NA,Service,NA,friendlist,NA,SERVICE#GENERAL,NA,positive,31
+40,NA,Food,NA,nicest,NA,FOOD#QUALITY,NA,positive,31
+40,NA,atmosphere,NA,good,NA,AMBIENCE#GENERAL,NA,positive,31
+41,facilities,facilities,clean,good,RESTAURANT#GENERAL,AMBIENCE#GENERAL,positive,positive,51
+41,facilities,NA,efficient,NA,RESTAURANT#GENERAL,NA,positive,NA,51
+41,staff,staff,pleasant,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,51
+41,eateries,NA,modern,NA,RESTAURANT#GENERAL,NA,positive,NA,51
+41,food,NA,delicious,NA,FOOD#QUALITY,NA,positive,NA,51
+41,food,NA,over priced,NA,FOOD#PRICES,NA,negative,NA,51
+41,food,NA,variations,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,51
+41,NA,NULL,NA,modern,NA,AMBIENCE#GENERAL,NA,positive,51
+42,calamari rings,calamari rings,tough,tough,FOOD#QUALITY,FOOD#QUALITY,negative,negative,163
+42,Stuffed Jalapenos,Stuffed Jalapenos,not bad,not bad,FOOD#QUALITY,FOOD#QUALITY,neutral,negative,163
+42,Stuffed Jalapenos,Stuffed Jalapenos,not good,not good,FOOD#QUALITY,FOOD#QUALITY,negative,negative,163
+42,pizza,NA,horrible,NA,FOOD#QUALITY,NA,negative,NA,163
+42,NULL,NULL,disappointment,not good,FOOD#QUALITY,FOOD#QUALITY,negative,negative,163
+42,pizza,NA,soggy,NA,FOOD#QUALITY,NA,negative,NA,163
+42,NULL,NULL,pleasant,not good,AMBIENCE#GENERAL,FOOD#QUALITY,negative,negative,163
+42,restaurant,NA,smoking,NA,AMBIENCE#GENERAL,NA,negative,NA,163
+42,NA,drinks,NA,good,NA,FOOD#QUALITY,NA,negative,163
+42,NA,Pizza,NA,not good,NA,FOOD#QUALITY,NA,negative,163
+42,NA,NULL,NA,not good,NA,FOOD#QUALITY,NA,negative,163
+43,food,food,Amazing,Amazing,FOOD#QUALITY,FOOD#QUALITY,positive,positive,20
+43,portions,portions,Big,big,FOOD#STYLE_OPTIONS,FOOD#QUALITY,positive,positive,20
+43,Teh Tarik,Teh Tarik,not oversweetened,not oversweetened,DRINKS#QUALITY,FOOD#QUALITY,positive,positive,20
+43,wait staff,wait staff,best,best,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,20
+43,NA,Tandori chicken,NA,big,NA,FOOD#QUALITY,NA,positive,20
+44,steak,steak,delicious,delicious,FOOD#QUALITY,FOOD#QUALITY,positive,positive,33
+44,steak,NA,cook perfectly,NA,FOOD#QUALITY,NA,positive,NA,33
+44,sides,sides,excellent,cook perfectly,FOOD#QUALITY,AMBIENCE#GENERAL,positive,positive,33
+44,sides,NA,good range,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,33
+44,NULL,NULL,satisfy,excellent,RESTAURANT#GENERAL,SERVICE#GENERAL,positive,positive,33
+44,NULL,NA,kind mind set,NA,SERVICE#GENERAL,NA,positive,NA,33
+45,food,food,yummy,yummy,FOOD#QUALITY,FOOD#QUALITY,positive,positive,19
+45,ambiance,ambiance,lovely,lovely,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,19
+45,tapas,tapas,variety,popular,FOOD#STYLE_OPTIONS,FOOD#QUALITY,positive,positive,19
+45,service,service,great,great,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,19
+46,collection of beers,NA,biggest,NA,DRINKS#STYLE_OPTIONS,NA,positive,NA,69
+46,collection of beers,NA,huge,NA,DRINKS#STYLE_OPTIONS,NA,positive,NA,69
+46,collection of beers,NA,huge,NA,DRINKS#QUALITY,NA,positive,NA,69
+46,collection of beers,NA,biggest,NA,DRINKS#QUALITY,NA,positive,NA,69
+46,NULL,NULL,reasonably priced,nice place to unwind,PRICES#GENERAL,AMBIENCE#GENERAL,positive,positive,69
+46,place,NA,Nice,NA,AMBIENCE#GENERAL,NA,positive,NA,69
+46,place,NA,unwind,NA,AMBIENCE#GENERAL,NA,positive,NA,69
+46,NULL,NA,Must visit,NA,RESTAURANT#GENERAL,NA,positive,NA,69
+46,NA,tap beer,NA,big,NA,FOOD#QUALITY,NA,positive,69
+46,NA,can / bottle,NA,reasonable priced,NA,FOOD#QUALITY,NA,positive,69
+47,ambience,ambience,pleasant,wooed,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,65
+47,food,food,tastes good,reasonable,FOOD#QUALITY,FOOD#QUALITY,positive,positive,65
+47,food,NA,reasonable,NA,FOOD#PRICES,NA,positive,NA,65
+47,drinks,drinks,reasonable,reasonable,DRINKS#PRICES,DRINKS#QUALITY,positive,positive,65
+47,pizza,NA,amazing,NA,FOOD#QUALITY,NA,positive,NA,65
+47,pizza,NA,thin crust,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,65
+47,NA,NULL,NA,pleasant,NA,AMBIENCE#GENERAL,NA,positive,65
+48,duck,duck,muscle,big muscle,FOOD#QUALITY,FOOD#QUALITY,negative,negative,94
+48,lobster,NA,small,NA,FOOD#STYLE_OPTIONS,NA,negative,NA,94
+48,NULL,NULL,prices are extremely high,high,RESTAURANT#PRICES,AMBIENCE#GENERAL,negative,negative,94
+48,NA,loin,NA,small,NA,FOOD#QUALITY,NA,negative,94
+48,NA,NULL,NA,high,NA,AMBIENCE#GENERAL,NA,negative,94
+49,NULL,NA,over-priced,NA,PRICES#GENERAL,NA,negative,NA,45
+49,NULL,NA,over cooked,NA,FOOD#QUALITY,NA,negative,NA,45
+49,NULL,NA,slow service,NA,SERVICE#GENERAL,NA,negative,NA,45
+49,Steakhouse,NA,best,NA,RESTAURANT#GENERAL,NA,positive,NA,45
+49,Steakhouse,NA,well worth,NA,FOOD#QUALITY,NA,positive,NA,45
+49,NA,steakhouse,NA,nice,NA,FOOD#QUALITY,NA,positive,45
+49,NA,owner,NA,over-priced,NA,SERVICE#GENERAL,NA,positive,45
+49,NA,service,NA,slow service,NA,SERVICE#GENERAL,NA,positive,45
+49,NA,steakhouse,NA,best,NA,SERVICE#GENERAL,NA,positive,45
+50,service,service,Great,Great,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,24
+51,steaks,steaks,Delicious,Delicious,FOOD#QUALITY,FOOD#QUALITY,positive,positive,50
+51,burgers,burgers,okay,ok,FOOD#QUALITY,FOOD#QUALITY,neutral,positive,50
+51,oysters,NA,Fresh,NA,FOOD#QUALITY,NA,positive,NA,50
+51,pricing,NA,hefty,NA,FOOD#PRICES,NA,negative,NA,50
+51,staffs,staffs,friendly,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,50
+51,place,place,weird,smells weird,AMBIENCE#GENERAL,AMBIENCE#GENERAL,negative,negative,50
+51,place,NA,smells weird,NA,AMBIENCE#GENERAL,NA,negative,NA,50
+51,seasoned wooden planks,NA,weird,NA,AMBIENCE#GENERAL,NA,negative,NA,50
+51,NULL,NA,refurbish,NA,RESTAURANT#MISCELLANEOUS,NA,negative,NA,50
+51,NA,Oysters,NA,fresh,NA,FOOD#QUALITY,NA,positive,50
+51,NA,Price,NA,hefty,NA,FOOD#QUALITY,NA,negative,50
+51,NA,smells,NA,seasoned wooden planks,NA,AMBIENCE#GENERAL,NA,negative,50
+52,taste,taste,not great,not great,FOOD#QUALITY,FOOD#QUALITY,negative,negative,21
+53,service,service,Wonderful,Wonderful,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,42
+53,NULL,NULL,warm,warm,AMBIENCE#GENERAL,SERVICE#GENERAL,positive,positive,42
+53,NA,staff,NA,Wonderful,NA,SERVICE#GENERAL,NA,positive,42
+54,food,food,truly Spanish,truly Spanish,FOOD#STYLE_OPTIONS,FOOD#QUALITY,positive,positive,39
+54,food,NA,Best Spanish,NA,FOOD#QUALITY,NA,positive,NA,39
+54,NULL,NULL,great,Best Spanish,RESTAURANT#GENERAL,SERVICE#GENERAL,positive,positive,39
+54,NULL,NA,Casual friendly,NA,SERVICE#GENERAL,NA,positive,NA,39
+54,NULL,NA,unique,NA,RESTAURANT#GENERAL,NA,positive,NA,39
+54,NA,standard,NA,great,NA,SERVICE#GENERAL,NA,positive,39
+55,Steak Borderlaise,Steak Borderlaise,amazing,amazing,FOOD#QUALITY,FOOD#QUALITY,positive,positive,88
+55,Steak Borderlaise,Steak Borderlaise,super tender,super tender,FOOD#QUALITY,FOOD#QUALITY,positive,positive,88
+55,Steak Borderlaise,NA,juicy,NA,FOOD#QUALITY,NA,positive,NA,88
+55,NULL,NA,wonderful,NA,SERVICE#GENERAL,NA,positive,NA,88
+55,NULL,NA,super attentive,NA,SERVICE#GENERAL,NA,positive,NA,88
+55,NA,waiters,NA,super attentive,NA,SERVICE#GENERAL,NA,positive,88
+56,staffs,staffs,friendly,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,51
+56,staffs,NA,looking after their customer,NA,SERVICE#GENERAL,NA,positive,NA,51
+56,NULL,NULL,clean,looking after their customer,AMBIENCE#GENERAL,SERVICE#GENERAL,positive,positive,51
+56,NULL,NA,fast,NA,SERVICE#GENERAL,NA,positive,NA,51
+57,local rendang burger,local rendang burger,best,best,FOOD#QUALITY,FOOD#QUALITY,positive,positive,31
+57,staff,staff,friendly,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,31
+57,staff,NA,efficient,NA,SERVICE#GENERAL,NA,positive,NA,31
+57,restaurant,restaurant,top of the line,efficient,RESTAURANT#GENERAL,SERVICE#GENERAL,positive,positive,31
+58,venue,venue,small,small,AMBIENCE#GENERAL,RESTAURANT#GENERAL,negative,positive,45
+58,staff,NA,well staffed,NA,SERVICE#GENERAL,NA,positive,NA,45
+58,entrees,NA,amazing,NA,FOOD#QUALITY,NA,positive,NA,45
+58,sucking pig,sucking pig,winners,winners,FOOD#QUALITY,FOOD#QUALITY,positive,positive,45
+58,duck dishes,duck dishes,winners,winners,FOOD#QUALITY,FOOD#QUALITY,positive,positive,45
+58,NULL,NA,delicious,NA,FOOD#QUALITY,NA,positive,NA,45
+58,NA,food menu,NA,delicious,NA,FOOD#QUALITY,NA,positive,45
+58,NA,entrées,NA,amazing,NA,FOOD#QUALITY,NA,positive,45
+59,food,NA,authentic,NA,FOOD#QUALITY,NA,positive,NA,44
+59,food,NA,superb,NA,FOOD#QUALITY,NA,positive,NA,44
+59,food,NA,huge,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,44
+59,place,NA,clean,NA,AMBIENCE#GENERAL,NA,positive,NA,44
+59,place,NA,peaceful,NA,AMBIENCE#GENERAL,NA,positive,NA,44
+59,staff,NA,attentive,NA,SERVICE#GENERAL,NA,positive,NA,44
+59,staff,NA,friendly,NA,SERVICE#GENERAL,NA,positive,NA,44
+59,NA,Chinese food,NA,authentic,NA,FOOD#QUALITY,NA,positive,44
+59,NA,taste,NA,superb,NA,FOOD#QUALITY,NA,positive,44
+59,NA,portion,NA,large,NA,FOOD#QUALITY,NA,positive,44
+59,NA,NULL,NA,clean,NA,SERVICE#GENERAL,NA,positive,44
+59,NA,NULL,NA,friendly,NA,SERVICE#GENERAL,NA,positive,44
+59,NA,NULL,NA,friendly,NA,SERVICE#GENERAL,NA,positive,44
+60,burgers,burgers,great,great,FOOD#QUALITY,FOOD#QUALITY,positive,positive,28
+60,cocktails,cocktails,enjoyable,enjoyable,DRINKS#STYLE_OPTIONS,FOOD#QUALITY,positive,positive,28
+60,price,price,almost European,European,FOOD#PRICES,FOOD#QUALITY,negative,positive,28
+60,service,service,good,good,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,28
+60,service,NA,friendly,NA,SERVICE#GENERAL,NA,positive,NA,28
+61,spring rolls,spring rolls,delicious,delicious,FOOD#QUALITY,FOOD#QUALITY,positive,positive,18
+61,beef noodle,beef noodle,delicious,delicious,FOOD#QUALITY,FOOD#QUALITY,positive,positive,18
+61,chicken soup noodle,chicken soup noodle,delicious,delicious,FOOD#QUALITY,FOOD#QUALITY,positive,positive,18
+62,food,food,sumptuous,sumptuous,FOOD#QUALITY,FOOD#QUALITY,positive,positive,23
+62,service,service,great,great,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,23
+62,ambience,ambience,nice,nice,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,23
+62,Chef,Chef,friendly,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,23
+63,variety,NA,Great,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,18
+63,variety,NA,western,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,18
+63,variety,NA,Asian,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,18
+63,service staff,service staff,attentive,attentive,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,18
+63,service staff,NA,friendly,NA,SERVICE#GENERAL,NA,positive,NA,18
+63,service staff,NA,Great,NA,SERVICE#GENERAL,NA,positive,NA,18
+63,Jahidul,Jahidul,attentive,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,18
+63,Jahidul,NA,friendly,NA,SERVICE#GENERAL,NA,positive,NA,18
+63,NA,variety of Asian and western cuisine,NA,Great,NA,FOOD#QUALITY,NA,positive,18
+64,food,food,excellent,excellent,FOOD#QUALITY,FOOD#QUALITY,positive,positive,77
+64,small course concept,small course concept,enjoyed,excellent,FOOD#STYLE_OPTIONS,FOOD#QUALITY,positive,positive,77
+64,wine list,wine list,extensive,excellent,DRINKS#STYLE_OPTIONS,AMBIENCE#GENERAL,positive,positive,77
+64,wine list,NA,well priced,NA,DRINKS#PRICES,NA,positive,NA,77
+64,NULL,NA,fault,NA,RESTAURANT#GENERAL,NA,positive,NA,77
+64,view,NA,Excellent,NA,AMBIENCE#GENERAL,NA,positive,NA,77
+64,service,service,Excellent,excellent,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,77
+64,cooking,cooking,Excellent,excellent,FOOD#QUALITY,AMBIENCE#GENERAL,positive,positive,77
+65,Service,Service,random,random,SERVICE#GENERAL,SERVICE#GENERAL,negative,negative,96
+65,NULL,NULL,NULL,NULL,FOOD#QUALITY,SERVICE#GENERAL,negative,negative,96
+65,NA,waiters,NA,stunnel,NA,SERVICE#GENERAL,NA,negative,96
+65,NA,dishes,NA,stunnel,NA,FOOD#QUALITY,NA,negative,96
+65,NA,drinks,NA,stunnel,NA,FOOD#QUALITY,NA,negative,96
+66,place,place,Nice,Nice,RESTAURANT#GENERAL,RESTAURANT#GENERAL,positive,positive,43
+66,NULL,NULL,Best time to visit is around 12pm,Nice,RESTAURANT#GENERAL,SERVICE#GENERAL,positive,negative,43
+66,NULL,NA,Worst time to visit would be after 2pm as most of the food will finish,NA,RESTAURANT#GENERAL,NA,negative,NA,43
+66,NULL,NA,self serving,NA,SERVICE#GENERAL,NA,neutral,NA,43
+67,guacamole,guacamole,Finger licking good,Finger licking good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,96
+67,staff,staff,friendly,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,96
+67,staff,NA,helpful,NA,SERVICE#GENERAL,NA,positive,NA,96
+67,NULL,NA,great,NA,RESTAURANT#GENERAL,NA,positive,NA,96
+67,soft shell crab,NA,delicious,NA,FOOD#QUALITY,NA,positive,NA,96
+67,grilled watermelon,NA,very delicious,NA,FOOD#QUALITY,NA,positive,NA,96
+67,ceviche with salmon,NA,NULL,NA,FOOD#QUALITY,NA,positive,NA,96
+67,beef croquettes,NA,NULL,NA,FOOD#QUALITY,NA,positive,NA,96
+67,guacamole with olives,NA,awesome,NA,FOOD#QUALITY,NA,positive,NA,96
+67,view,view,Awesome,high,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,96
+67,NULL,NA,good,NA,FOOD#QUALITY,NA,positive,NA,96
+67,NULL,NA,good,NA,FOOD#QUALITY,NA,positive,NA,96
+67,NULL,NA,good,NA,FOOD#QUALITY,NA,positive,NA,96
+67,NULL,NA,good,NA,FOOD#QUALITY,NA,positive,NA,96
+67,NULL,NA,good,NA,FOOD#QUALITY,NA,positive,NA,96
+67,NA,price,NA,helpful,NA,AMBIENCE#GENERAL,NA,positive,96
+68,food,food,cold,Clean,FOOD#QUALITY,FOOD#QUALITY,negative,negative,52
+68,food,NA,no sauce,NA,FOOD#QUALITY,NA,negative,NA,52
+68,food,NA,not tasty,NA,FOOD#QUALITY,NA,negative,NA,52
+68,noodles with shrimps,NA,1 shrimp,NA,FOOD#STYLE_OPTIONS,NA,negative,NA,52
+68,staff,staff,unfriendly,unfriendly,SERVICE#GENERAL,SERVICE#GENERAL,negative,negative,52
+68,NA,soup,NA,not tasty,NA,FOOD#QUALITY,NA,negative,52
+68,NA,NULL,NA,NULL,NA,AMBIENCE#GENERAL,NA,negative,52
+69,menu,menu,varied,excellent,FOOD#STYLE_OPTIONS,RESTAURANT#GENERAL,positive,positive,70
+69,dishes,dishes,beautifully executed,beautiful executed,FOOD#QUALITY,FOOD#QUALITY,positive,positive,70
+69,dishes,NA,cooked to perfection,NA,FOOD#QUALITY,NA,positive,NA,70
+69,ingredients,NA,freshest,NA,FOOD#QUALITY,NA,positive,NA,70
+69,service,service,warm,warm,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,70
+69,service,NA,efficient,NA,SERVICE#GENERAL,NA,positive,NA,70
+69,service,NA,unobtrusive,NA,SERVICE#GENERAL,NA,positive,NA,70
+69,NULL,NULL,lovely,efficient,RESTAURANT#GENERAL,SERVICE#GENERAL,positive,positive,70
+69,NULL,NA,great value,NA,PRICES#GENERAL,NA,positive,NA,70
+69,NA,cooks,NA,perfect,NA,SERVICE#GENERAL,NA,positive,70
+70,food,food,wise range,best,FOOD#STYLE_OPTIONS,FOOD#QUALITY,positive,positive,39
+70,food,NA,best,NA,FOOD#QUALITY,NA,positive,NA,39
+70,food,NA,best,NA,FOOD#PRICES,NA,positive,NA,39
+70,NA,thalis,NA,wise range,NA,FOOD#QUALITY,NA,positive,39
+70,NA,beverages,NA,wise range,NA,FOOD#QUALITY,NA,positive,39
+70,NA,breakfast,NA,wise range,NA,AMBIENCE#GENERAL,NA,positive,39
+70,NA,dinner,NA,best,NA,AMBIENCE#GENERAL,NA,positive,39
+71,tacos,tacos,Great,Great,FOOD#QUALITY,FOOD#QUALITY,positive,positive,30
+71,chilli,chilli,lovely,delicious,FOOD#QUALITY,FOOD#QUALITY,positive,positive,30
+71,NULL,NULL,delicious,good value,FOOD#QUALITY,FOOD#QUALITY,positive,positive,30
+71,NULL,NA,really good value,NA,FOOD#PRICES,NA,positive,NA,30
+71,meat,meat,NULL,good value,FOOD#QUALITY,FOOD#QUALITY,positive,positive,30
+72,food,food,bland,tasting good,FOOD#QUALITY,FOOD#QUALITY,negative,negative,82
+72,food,food,not up to standard,tasting good,FOOD#QUALITY,FOOD#QUALITY,negative,negative,82
+72,service,service,mixed up orders,ok,SERVICE#GENERAL,SERVICE#GENERAL,negative,negative,82
+72,service,service,ok,ok,SERVICE#GENERAL,SERVICE#GENERAL,neutral,negative,82
+72,juices,juices,nice,ok,DRINKS#QUALITY,SERVICE#GENERAL,positive,negative,82
+72,prices,prices,cheap,not up to standard,FOOD#PRICES,FOOD#QUALITY,positive,negative,82
+72,NA,food,NA,not up to standard,NA,FOOD#QUALITY,NA,negative,82
+73,Menglembu wanton mee,Menglembu wanton mee,absurdly satisfying,ambiently satisfying,FOOD#QUALITY,FOOD#QUALITY,positive,positive,143
+73,noodles,noodles,springy,springy,FOOD#QUALITY,FOOD#QUALITY,positive,positive,143
+73,charsiews,charsiews,star,star,FOOD#QUALITY,FOOD#QUALITY,positive,positive,143
+73,Chee cheong fun pork curry,Chee cheong fun pork curry,moved to speechlessness,good place to try these rice noodle roll,FOOD#QUALITY,FOOD#QUALITY,positive,positive,143
+73,food,food,deliciously affordable,deliciously affordable,FOOD#PRICES,FOOD#QUALITY,positive,positive,143
+73,NA,NULL,NA,deliciously affordable,NA,AMBIENCE#GENERAL,NA,positive,143
+74,dumplings,dumplings,great,great,FOOD#QUALITY,FOOD#QUALITY,positive,positive,45
+74,dishes,dishes,tasty,good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,45
+74,NULL,NA,excellent,NA,RESTAURANT#GENERAL,NA,positive,NA,45
+74,beers,beers,NULL,good,DRINKS#QUALITY,AMBIENCE#GENERAL,positive,positive,45
+75,sunshine noodle,sunshine noodle,favorite,favorite,FOOD#QUALITY,FOOD#QUALITY,positive,positive,34
+75,fried rice,fried rice,NULL,favorite,FOOD#QUALITY,FOOD#QUALITY,positive,positive,34
+75,seaweed soup,seaweed soup,enjoyed,enjoyed,FOOD#QUALITY,FOOD#QUALITY,positive,positive,34
+76,eggs Benedict,eggs Benedict,good,good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,30
+76,salmon,salmon,slightly fishy,fishy,FOOD#QUALITY,FOOD#QUALITY,negative,negative,30
+76,holandaise sauces,holandaise sauces,drowned,drwoned,FOOD#STYLE_OPTIONS,FOOD#QUALITY,positive,positive,30
+76,portions,portions,Good,good,FOOD#STYLE_OPTIONS,FOOD#QUALITY,positive,positive,30
+76,American coffee,American coffee,great,great,DRINKS#QUALITY,AMBIENCE#GENERAL,positive,positive,30
+77,Food,Food,good,good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,26
+77,Food,NA,too oily,NA,FOOD#QUALITY,NA,negative,NA,26
+77,place,place,air-conditioned,oily,AMBIENCE#GENERAL,FOOD#QUALITY,positive,negative,26
+77,place,NA,nice,NA,AMBIENCE#GENERAL,NA,positive,NA,26
+77,place,NA,comfortable,NA,AMBIENCE#GENERAL,NA,positive,NA,26
+77,NA,air-conditioned,NA,air-conditioned,NA,RESTAURANT#GENERAL,NA,positive,26
+77,NA,NULL,NA,nice comfortable atmosphere,NA,RESTAURANT#GENERAL,NA,positive,26
+78,char keow tiew,char keow tiew,better,must try,FOOD#QUALITY,FOOD#QUALITY,positive,positive,34
+78,char keow tiew,NA,must try,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,34
+78,NULL,NA,Awesome,NA,FOOD#QUALITY,NA,positive,NA,34
+78,NA,food,NA,Awesome,NA,FOOD#QUALITY,NA,positive,34
+78,NA,taste,NA,best,NA,AMBIENCE#GENERAL,NA,positive,34
+79,food,food,tasty,Very tasty,FOOD#QUALITY,FOOD#QUALITY,positive,positive,47
+79,food,NA,tasty,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,47
+79,food,NA,tasty,NA,FOOD#PRICES,NA,positive,NA,47
+79,NULL,NULL,difficult to choose,great,RESTAURANT#GENERAL,AMBIENCE#GENERAL,positive,positive,47
+79,places,NA,real buzz,NA,AMBIENCE#GENERAL,NA,positive,NA,47
+79,courses,courses,different,unbelievable,FOOD#STYLE_OPTIONS,AMBIENCE#GENERAL,positive,positive,47
+79,courses,NA,different,NA,FOOD#QUALITY,NA,positive,NA,47
+79,courses,NA,different,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,47
+79,courses,NA,different,NA,FOOD#PRICES,NA,positive,NA,47
+79,sharing,sharing,great,unbelievable,FOOD#STYLE_OPTIONS,AMBIENCE#GENERAL,positive,positive,47
+79,sharing,NA,great,NA,FOOD#QUALITY,NA,positive,NA,47
+79,sharing,NA,great,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,47
+79,sharing,NA,great,NA,FOOD#PRICES,NA,positive,NA,47
+79,NA,prices,NA,unbelievable,NA,AMBIENCE#GENERAL,NA,positive,47
+80,dim sum,dim sum,good,good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,92
+81,ambience,ambience,Good,excellent,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,90
+81,food,food,excellent,excellent,FOOD#QUALITY,FOOD#QUALITY,positive,positive,90
+81,owner,owner,friendly,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,90
+81,owner,NA,attentive,NA,SERVICE#GENERAL,NA,positive,NA,90
+81,Gamberi & Pesto,NA,favourite,NA,FOOD#QUALITY,NA,positive,NA,90
+81,NULL,NULL,amazing,amazing,FOOD#QUALITY,SERVICE#GENERAL,positive,positive,90
+81,Dover sole fish cooked in white wine sauce,Dover sole fish cooked in white wine sauce,amazing,attentive,FOOD#QUALITY,SERVICE#GENERAL,positive,positive,90
+81,NA,Mr Maury,NA,attentive,NA,SERVICE#GENERAL,NA,positive,90
+81,NA,team members,NA,friendly,NA,SERVICE#GENERAL,NA,positive,90
+82,dried noodle,dried noodle,originals seasoning,originals seasoning,FOOD#STYLE_OPTIONS,FOOD#QUALITY,positive,positive,48
+82,dried noodle,NA,Taste great,NA,FOOD#QUALITY,NA,positive,NA,48
+82,NULL,NULL,cheap,cheap,FOOD#PRICES,AMBIENCE#GENERAL,positive,positive,48
+83,food,food,super tasty,super tasty,FOOD#QUALITY,FOOD#QUALITY,positive,positive,68
+83,hospitality,hospitality,amazing,amazing,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,68
+83,care,NA,extra doze of care,NA,SERVICE#GENERAL,NA,positive,NA,68
+83,NULL,NULL,happy,NULL,RESTAURANT#GENERAL,SERVICE#GENERAL,positive,positive,68
+83,NULL,NA,will go here again and again,NA,RESTAURANT#GENERAL,NA,positive,NA,68
+83,options,NA,so many,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,68
+83,NULL,NA,Value for money,NA,PRICES#GENERAL,NA,positive,NA,68
+83,NA,extra doze of care,NA,extra doze of care,NA,SERVICE#GENERAL,NA,positive,68
+84,dishes,NA,different,NA,FOOD#QUALITY,NA,negative,NA,129
+84,dishes,NA,out of presentation,NA,FOOD#STYLE_OPTIONS,NA,negative,NA,129
+84,dishes,NA,different,NA,FOOD#QUALITY,NA,negative,NA,129
+84,service,service,Bad,bad,SERVICE#GENERAL,SERVICE#GENERAL,negative,negative,129
+84,managers,managers,impolite,implolite,SERVICE#GENERAL,SERVICE#GENERAL,negative,negative,129
+84,NULL,NULL,messy to serve on table like a normal restaurant,different,FOOD#STYLE_OPTIONS,AMBIENCE#GENERAL,negative,negative,129
+84,NULL,NA,disappointed,NA,RESTAURANT#GENERAL,NA,negative,NA,129
+84,NULL,NA,not worth,NA,RESTAURANT#GENERAL,NA,negative,NA,129
+84,NULL,NA,no one contact me as informed more than 1 month,NA,SERVICE#GENERAL,NA,negative,NA,129
+84,NA,dishes served,NA,different,NA,FOOD#QUALITY,NA,negative,129
+85,star anise,star anise,loved,little highlight,FOOD#STYLE_OPTIONS,FOOD#QUALITY,positive,positive,50
+85,scone,scone,buttery texture gave it another level of deliciousness,loved,FOOD#QUALITY,FOOD#QUALITY,positive,positive,50
+85,Danish croissants,Danish croissants,NULL,delicious,FOOD#QUALITY,FOOD#QUALITY,positive,positive,50
+86,decor,decor,modern,modern,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,83
+86,lighting,lighting,good,good,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,83
+86,staff,staff,pleasant,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,83
+86,staff,NA,efficient,NA,SERVICE#GENERAL,NA,positive,NA,83
+86,menu,NA,extensive,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,83
+86,menu,NA,varied,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,83
+86,range of soft drinks,NA,excellent,NA,DRINKS#QUALITY,NA,positive,NA,83
+86,dancing fiish,NA,delicious,NA,FOOD#QUALITY,NA,positive,NA,83
+86,fern,NA,favourite,NA,FOOD#QUALITY,NA,positive,NA,83
+86,atmosphere,atmosphere,warm,warm,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,83
+86,atmosphere,atmosphere,welcoming,welcoming,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,83
+86,NULL,NULL,recommend,efficient,RESTAURANT#GENERAL,AMBIENCE#GENERAL,positive,positive,83
+86,NA,NULL,NA,favourite,NA,AMBIENCE#GENERAL,NA,positive,83
+86,NA,NULL,NA,favourite,NA,AMBIENCE#GENERAL,NA,positive,83
+87,ambiance,ambiance,decent,decent,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,108
+87,ramen,ramen,not the best,nice,FOOD#QUALITY,FOOD#QUALITY,negative,positive,108
+87,noodles,noodles,cooked just nice,cooked just nice,FOOD#QUALITY,FOOD#QUALITY,positive,positive,108
+87,broth,broth,tasting a little underwhelmed,tasting a little underwhelmed,FOOD#QUALITY,FOOD#QUALITY,negative,negative,108
+87,NA,soup,NA,not the best,NA,FOOD#QUALITY,NA,negative,108
+87,NA,soup,NA,not the best,NA,FOOD#QUALITY,NA,negative,108
+87,NA,soup,NA,not the best,NA,FOOD#QUALITY,NA,negative,108
+87,NA,soup,NA,not the best,NA,FOOD#QUALITY,NA,negative,108
+88,Sukiyaki,Sukiyaki,delicious,delicious,FOOD#QUALITY,FOOD#QUALITY,positive,positive,29
+88,teppayanki,teppayanki,super love,love,FOOD#QUALITY,FOOD#QUALITY,positive,positive,29
+88,Mina,Mina,helpful,helpful,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,29
+88,staff,staff,corteous,corteous,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,29
+88,food,food,nice,nice,FOOD#QUALITY,FOOD#QUALITY,positive,positive,29
+88,food,NA,superb,NA,FOOD#QUALITY,NA,positive,NA,29
+88,NA,quality of the food,NA,superb,NA,FOOD#QUALITY,NA,positive,29
+89,food,food,decent,decent,FOOD#QUALITY,FOOD#QUALITY,neutral,positive,81
+89,ambience,ambience,comfortable,comfortable,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,81
+89,food,food,expensive,expensive,FOOD#PRICES,FOOD#QUALITY,negative,positive,81
+89,manager’s service,NA,insightful,NA,SERVICE#GENERAL,NA,positive,NA,81
+89,manager’s service,NA,spot-on,NA,SERVICE#GENERAL,NA,positive,NA,81
+89,Winnie,NA,truly enjoyable,NA,SERVICE#GENERAL,NA,positive,NA,81
+89,NA,setting,NA,comfortable,NA,AMBIENCE#GENERAL,NA,positive,81
+89,NA,manager's service,NA,insightful menu suggestions,NA,FOOD#QUALITY,NA,positive,81
+89,NA,manager's service,NA,spot-on,NA,SERVICE#GENERAL,NA,positive,81
+90,burnt cheesecake,burnt cheesecake,rich,popular,FOOD#QUALITY,FOOD#QUALITY,positive,positive,396
+90,burnt cheesecake,NA,soft,NA,FOOD#QUALITY,NA,positive,NA,396
+90,burnt cheesecake,NA,bold,NA,FOOD#QUALITY,NA,positive,NA,396
+90,whipped cream,whipped cream,mellow,soft,FOOD#QUALITY,FOOD#QUALITY,positive,positive,396
+90,NULL,NULL,tastefully decorated,rich,AMBIENCE#GENERAL,FOOD#QUALITY,positive,positive,396
+90,Iced latte,NA,premium,NA,DRINKS#QUALITY,NA,positive,NA,396
+90,NULL,NA,modern,NA,AMBIENCE#GENERAL,NA,positive,NA,396
+90,NULL,NA,warm,NA,AMBIENCE#GENERAL,NA,positive,NA,396
+90,NULL,NA,empty,NA,AMBIENCE#GENERAL,NA,positive,NA,396
+90,NULL,NA,famous,NA,RESTAURANT#GENERAL,NA,positive,NA,396
+90,NULL,NA,refurbished,NA,RESTAURANT#GENERAL,NA,positive,NA,396
+90,NULL,NA,tasteful,NA,RESTAURANT#GENERAL,NA,positive,NA,396
+91,traditional chinese fare,traditional chinese fare,joy,good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,78
+91,dishes,NA,impressed,NA,FOOD#QUALITY,NA,positive,NA,78
+91,NULL,NULL,impressed,NULL,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,78
+92,ambience,ambience,nice,nice,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,48
+92,service,service,good,good,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,48
+92,fried rice,fried rice,must try,must try,FOOD#QUALITY,FOOD#QUALITY,positive,positive,48
+92,fried rice,NA,reasonably priced,NA,FOOD#PRICES,NA,positive,NA,48
+92,NA,NULL,NA,reasonably priced,NA,AMBIENCE#GENERAL,NA,positive,48
+93,view,view,Great,Great,AMBIENCE#GENERAL,FOOD#QUALITY,positive,positive,67
+93,staff,staff,friendly,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,67
+93,pool,pool,cool,good selection of drinks,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,67
+93,selection of drinks,selection of drinks,good,best,DRINKS#STYLE_OPTIONS,AMBIENCE#GENERAL,positive,positive,67
+93,curly fries,curly fries,best,best,FOOD#QUALITY,AMBIENCE#GENERAL,positive,positive,67
+93,Elvin,NA,handsome,NA,SERVICE#GENERAL,NA,positive,NA,67
+93,NULL,NA,comfortable,NA,AMBIENCE#GENERAL,NA,positive,NA,67
+93,food,NA,good,NA,FOOD#QUALITY,NA,positive,NA,67
+93,drinks,NA,good,NA,DRINKS#QUALITY,NA,positive,NA,67
+93,place,place,Best,best,RESTAURANT#GENERAL,AMBIENCE#GENERAL,positive,positive,67
+94,hot & sour soup,hot & sour soup,best,best,FOOD#QUALITY,FOOD#QUALITY,positive,positive,134
+94,ho fun & dim sum,NA,tasty,NA,FOOD#QUALITY,NA,positive,NA,134
+94,ho fun & dim sum,NA,large portions,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,134
+94,Dim Sum,NA,fresh,NA,FOOD#QUALITY,NA,positive,NA,134
+94,service,service,average,average,SERVICE#GENERAL,SERVICE#GENERAL,neutral,positive,134
+94,atmosphere,NA,excellent,NA,AMBIENCE#GENERAL,NA,positive,NA,134
+94,NA,NULL,NA,best,NA,AMBIENCE#GENERAL,NA,positive,134
+94,NA,NULL,NA,best,NA,AMBIENCE#GENERAL,NA,positive,134
+95,Apek,Apek,friendly,friendly greet,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,65
+95,Apek,NA,fast,NA,SERVICE#GENERAL,NA,positive,NA,65
+95,Apek,NA,efficient,NA,SERVICE#GENERAL,NA,positive,NA,65
+95,Teh Tarik Kaw,Teh Tarik Kaw,NULL,fast,FOOD#QUALITY,FOOD#QUALITY,positive,positive,65
+95,NA,staff,NA,efficient,NA,SERVICE#GENERAL,NA,positive,65
+96,place,place,amazing,Amazing,RESTAURANT#GENERAL,AMBIENCE#GENERAL,positive,positive,19
+96,taste,taste,amazing,Amazing,FOOD#QUALITY,FOOD#QUALITY,positive,positive,19
+96,ideas,ideas,creative,Amazing,FOOD#STYLE_OPTIONS,FOOD#QUALITY,positive,positive,19
+96,presentation,presentation,attractive,Amazing,FOOD#STYLE_OPTIONS,AMBIENCE#GENERAL,positive,positive,19
+96,NULL,NA,well decorated,NA,AMBIENCE#GENERAL,NA,positive,NA,19
+96,NULL,NA,well organized,NA,SERVICE#GENERAL,NA,positive,NA,19
+96,NULL,NA,love,NA,RESTAURANT#GENERAL,NA,positive,NA,19
+96,NA,place,NA,well decorated,NA,AMBIENCE#GENERAL,NA,positive,19
+97,staff,staff,friendly,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,20
+97,NULL,NA,recommend,NA,RESTAURANT#GENERAL,NA,positive,NA,20
+97,NA,breakfast,NA,under 10 RG,NA,FOOD#QUALITY,NA,positive,20
+98,dining experience,NA,unique,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,227
+98,dining experience,NA,instagrammable,NA,AMBIENCE#GENERAL,NA,positive,NA,227
+98,NULL,NULL,NULL,unique,RESTAURANT#GENERAL,RESTAURANT#GENERAL,positive,positive,227
+98,NA,organising team,NA,unique,NA,SERVICE#GENERAL,NA,positive,227
+99,plain rice,NA,amazing,NA,FOOD#QUALITY,NA,positive,NA,105
+99,tomato pepper rasam,tomato pepper rasam,amazing,amazing,FOOD#QUALITY,FOOD#QUALITY,positive,positive,105
+99,basket of poppadoms,basket of poppadoms,crunch,crunch,FOOD#STYLE_OPTIONS,FOOD#QUALITY,positive,positive,105
+99,kadai mutton,NA,full meal platter,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,105
+99,karaikudi chicken kozhambu,karaikudi chicken kozhambu,full meal platter,crunch,FOOD#STYLE_OPTIONS,FOOD#QUALITY,positive,positive,105
+99,tawa fried vegetables,tawa fried vegetables,full meal platter,NULL,FOOD#STYLE_OPTIONS,FOOD#QUALITY,positive,positive,105
+99,gulab jamuns,NA,dollops,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,105
+99,bru dabara coffee,NA,traditional way,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,105
+99,ginger black tea,ginger black tea,NULL,NULL,FOOD#QUALITY,DRINKS#QUALITY,positive,positive,105
+99,NULL,NULL,affordable,NULL,PRICES#GENERAL,DRINKS#QUALITY,positive,positive,105
+99,NULL,NA,satisying,NA,FOOD#QUALITY,NA,positive,NA,105
+99,NULL,NA,accept credit cards,NA,SERVICE#GENERAL,NA,positive,NA,105
+99,ambience,NA,good,NA,AMBIENCE#GENERAL,NA,positive,NA,105
+99,NULL,NA,tasty,NA,FOOD#QUALITY,NA,positive,NA,105
+99,NULL,NA,good,NA,SERVICE#GENERAL,NA,positive,NA,105
+99,NULL,NA,nice,NA,AMBIENCE#GENERAL,NA,positive,NA,105
+99,NULL,NA,nice,NA,RESTAURANT#MISCELLANEOUS,NA,positive,NA,105
+99,NA,bru dabara coffee traditional way,NA,NULL,NA,DRINKS#QUALITY,NA,positive,105
+99,NA,dabra set,NA,NULL,NA,DRINKS#QUALITY,NA,positive,105
+100,NULL,NULL,miss out,NULL,SERVICE#GENERAL,SERVICE#GENERAL,negative,negative,73
+100,NULL,NA,shame,NA,SERVICE#GENERAL,NA,negative,NA,73
+100,NULL,NA,NULL,NA,SERVICE#GENERAL,NA,negative,NA,73
+100,NULL,NA,disappointed,NA,SERVICE#GENERAL,NA,negative,NA,73
+100,NA,place,NA,NULL,NA,RESTAURANT#GENERAL,NA,negative,73
+101,NULL,NA,delicious,NA,FOOD#QUALITY,NA,positive,NA,26
+101,NULL,NA,man flavor,NA,FOOD#QUALITY,NA,positive,NA,26
+101,NULL,NA,hot flavor,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,26
+101,side dishes,side dishes,NULL,hot flavor,FOOD#QUALITY,AMBIENCE#GENERAL,positive,positive,26
+101,chicken liver,chicken liver,taste so good,delicious,FOOD#QUALITY,FOOD#QUALITY,positive,positive,26
+101,NA,chicken liver,NA,chicken liver in hot flavor,NA,FOOD#QUALITY,NA,positive,26
+102,pulled pork burger,pulled pork burger,Yummy,Yummy,FOOD#QUALITY,FOOD#QUALITY,positive,positive,30
+102,fries,fries,crisp,crisp,FOOD#STYLE_OPTIONS,FOOD#QUALITY,positive,positive,30
+102,coleslaw,coleslaw,thick,Thick,FOOD#STYLE_OPTIONS,FOOD#QUALITY,positive,positive,30
+102,cocktails,cocktails,Loved,Great,DRINKS#QUALITY,FOOD#QUALITY,positive,positive,30
+102,service,service,Great,Great,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,30
+102,ambience,ambience,funky,funky,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,30
+103,service,service,attentive,attentive,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,31
+103,food,food,good,good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,31
+103,food,NA,good,NA,FOOD#QUALITY,NA,positive,NA,31
+103,prices,NA,reasonable,NA,RESTAURANT#PRICES,NA,positive,NA,31
+103,decor,decor,cold,reasonable,AMBIENCE#GENERAL,FOOD#QUALITY,negative,negative,31
+103,NA,menu,NA,Decent,NA,RESTAURANT#GENERAL,NA,positive,31
+103,NA,price,NA,good,NA,FOOD#QUALITY,NA,positive,31
+104,food,food,superb,superb,FOOD#QUALITY,FOOD#QUALITY,positive,positive,19
+104,Sujan,Sujan,friendly,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,19
+104,Sujan,NA,helpful,NA,SERVICE#GENERAL,NA,positive,NA,19
+105,nasi lemak,nasi lemak,good,good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,19
+105,service,service,Fast,fast,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,19
+105,fried chicken,fried chicken,Best,best,FOOD#STYLE_OPTIONS,FOOD#QUALITY,positive,positive,19
+105,NULL,NA,crowded,NA,RESTAURANT#MISCELLANEOUS,NA,negative,NA,19
+106,place,place,great,great,RESTAURANT#GENERAL,RESTAURANT#GENERAL,positive,positive,18
+106,habib,habib,amazing,amazing,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,18
+106,habib,NA,great hospitality,NA,SERVICE#GENERAL,NA,positive,NA,18
+106,NA,hospitality,NA,great,NA,SERVICE#GENERAL,NA,positive,18
+107,foie gras sandwich,foie gras sandwich,enjoyed,enjoyed,FOOD#QUALITY,FOOD#QUALITY,positive,positive,114
+107,luxurious scramble egg,luxurious scramble egg,enjoyed,enjoyed,FOOD#QUALITY,FOOD#QUALITY,positive,positive,114
+108,Service,Service,friendly,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,68
+108,Service,NA,quickly,NA,SERVICE#GENERAL,NA,positive,NA,68
+108,NULL,NULL,Clean,affordable,AMBIENCE#GENERAL,DRINKS#QUALITY,positive,negative,68
+108,Food,NA,Decent,NA,FOOD#QUALITY,NA,neutral,NA,68
+108,Food,NA,smallish serve size,NA,FOOD#STYLE_OPTIONS,NA,negative,NA,68
+108,Cost,Cost,affordable,affordable,FOOD#PRICES,AMBIENCE#GENERAL,positive,negative,68
+108,NULL,NA,affordable,NA,FOOD#PRICES,NA,positive,NA,68
+108,NA,Cleanliness,NA,clean,NA,CleanService:SERVICE#GENERAL,NA,positive,68
+108,NA,staff,NA,friendly,NA,SERVICE#GENERAL,NA,positive,68
+108,NA,Dishes,NA,smallish serve size,NA,FOOD#QUALITY,NA,positive,68
+109,breakfast,NA,good spread,NA,FOOD#QUALITY,NA,positive,NA,373
+109,breakfast,NA,fresh cut fruit,NA,FOOD#QUALITY,NA,positive,NA,373
+109,breakfast,NA,chilled juices,NA,FOOD#QUALITY,NA,positive,NA,373
+109,breads and pastries,NA,good,NA,FOOD#QUALITY,NA,positive,NA,373
+109,pancakes,NA,NULL,NA,FOOD#QUALITY,NA,positive,NA,373
+109,waffles,NA,NULL,NA,FOOD#QUALITY,NA,positive,NA,373
+109,seating area,NA,dated,NA,AMBIENCE#GENERAL,NA,negative,NA,373
+109,carpets,NA,very old,NA,AMBIENCE#GENERAL,NA,negative,NA,373
+109,marble flooring,NA,NULL,NA,AMBIENCE#GENERAL,NA,negative,NA,373
+109,ceiling panels,NA,NULL,NA,AMBIENCE#GENERAL,NA,negative,NA,373
+109,tables,NA,NULL,NA,AMBIENCE#GENERAL,NA,negative,NA,373
+109,chairs,NA,NULL,NA,AMBIENCE#GENERAL,NA,negative,NA,373
+109,wall wooden panels & dividers,NA,NULL,NA,AMBIENCE#GENERAL,NA,negative,NA,373
+109,made to order eggs station,NA,NULL,NA,FOOD#QUALITY,NA,negative,NA,373
+109,grilled tomatoes,grilled tomatoes,NULL,depressing,FOOD#QUALITY,DRINKS#QUALITY,negative,negative,373
+109,sautéed mushrooms,NA,NULL,NA,FOOD#QUALITY,NA,negative,NA,373
+109,hash browns,NA,NULL,NA,FOOD#QUALITY,NA,positive,NA,373
+109,staff,NA,struggling to clean and service the tables,NA,SERVICE#GENERAL,NA,negative,NA,373
+109,NA,saucing tomatoes,NA,depressing,NA,FOOD#QUALITY,NA,negative,373
+109,NA,grilled tomatoes,NA,depressing,NA,FOOD#QUALITY,NA,negative,373
+109,NA,saucing sauce,NA,depressing,NA,FOOD#QUALITY,NA,negative,373
+110,food,food,decent,Decent,FOOD#QUALITY,FOOD#QUALITY,neutral,positive,55
+110,food,NA,good variety,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,55
+110,kuih selections,kuih selections,love more,decent,FOOD#STYLE_OPTIONS,FOOD#QUALITY,positive,positive,55
+110,fresh thosai,fresh thosai,personal favourite,personal favourite,FOOD#QUALITY,FOOD#QUALITY,positive,positive,55
+110,staff,staff,amazing,amazing,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,55
+110,customer service,customer service,amazing,amazing,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,55
+110,Istiaq,Istiaq,amazing,amazing,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,55
+110,Jhiro,Jhiro,amazing,amazing,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,55
+110,Rubal,Rubal,amazing,amazing,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,55
+110,Kaz,Kaz,lovely,amazing,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,55
+110,Lina,Lina,lovely,amazing,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,55
+110,NA,Lina,NA,amazing,NA,SERVICE#GEN,NA,positive,55
+111,service,service,attentive,attentive,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,41
+111,service,NA,polite,NA,SERVICE#GENERAL,NA,positive,NA,41
+111,NULL,NULL,festive,polite,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,41
+111,NULL,NA,christmas,NA,AMBIENCE#GENERAL,NA,positive,NA,41
+112,food,food,tasty,tasty,FOOD#QUALITY,FOOD#QUALITY,positive,positive,78
+112,service,service,ok,ok,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,78
+112,service standards,service standards,improve,ok,SERVICE#GENERAL,SERVICE#GENERAL,neutral,positive,78
+112,NULL,NULL,crowded,crowded,AMBIENCE#GENERAL,AMBIENCE#GENERAL,negative,positive,78
+112,NULL,NA,NULL,NA,FOOD#PRICES,NA,positive,NA,78
+113,staff,staff,Fantastic,Fantastic,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,85
+113,Tiger pints,Tiger pints,cheapest,cheapest,DRINKS#PRICES,FOOD#QUALITY,positive,positive,85
+113,Mexican food,Mexican food,Authentic,Authentic,FOOD#QUALITY,FOOD#QUALITY,positive,positive,85
+113,Mexican food,NA,reasonable prices,NA,FOOD#PRICES,NA,positive,NA,85
+113,NULL,NULL,great,best,RESTAURANT#GENERAL,SERVICE#GENERAL,positive,positive,85
+114,Food,Food,usual - Chili's fare,as usual - Chili's fare,FOOD#QUALITY,FOOD#QUALITY,neutral,negative,104
+114,service,service,horrible,disappointing,SERVICE#GENERAL,SERVICE#GENERAL,negative,negative,104
+114,NA,waiters,NA,not attentive,NA,SERVICE#GENERAL,NA,negative,104
+114,NA,waiters,NA,disappointing,NA,SERVICE#GENERAL,NA,negative,104
+115,fish and chips,fish and chips,great,great,FOOD#QUALITY,FOOD#QUALITY,positive,positive,82
+115,batter,NA,under cooked,NA,FOOD#QUALITY,NA,negative,NA,82
+115,"barrimundi with prawns,Pippys i think and squids",NA,beautiful,NA,FOOD#QUALITY,NA,positive,NA,82
+115,Guinness,NA,hit the spot,NA,DRINKS#QUALITY,NA,positive,NA,82
+115,fresh squeezed fruit drink,fresh squeezed fruit drink,great,great,DRINKS#QUALITY,FOOD#QUALITY,positive,positive,82
+115,full breakfast,NA,great,NA,FOOD#QUALITY,NA,positive,NA,82
+115,eggs Benedict,NA,great,NA,FOOD#QUALITY,NA,positive,NA,82
+115,NULL,NULL,great,great,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,82
+115,English tea,NA,NULL,NA,DRINKS#STYLE_OPTIONS,NA,positive,NA,82
+115,NA,bath,NA,under cooked,NA,FOOD#QUALITY,NA,positive,82
+115,NA,guinness,NA,great,NA,FOOD#QUALITY,NA,positive,82
+115,NA,NULL,NA,great,NA,SERVICE#GENERAL,NA,positive,82
+116,portion of meat,portion of meat,Generous,Generous,FOOD#STYLE_OPTIONS,FOOD#QUALITY,positive,positive,58
+116,soup,soup,delicious,delicious,FOOD#QUALITY,FOOD#QUALITY,positive,positive,58
+116,service,service,good,good,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,58
+116,NULL,NA,favorite,NA,RESTAURANT#GENERAL,NA,positive,NA,58
+116,Parking,NA,challenging,NA,RESTAURANT#MISCELLANEOUS,NA,negative,NA,58
+116,hawker place,hawker place,hot,hot,AMBIENCE#GENERAL,FOOD#QUALITY,negative,negative,58
+116,pork noodle,pork noodle,best,best,FOOD#QUALITY,FOOD#QUALITY,positive,positive,58
+116,service,service,good,good,SERVICE#GENERAL,FOOD#QUALITY,positive,positive,58
+116,price,NA,decent,NA,FOOD#PRICES,NA,positive,NA,58
+116,NA,parking,NA,challenging,NA,SERVICE#GENERAL,NA,negative,58
+116,NA,pork noodle,NA,best,NA,SERVICE#GENERAL,NA,positive,58
+117,Ms.Jia Yang,Ms.Jia Yang,good experience,good experience,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,121
+117,game,NA,interesting,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,121
+117,NULL,NULL,Difficult,good experience,FOOD#STYLE_OPTIONS,AMBIENCE#GENERAL,negative,positive,121
+117,mr.radha,NA,friendly,NA,SERVICE#GENERAL,NA,positive,NA,121
+117,mr.radha,NA,kind hearted,NA,SERVICE#GENERAL,NA,positive,NA,121
+117,dinner,NA,awesome,NA,FOOD#QUALITY,NA,positive,NA,121
+117,foods,NA,new taste,NA,FOOD#QUALITY,NA,positive,NA,121
+117,foods,NA,best moment,NA,FOOD#QUALITY,NA,positive,NA,121
+117,NULL,NULL,good time,good time,SERVICE#GENERAL,AMBIENCE#GENERAL,positive,positive,121
+117,NULL,NULL,NULL,best moment,FOOD#STYLE_OPTIONS,AMBIENCE#GENERAL,positive,positive,121
+117,NULL,NA,NULL,NA,SERVICE#GENERAL,NA,positive,NA,121
+117,Ms.Bella,NA,best moment,NA,SERVICE#GENERAL,NA,positive,NA,121
+117,Ms.Bella,NA,good time,NA,SERVICE#GENERAL,NA,positive,NA,121
+117,NULL,NA,surprise menu,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,121
+117,NULL,NA,membership,NA,SERVICE#GENERAL,NA,positive,NA,121
+118,Spiced lamb on toast,Spiced lamb on toast,well prepared,good size,FOOD#QUALITY,FOOD#QUALITY,positive,positive,30
+118,Spiced lamb on toast,NA,good size,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,30
+118,Spiced lamb on toast,NA,well presented,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,30
+118,Guinness,NA,NULL,NA,DRINKS#QUALITY,NA,positive,NA,30
+118,Guinness,NA,NULL,NA,FOOD#PRICES,NA,positive,NA,30
+118,NA,Pints of Guinness,NA,well prepared,NA,FOOD#QUALITY,NA,positive,30
+119,beef noodle,beef noodle,NULL,big,FOOD#QUALITY,FOOD#QUALITY,positive,positive,106
+119,NULL,NA,efficient,NA,SERVICE#GENERAL,NA,positive,NA,106
+119,food,food,delicious,delicious,FOOD#QUALITY,FOOD#QUALITY,positive,positive,106
+119,drinks,drinks,very good,good,DRINKS#QUALITY,DRINKS#QUALITY,positive,positive,106
+119,NA,staff,NA,efficient,NA,SERVICE#GENERAL,NA,positive,106
+120,Tokujo set of 9 premium sushi,Tokujo set of 9 premium sushi,NULL,best,FOOD#QUALITY,FOOD#QUALITY,positive,positive,81
+120,NULL,NULL,popular,favorite,RESTAURANT#GENERAL,AMBIENCE#GENERAL,positive,positive,81
+120,Chef Hiro,Chef Hiro,masterful,Masterful,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,81
+120,Chef Hiro,NA,charming,NA,SERVICE#GENERAL,NA,positive,NA,81
+120,reservations,NA,recommended,NA,SERVICE#GENERAL,NA,positive,NA,81
+120,NULL,NA,favorite,NA,RESTAURANT#GENERAL,NA,positive,NA,81
+121,Helen Lee and her team,NA,NULL,NA,SERVICE#GENERAL,NA,positive,NA,93
+121,dessert,NA,beautiful,NA,FOOD#QUALITY,NA,positive,NA,93
+121,dessert,NA,tasty,NA,FOOD#QUALITY,NA,positive,NA,93
+121,atmosphere,NA,relaxed,NA,AMBIENCE#GENERAL,NA,positive,NA,93
+121,atmosphere,NA,pleasant,NA,AMBIENCE#GENERAL,NA,positive,NA,93
+121,staff,staff,great care,great,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,93
+121,NA,Helen Lee,NA,great,NA,SERVICE#GENERAL,NA,positive,93
+121,NA,NULL,NA,great,NA,SERVICE#GENERAL,NA,positive,93
+122,dishes,NA,fantastic,NA,FOOD#QUALITY,NA,positive,NA,70
+122,dishes,NA,marveled,NA,FOOD#QUALITY,NA,positive,NA,70
+122,ingredients,NA,wonderful,NA,FOOD#QUALITY,NA,positive,NA,70
+122,NULL,NULL,amazing,best,FOOD#QUALITY,AMBIENCE#GENERAL,positive,positive,70
+122,service,service,good,good,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,70
+122,service,NA,attentive,NA,SERVICE#GENERAL,NA,positive,NA,70
+122,location,location,quirky,unique,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,70
+122,location,location,NULL,unique,LOCATION#GENERAL,AMBIENCE#GENERAL,positive,positive,70
+122,venue,venue,not the most polished,not the most polished,AMBIENCE#GENERAL,AMBIENCE#GENERAL,negative,positive,70
+122,NA,17 course degustation dinner,NA,amazing,NA,FOOD#QUALITY,NA,positive,70
+123,roast duck,roast duck,succulent,succulent,FOOD#QUALITY,,positive,positive,222
+123,roast duck,NA,tender,NA,FOOD#QUALITY,NA,positive,NA,222
+123,roast duck,NA,seasoned perfectly,NA,FOOD#QUALITY,NA,positive,NA,222
+123,roast pork (siew yoke),NA,tender,NA,FOOD#QUALITY,NA,positive,NA,222
+123,roast pork (siew yoke),NA,tasty,NA,FOOD#QUALITY,NA,positive,NA,222
+123,roast pork (siew yoke),NA,crispy,NA,FOOD#QUALITY,NA,positive,NA,222
+123,barbecued roast pork (char siew),NA,heavenly,NA,FOOD#QUALITY,NA,positive,NA,222
+123,barbecued roast pork (char siew),NA,tender,NA,FOOD#QUALITY,NA,positive,NA,222
+123,barbecued roast pork (char siew),NA,nicely caramelized,NA,FOOD#QUALITY,NA,positive,NA,222
+123,barbecued roast pork (char siew),NA,devoid of ghastly red coloring,NA,FOOD#QUALITY,NA,positive,NA,222
+123,wantan noodles,NA,al dente,NA,FOOD#QUALITY,NA,positive,NA,222
+123,wantan noodles,NA,deliciously coated with meat juices,NA,FOOD#QUALITY,NA,positive,NA,222
+123,fried rice cooked in lotus leaves,NA,reminiscent of rustic home cooking,NA,FOOD#QUALITY,NA,positive,NA,222
+123,fried rice cooked in lotus leaves,NA,pure comfort food,NA,FOOD#QUALITY,NA,positive,NA,222
+123,steamed pork with salted fish,NA,NULL,NA,FOOD#QUALITY,NA,positive,NA,222
+123,stewed pork & yam ('kau yoke'),NA,tender,NA,FOOD#QUALITY,NA,positive,NA,222
+123,clam soup (xiong tong lala),NA,NULL,NA,FOOD#QUALITY,NA,positive,NA,222
+123,stir fried beans in shrimp paste (belacan),NA,NULL,NA,FOOD#QUALITY,NA,positive,NA,222
+123,braised homestyle tofu,NA,NULL,NA,FOOD#QUALITY,NA,positive,NA,222
+123,service staff,NA,attentive,NA,SERVICE#GENERAL,NA,positive,NA,222
+123,service staff,NA,efficient,NA,SERVICE#GENERAL,NA,positive,NA,222
+123,service staff,NA,accommodating,NA,SERVICE#GENERAL,NA,positive,NA,222
+123,service staff,NA,courteous,NA,SERVICE#GENERAL,NA,positive,NA,222
+123,service staff,NA,knowledgeable about the food offerings,NA,SERVICE#GENERAL,NA,positive,NA,222
+124,service,service,impeccable,inviting,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,96
+124,food,food,delicious,delicious,FOOD#QUALITY,FOOD#QUALITY,positive,positive,96
+124,mains,NA,delicious,NA,FOOD#QUALITY,NA,positive,NA,96
+124,dishes,NA,extensive,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,96
+124,desserts,NA,extensive,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,96
+124,desserts,NA,good,NA,FOOD#QUALITY,NA,positive,NA,96
+124,NULL,NULL,intimate,delicious,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,96
+124,NULL,NA,distanced,NA,AMBIENCE#GENERAL,NA,positive,NA,96
+124,NA,staff,NA,attentive,NA,SERVICE#GENERAL,NA,positive,96
+125,food,food,ok,ok,FOOD#QUALITY,FOOD#QUALITY,neutral,negative,23
+125,staffs,staffs,NULL,NULL,SERVICE#GENERAL,SERVICE#GENERAL,negative,positive,23
+126,wait staffs,wait staffs,friendly,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,91
+126,wait staffs,NA,helpful,NA,SERVICE#GENERAL,NA,positive,NA,91
+126,food,food,amazing,amazing,FOOD#QUALITY,SERVICE#GENERAL,positive,positive,91
+126,Mangosteen Salad,Mangosteen Salad,NULL,amazing,FOOD#QUALITY,FOOD#QUALITY,positive,positive,91
+126,Mangosteen Salad,NA,tasty,NA,FOOD#QUALITY,NA,positive,NA,91
+126,interior,interior,nicely done,nicely done,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,91
+126,dining,NA,casual,NA,AMBIENCE#GENERAL,NA,positive,NA,91
+126,dining,NA,beautiful presentation,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,91
+126,NULL,NULL,pricey,nicely done,FOOD#PRICES,FOOD#QUALITY,negative,positive,91
+126,NA,NULL,NA,favorite,NA,AMBIENCE#GENERAL,NA,positive,91
+127,Lou Sang,Lou Sang,NULL,nice,FOOD#STYLE_OPTIONS,FOOD#QUALITY,positive,positive,140
+127,Peking duck,NA,not quite as tasty,NA,FOOD#QUALITY,NA,negative,NA,140
+127,service,service,deteriorated,deteriorated,SERVICE#GENERAL,SERVICE#GENERAL,negative,negative,140
+127,taufu,taufu,tasty,tasty,FOOD#QUALITY,FOOD#QUALITY,positive,positive,140
+127,beef,beef,tasty,tasty,FOOD#QUALITY,FOOD#QUALITY,positive,positive,140
+127,noodles with duck,NA,NULL,NA,FOOD#QUALITY,NA,positive,NA,140
+127,Chinese sausages with rice,NA,NULL,NA,FOOD#QUALITY,NA,positive,NA,140
+127,fish dish,NA,NULL,NA,FOOD#QUALITY,NA,positive,NA,140
+127,NA,NULL,NA,tasty,NA,SERVICE#GENERAL,NA,negative,140
+127,NA,waiters,NA,re-filling tea/changing dirty plates,NA,SERVICE#GENERAL,NA,negative,140
+128,chat,chat,tasty,tasty,FOOD#QUALITY,FOOD#QUALITY,positive,positive,76
+128,Ragda Pattice,Ragda Pattice,tasty,tasty,FOOD#QUALITY,FOOD#QUALITY,positive,positive,76
+128,Ragda Pattice,NA,spicy,NA,FOOD#QUALITY,NA,negative,NA,76
+128,prices,prices,high,high,FOOD#PRICES,AMBIENCE#GENERAL,negative,negative,76
+128,prices,NA,high,NA,DRINKS#PRICES,NA,negative,NA,76
+128,location,location,NULL,NULL,LOCATION#GENERAL,AMBIENCE#GENERAL,negative,negative,76
+128,NULL,NULL,average,average,RESTAURANT#GENERAL,AMBIENCE#GENERAL,negative,negative,76
+129,buffet,buffet,enjoyed,enjoyed,FOOD#QUALITY,FOOD#QUALITY,positive,positive,85
+129,buffet,NA,enjoyed,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,85
+129,restaurant,restaurant,spacious,spacious,AMBIENCE#GENERAL,RESTAURANT#GENERAL,positive,positive,85
+129,restaurant,NA,well laid out,NA,AMBIENCE#GENERAL,NA,positive,NA,85
+129,seating,seating,comfortable,well laid out,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,85
+129,food,NA,high-quality,NA,FOOD#QUALITY,NA,positive,NA,85
+129,dishes,NA,well-presented,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,85
+129,dishes,NA,fresh,NA,FOOD#QUALITY,NA,positive,NA,85
+129,dishes,NA,appealing,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,85
+129,roast lamb,NA,favourites,NA,FOOD#QUALITY,NA,positive,NA,85
+129,desserts,NA,favourites,NA,FOOD#QUALITY,NA,positive,NA,85
+129,Indian dishes,NA,tasty,NA,FOOD#QUALITY,NA,positive,NA,85
+129,Indian dishes,NA,well cooked,NA,FOOD#QUALITY,NA,positive,NA,85
+129,service,service,professional,professional,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,85
+129,service,NA,unobtrusive,NA,SERVICE#GENERAL,NA,positive,NA,85
+129,NA,NULL,NA,comfortable,NA,AMBIENCE#GENERAL,NA,positive,85
+129,NA,NULL,NA,comfortable,NA,AMBIENCE#GENERAL,NA,positive,85
+130,Spice chicken,Spice chicken,Taste good,Taste good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,25
+130,Menu variety,NA,Ok,NA,FOOD#STYLE_OPTIONS,NA,neutral,NA,25
+130,Service,NA,Moderate,NA,SERVICE#GENERAL,NA,neutral,NA,25
+130,NULL,NULL,"Located Level Pavilion Mall ., Easy Reachable,Vegetarian Friendly",easy reachable,LOCATION#GENERAL,SERVICE#GENERAL,positive,positive,25
+130,NA,NULL,NA,moderate,NA,SERVICE#GENERAL,NA,positive,25
+131,NULL,NA,warm,NA,SERVICE#GENERAL,NA,positive,NA,113
+131,drinks,drinks,good,good,DRINKS#QUALITY,DRINKS#QUALITY,positive,positive,113
+131,food,food,match,match,FOOD#QUALITY,FOOD#QUALITY,positive,positive,113
+131,NA,welcome,NA,warm,NA,SERVICE#GENERAL,NA,positive,113
+132,food,food,superb,superb,FOOD#QUALITY,FOOD#QUALITY,positive,positive,91
+132,food,NA,impressed,NA,FOOD#QUALITY,NA,positive,NA,91
+132,food,NA,flavours,NA,FOOD#QUALITY,NA,positive,NA,91
+132,food,NA,presentation,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,91
+132,cocktails,cocktails,nicely made,nicely made,DRINKS#QUALITY,FOOD#QUALITY,positive,positive,91
+132,service,service,NULL,helpful,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,91
+132,ambience,NA,good,NA,AMBIENCE#GENERAL,NA,positive,NA,91
+132,music,music,good,good,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,91
+132,NULL,NA,definitely go again,NA,RESTAURANT#GENERAL,NA,positive,NA,91
+132,price,price,expensive,well worth,FOOD#PRICES,AMBIENCE#GENERAL,negative,positive,91
+132,price,NA,worthy,NA,FOOD#PRICES,NA,positive,NA,91
+132,NA,ambiance,NA,good,NA,AMBIENCE#GENERAL,NA,positive,91
+133,host,host,excellent,excellent,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,59
+133,food,food,good,good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,59
+133,ambience,ambience,perfect,perfect,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,59
+133,music,music,light,light,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,59
+133,lighting,lighting,soft feel,soft feel,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,59
+133,guests,NA,well mannered,NA,AMBIENCE#GENERAL,NA,positive,NA,59
+133,NA,other guests,NA,well mannered,NA,AMBIENCE#GENERAL,NA,positive,59
+134,staff,staff,friendly,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,207
+134,staff,NA,courteous,NA,SERVICE#GENERAL,NA,positive,NA,207
+134,food,NA,delicious,NA,FOOD#QUALITY,NA,positive,NA,207
+134,food,NA,tasty,NA,FOOD#QUALITY,NA,positive,NA,207
+134,coffees,NA,NULL,NA,DRINKS#QUALITY,NA,positive,NA,207
+134,teas,NA,NULL,NA,DRINKS#QUALITY,NA,positive,NA,207
+134,NULL,NULL,cheap,accommodating,FOOD#PRICES,SERVICE#GENERAL,positive,positive,207
+134,NULL,NULL,good,cleanliness,FOOD#STYLE_OPTIONS,SERVICE#GENERAL,positive,positive,207
+134,NULL,NULL,helpful,good,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,207
+134,NULL,NA,attentive,NA,SERVICE#GENERAL,NA,positive,NA,207
+134,NULL,NA,glad,NA,RESTAURANT#GENERAL,NA,positive,NA,207
+134,cleanliness,NA,good,NA,FOOD#QUALITY,NA,positive,NA,207
+134,quality of the meals,NA,good,NA,FOOD#QUALITY,NA,positive,NA,207
+135,meal,meal,Good,Good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,25
+135,price,price,decent,good,FOOD#PRICES,AMBIENCE#GENERAL,positive,positive,25
+135,service,service,good,good,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,25
+135,Chef,Chef,friendly,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,25
+135,pizzas,pizzas,good,good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,25
+135,Pastas,Pastas,average,average,FOOD#QUALITY,FOOD#QUALITY,negative,negative,25
+135,wine list,wine list,decent,decent,DRINKS#STYLE_OPTIONS,AMBIENCE#GENERAL,positive,positive,25
+136,manager and the staff,NA,attentive,NA,SERVICE#GENERAL,NA,positive,NA,57
+136,manager and the staff,NA,focus to the guest,NA,SERVICE#GENERAL,NA,positive,NA,57
+136,food,food,nice,nice,FOOD#QUALITY,FOOD#QUALITY,positive,positive,57
+136,food,NA,large selection of dish,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,57
+136,wine,wine,good,good,DRINKS#QUALITY,FOOD#QUALITY,positive,positive,57
+136,prices,prices,affordable,good,FOOD#PRICES,AMBIENCE#GENERAL,positive,positive,57
+136,NA,manager,NA,attentive,NA,SERVICE#GENERAL,NA,positive,57
+136,NA,staff,NA,focus to the guest,NA,SERVICE#GENERAL,NA,positive,57
+136,NA,price,NA,affordable,NA,AMBIENCE#GENERAL,NA,positive,57
+137,prawn dumpling,prawn dumpling,favorite,love,FOOD#QUALITY,FOOD#QUALITY,positive,positive,28
+137,NULL,NA,surprise,NA,FOOD#QUALITY,NA,positive,NA,28
+137,NA,food quality,NA,good,NA,AMBIENCE#GENERAL,NA,positive,28
+138,food,food,plentiful,pleasant,FOOD#STYLE_OPTIONS,FOOD#QUALITY,positive,positive,83
+138,food,NA,plentiful,NA,FOOD#QUALITY,NA,positive,NA,83
+138,food,NA,sushi,NA,FOOD#QUALITY,NA,positive,NA,83
+138,food,NA,sushi,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,83
+138,service,service,attentive,extremely attentive,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,83
+138,NA,NULL,NA,obnoxious,NA,AMBIENCE#GENERAL,NA,negative,83
+139,fresh bread,fresh bread,liked,loved,FOOD#QUALITY,FOOD#QUALITY,positive,positive,21
+139,hummus,hummus,liked,loved,FOOD#QUALITY,FOOD#QUALITY,positive,positive,21
+139,Kabab Halabi,Kabab Halabi,good,good,FOOD#QUALITY,AMBIENCE#GENERAL,positive,positive,21
+140,dishes,dishes,exceptional,Thai inspired,FOOD#QUALITY,FOOD#QUALITY,positive,positive,77
+140,dishes,NA,Thai inspired,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,77
+140,Thai food,NA,not typical,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,77
+140,fusion with more contemporary styles of cooking,fusion with more contemporary styles of cooking,better,delicious,FOOD#STYLE_OPTIONS,SERVICE#GENERAL,positive,positive,77
+140,NULL,NULL,delightful,noisy,FOOD#STYLE_OPTIONS,AMBIENCE#GENERAL,positive,positive,77
+140,NULL,NA,exceptional,NA,FOOD#QUALITY,NA,positive,NA,77
+140,restaurant,restaurant,noisy,noisy,AMBIENCE#GENERAL,AMBIENCE#GENERAL,negative,negative,77
+140,restaurant,NA,noisy,NA,AMBIENCE#GENERAL,NA,negative,NA,77
+140,Service,NA,good,NA,SERVICE#GENERAL,NA,positive,NA,77
+141,staff,staff,welcomed,well-trained,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,238
+141,staff,NA,well-trained,NA,SERVICE#GENERAL,NA,positive,NA,238
+141,staff,NA,polite,NA,SERVICE#GENERAL,NA,positive,NA,238
+141,staff,NA,professional,NA,SERVICE#GENERAL,NA,positive,NA,238
+141,Black Angus Pure Certified Australian Angus Beef Medallion,NA,good,NA,FOOD#QUALITY,NA,positive,NA,238
+141,Steak Bordelaise,NA,great,NA,FOOD#QUALITY,NA,positive,NA,238
+141,NULL,NULL,perfection,Best,FOOD#QUALITY,AMBIENCE#GENERAL,positive,positive,238
+141,service,service,Superb,superb,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,238
+141,bread basket,bread basket,fresh,fresh,FOOD#QUALITY,SERVICE#GENERAL,positive,positive,238
+141,Werner's Special,Werner's Special,sweet,NULL,FOOD#QUALITY,AMBIENCE#GENERAL,positive,positive,238
+141,Werner's Special,NA,refreshing,NA,FOOD#QUALITY,NA,positive,NA,238
+141,Jubert,NA,special,NA,SERVICE#GENERAL,NA,positive,NA,238
+141,Jubert,NA,appreciation,NA,SERVICE#GENERAL,NA,positive,NA,238
+141,Jubert,NA,thanks,NA,SERVICE#GENERAL,NA,positive,NA,238
+141,NULL,NA,wonderful,NA,FOOD#QUALITY,NA,positive,NA,238
+141,steaks,steaks,best,good,FOOD#QUALITY,SERVICE#GENERAL,positive,positive,238
+141,service,NA,excellent,NA,SERVICE#GENERAL,NA,positive,NA,238
+142,food quality,NA,good,NA,FOOD#QUALITY,NA,positive,NA,467
+142,pricing,NA,affordable,NA,FOOD#PRICES,NA,positive,NA,467
+142,Garlic & Escargot Soup,NA,good,NA,FOOD#QUALITY,NA,positive,NA,467
+142,Salmon & Katsuo,NA,Delicious,NA,FOOD#QUALITY,NA,positive,NA,467
+142,Duck & Potato,NA,impressed,NA,FOOD#QUALITY,NA,positive,NA,467
+142,presentation,NA,impressed,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,467
+142,Butter Fish,NA,prefer,NA,FOOD#QUALITY,NA,negative,NA,467
+142,pickled onion,NA,cut through the richness of the sauce,NA,FOOD#QUALITY,NA,positive,NA,467
+142,Banana Éclair,NA,Lovely,NA,FOOD#QUALITY,NA,positive,NA,467
+142,complimentary bread with kombu butter,NA,heavenly,NA,FOOD#QUALITY,NA,positive,NA,467
+142,NULL,NA,beautiful,NA,AMBIENCE#GENERAL,NA,positive,NA,467
+142,NULL,NA,satisfied,NA,SERVICE#GENERAL,NA,positive,NA,467
+142,NA,salmon tartare,NA,deep fried,NA,FOOD#QUALITY,NA,positive,467
+143,staff,staff,Izzatie & Hassif,Izzatie & Hassif,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,16
+143,staff,NA,Suresh & Yazed,NA,FOOD#QUALITY,NA,positive,NA,16
+143,NA,NULL,NA,NULL,NA,SERVICE#GENERAL,NA,positive,16
+144,food,food,amazing,amazing,FOOD#QUALITY,FOOD#QUALITY,positive,positive,63
+144,food,NA,great,NA,FOOD#PRICES,NA,positive,NA,63
+144,desserts,desserts,whole new level,a whole new level,FOOD#QUALITY,FOOD#QUALITY,positive,positive,63
+144,Anis,NA,amazing,NA,SERVICE#GENERAL,NA,positive,NA,63
+144,NA,prices,NA,great,NA,AMBIENCE#GENERAL,NA,positive,63
+144,NA,NULL,NA,amazing,NA,AMBIENCE#GENERAL,NA,positive,63
+145,food,food,nice,nice,FOOD#QUALITY,FOOD#QUALITY,positive,positive,25
+145,service,service,friendly,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,25
+145,NA,bar staff,NA,friendly,NA,SERVICE#GENERAL,NA,positive,25
+145,NA,bar staff,NA,friendly,NA,SERVICE#GENERAL,NA,positive,25
+145,NA,NULL,NA,friendly,NA,SERVICE#GENERAL,NA,positive,25
+146,lamb rack,lamb rack,superb,superb,FOOD#QUALITY,FOOD#QUALITY,positive,positive,23
+146,aglio olio,aglio olio,superb,superb,FOOD#QUALITY,FOOD#QUALITY,positive,positive,23
+146,Ambience,NA,nice,NA,AMBIENCE#GENERAL,NA,positive,NA,23
+146,waiter Sarmila,waiter Sarmila,attentive,attentive,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,23
+146,waiter Sarmila,NA,friendly,NA,SERVICE#GENERAL,NA,positive,NA,23
+146,NA,Food,NA,superb,NA,FOOD#QUALITY,NA,positive,23
+146,NA,ambience,NA,nice,NA,AMBIENCE#GENERAL,NA,positive,23
+147,food,food,nice,nice,FOOD#QUALITY,FOOD#QUALITY,positive,positive,21
+147,service,service,good,good,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,21
+147,lamb shamp,lamb shamp,Great,good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,21
+147,service,service,good,good,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,21
+147,cocktail,NA,special,NA,DRINKS#STYLE_OPTIONS,NA,positive,NA,21
+147,NA,meat shamp,NA,good,NA,FOOD#QUALITY,NA,positive,21
+147,NA,service,NA,good,NA,SERVICE#GENERAL,NA,positive,21
+147,NA,drink,NA,good,NA,SERVICE#GENERAL,NA,positive,21
+148,wines,wines,Great,Great,DRINKS#QUALITY,FOOD#QUALITY,positive,positive,32
+148,cocktails,cocktails,Great,Great,DRINKS#QUALITY,FOOD#QUALITY,positive,positive,32
+148,staff,staff,Attentive,attentive,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,32
+148,chef,chef,fuss around you,attentive,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,32
+148,NULL,NULL,authentic,authentic,FOOD#QUALITY,AMBIENCE#GENERAL,positive,positive,32
+149,kids menu,kids menu,not impressed,not impressed,FOOD#QUALITY,RESTAURANT#GENERAL,negative,negative,100
+149,food,food,mostly cold,pre prepared,FOOD#QUALITY,FOOD#QUALITY,negative,negative,100
+149,food,food,over-cooked,over-cooked,FOOD#QUALITY,FOOD#QUALITY,negative,negative,100
+149,NULL,NULL,plenty of room for improvement,over-cooked,FOOD#QUALITY,FOOD#QUALITY,negative,negative,100
+149,NULL,NA,NULL,NA,FOOD#STYLE_OPTIONS,NA,negative,NA,100
+149,NULL,NA,NULL,NA,FOOD#PRICES,NA,negative,NA,100
+150,service,service,Great,Great,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,29
+150,food,food,excellent,excellent,FOOD#QUALITY,FOOD#QUALITY,positive,positive,29
+150,ambient,ambient,nice,nice,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,29
+151,chic banana Roti,NA,NULL,NA,FOOD#QUALITY,NA,positive,NA,30
+151,staff,staff,friendly,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,30
+151,food,food,great,great,FOOD#QUALITY,FOOD#QUALITY,positive,positive,30
+151,NA,chiban Roti,NA,enjoy,NA,FOOD#QUALITY,NA,positive,30
+152,Fat Brother,Fat Brother,great value,great value,PRICES#GENERAL,FOOD#QUALITY,positive,positive,31
+152,Fat Brother,NA,clean,NA,FOOD#QUALITY,NA,positive,NA,31
+152,Fat Brother,NA,fresh,NA,FOOD#QUALITY,NA,positive,NA,31
+153,food,food,satisfying,satisfying,FOOD#QUALITY,FOOD#QUALITY,positive,positive,26
+153,services,services,satisfying,satisfying,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,26
+153,Shaz,Shaz,friendly,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,26
+153,rossi,rossi,friendly,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,26
+153,Kampala,Kampala,friendly,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,26
+153,wegen,wegen,friendly,welcomed,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,26
+154,food,food,good,good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,84
+154,food,NA,big portions,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,84
+154,food,NA,good taste,NA,FOOD#QUALITY,NA,positive,NA,84
+154,food,NA,affordable prices,NA,FOOD#PRICES,NA,positive,NA,84
+154,service,service,amazing,attentive,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,84
+154,waiters,waiters,attentive,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,84
+154,waiters,waiters,friendly,amazing,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,84
+154,waiters,NA,amazing,NA,SERVICE#GENERAL,NA,positive,NA,84
+154,NA,portions,NA,good taste,NA,FOOD#QUALITY,NA,positive,84
+154,NA,good taste,NA,affordable,NA,FOOD#QUALITY,NA,positive,84
+154,NA,prices,NA,amazing,NA,FOOD#QUALITY,NA,positive,84
+155,food options,NA,wonderful,NA,FOOD#QUALITY,NA,positive,NA,105
+155,NULL,NULL,delighted,enjoyed,RESTAURANT#GENERAL,SERVICE#GENERAL,positive,positive,105
+155,iPad,NA,NULL,NA,SERVICE#GENERAL,NA,positive,NA,105
+155,NA,food,NA,delicious,NA,FOOD#QUALITY,NA,positive,105
+155,NA,ipad,NA,enjoyed,NA,SERVICE#GENERAL,NA,positive,105
+156,samosa,samosa,excellent,excellent,FOOD#QUALITY,FOOD#QUALITY,positive,positive,41
+156,"pap( rice substitute), wild mushroom combine with carrot",NA,superb,NA,FOOD#QUALITY,NA,positive,NA,41
+156,NULL,NULL,full,full,FOOD#STYLE_OPTIONS,AMBIENCE#GENERAL,positive,positive,41
+156,service,service,great,great,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,41
+156,NULL,NA,Different environment,NA,AMBIENCE#GENERAL,NA,positive,NA,41
+156,NULL,NA,well organised,NA,SERVICE#GENERAL,NA,positive,NA,41
+156,NA,environment,NA,Different,NA,AMBIENCE#GENERAL,NA,positive,41
+156,NA,staff,NA,knows it,NA,SERVICE#GENERAL,NA,positive,41
+156,NA,"vegetarian main course pap( rice substitute), wild mushroom combine with carrot",NA,,NA,FOOD#QUALITY,NA,positive,41
+157,servers,servers,wonderful,wonderful,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,49
+157,NULL,NA,wonderful,NA,SERVICE#GENERAL,NA,positive,NA,49
+157,NA,mandarin employees,NA,first class,NA,SERVICE#GENERAL,NA,positive,49
+157,NA,mandarin employees,NA,first class,NA,SERVICE#GENERAL,NA,positive,49
+158,duck,duck,good,good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,21
+158,service,service,fast,fast,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,21
+158,service,NA,proper,NA,SERVICE#GENERAL,NA,positive,NA,21
+158,NULL,NA,clean,NA,RESTAURANT#MISCELLANEOUS,NA,positive,NA,21
+158,NA,clean,NA,proper,NA,SERVICE#GENERAL,NA,positive,21
+159,foods,foods,good,good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,27
+159,service,service,tip top,tip top,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,27
+159,service,NA,friendly,NA,SERVICE#GENERAL,NA,positive,NA,27
+159,service,NA,awsome,NA,SERVICE#GENERAL,NA,positive,NA,27
+159,NA,NULL,NA,friendly,NA,SERVICE#GENERAL,NA,positive,27
+160,Food,Food,delish,delish,FOOD#QUALITY,FOOD#QUALITY,positive,positive,38
+160,coffe,coffe,very nice,nice,DRINKS#QUALITY,FOOD#QUALITY,positive,positive,38
+160,workers,workers,friendly,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,38
+160,workers,NA,lovely,NA,SERVICE#GENERAL,NA,positive,NA,38
+160,interior,interior,cool,lovely,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,38
+160,music,music,good,cool,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,38
+161,mezza platter,mezza platter,delicious,delicious,FOOD#QUALITY,FOOD#QUALITY,positive,positive,55
+161,service,service,satisfied,satisfied,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,55
+161,NULL,NA,satisfied,NA,RESTAURANT#GENERAL,NA,positive,NA,55
+161,NA,staff,NA,friendly,NA,SERVICE#GENERAL,NA,positive,55
+161,NA,food,NA,delicious,NA,FOOD#QUALITY,NA,positive,55
+162,Brian,Brian,welcomed,great hospitality,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,59
+162,Brian,NA,helped us to take many amazing photos,NA,SERVICE#GENERAL,NA,positive,NA,59
+162,NA,Bar Manager,NA,great,NA,SERVICE#GENERAL,NA,positive,59
+162,NA,NULL,NA,chill,NA,SERVICE#GENERAL,NA,positive,59
+163,pad thai,pad thai,ok,ok,FOOD#QUALITY,FOOD#QUALITY,neutral,positive,42
+163,pad thai,NA,fine,NA,FOOD#STYLE_OPTIONS,NA,neutral,NA,42
+163,portion,portion,fine,fine,FOOD#STYLE_OPTIONS,FOOD#QUALITY,neutral,positive,42
+163,green curry,green curry,recommend,creamy,FOOD#QUALITY,FOOD#QUALITY,positive,positive,42
+163,green curry,NA,creamy,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,42
+163,green curry,NA,not spicy,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,42
+163,price,NA,high side,NA,FOOD#PRICES,NA,negative,NA,42
+163,NA,Price,NA,not spicy,NA,AMBIENCE#GENERAL,NA,positive,42
+164,service,service,Good,Good,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,31
+164,NULL,NA,ok,NA,FOOD#QUALITY,NA,neutral,NA,31
+164,ambience,ambience,Good,good,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,negative,31
+164,ambience,NA,a lot of flies,NA,AMBIENCE#GENERAL,NA,negative,NA,31
+164,NA,Food,NA,ok,NA,FOOD#QUALITY,NA,positive,31
+164,NA,chicken rice,NA,good,NA,FOOD#QUALITY,NA,positive,31
+165,vibe,vibe,Love,love,AMBIENCE#GENERAL,FOOD#QUALITY,positive,positive,23
+165,snacks,snacks,good,good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,23
+165,entertainment,entertainment,good,good,RESTAURANT#MISCELLANEOUS,AMBIENCE#GENERAL,positive,positive,23
+165,NULL,NULL,Great,great,RESTAURANT#GENERAL,SERVICE#GENERAL,positive,positive,23
+165,NULL,NA,stellar,NA,RESTAURANT#GENERAL,NA,positive,NA,23
+165,NULL,NA,real,NA,RESTAURANT#GENERAL,NA,positive,NA,23
+166,pool,pool,awesome,awesome,AMBIENCE#GENERAL,FOOD#QUALITY,positive,positive,60
+166,restaurant,restaurant,excellent,excellent,FOOD#QUALITY,RESTAURANT#GENERAL,positive,positive,60
+166,restaurant,NA,excellent,NA,DRINKS#QUALITY,NA,positive,NA,60
+166,Fatin,NA,nice,NA,SERVICE#GENERAL,NA,positive,NA,60
+166,Fatin,NA,polite,NA,SERVICE#GENERAL,NA,positive,NA,60
+166,Fatin,NA,exceptional,NA,SERVICE#GENERAL,NA,positive,NA,60
+166,NULL,NULL,valuable,nice,SERVICE#GENERAL,AMBIENCE#GENERAL,positive,positive,60
+166,NA,hostess name Fatin,NA,nice,NA,SERVICE#GENERAL,NA,positive,60
+167,Cocktails,Cocktails,big ice cube,big ice cube,DRINKS#STYLE_OPTIONS,FOOD#QUALITY,negative,negative,29
+167,Cocktails,NA,very little drink,NA,DRINKS#QUALITY,NA,negative,NA,29
+167,Ambiance,NA,basic,NA,AMBIENCE#GENERAL,NA,negative,NA,29
+167,decor,decor,basic,basic,AMBIENCE#GENERAL,AMBIENCE#GENERAL,negative,negative,29
+167,place,place,not worth it,Disappointed,RESTAURANT#GENERAL,DRINKS#QUALITY,negative,negative,29
+167,place,NA,Disappointed,NA,RESTAURANT#GENERAL,NA,negative,NA,29
+167,NA,ambiance,NA,basic,NA,AMBIENCE#GENERAL,NA,negative,29
+168,food,food,great,great,FOOD#QUALITY,FOOD#QUALITY,positive,positive,28
+168,food,NA,great,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,28
+168,beer,beer,great,great,DRINKS#QUALITY,FOOD#QUALITY,positive,positive,28
+168,NULL,NULL,attracted,vibrant,AMBIENCE#GENERAL,SERVICE#GENERAL,positive,positive,28
+168,NULL,NA,fun,NA,RESTAURANT#GENERAL,NA,positive,NA,28
+169,restaurant,restaurant,good,good,RESTAURANT#GENERAL,RESTAURANT#GENERAL,positive,positive,52
+169,food,food,good,good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,52
+169,staff,staff,good,good,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,52
+169,Japanese curry katsu,Japanese curry katsu,good,good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,52
+169,Red Ruby,Red Ruby,tasty,tasty,FOOD#QUALITY,FOOD#QUALITY,positive,positive,52
+169,NA,NULL,NA,recommend,NA,SERVICE#GENERAL,NA,positive,52
+170,food,food,bold flavours,good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,57
+170,food,NA,good,NA,FOOD#QUALITY,NA,positive,NA,57
+170,food,NA,bold flavours,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,57
+170,food,NA,good,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,57
+170,appam,appam,NULL,bold flavours,FOOD#STYLE_OPTIONS,FOOD#QUALITY,positive,positive,57
+170,stringhoppers,stringhoppers,NULL,good,FOOD#STYLE_OPTIONS,FOOD#QUALITY,positive,positive,57
+171,Food,Food,excellent,excellent,FOOD#QUALITY,FOOD#QUALITY,positive,positive,31
+171,service,service,fantastic,fantastic,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,31
+171,staff,staff,INCREDIBLE,INFECT,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,31
+171,Antipodean establishment,NA,favourite,NA,RESTAURANT#GENERAL,NA,positive,NA,31
+172,restaurant,restaurant,perfect,perfect,RESTAURANT#GENERAL,RESTAURANT#GENERAL,positive,positive,17
+173,food,food,quality,nice,FOOD#QUALITY,FOOD#QUALITY,positive,positive,90
+173,food,NA,unusual good portioned,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,90
+173,seafood risotto,seafood risotto,NULL,not on,FOOD#QUALITY,FOOD#QUALITY,negative,positive,90
+173,NULL,NA,disappointment,NA,FOOD#QUALITY,NA,negative,NA,90
+173,decor,NA,nice,NA,AMBIENCE#GENERAL,NA,positive,NA,90
+173,ambiance,ambiance,nice,nice,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,90
+173,server Fulzen,server Fulzen,professional,professional,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,90
+173,server Fulzen,NA,friendly,NA,SERVICE#GENERAL,NA,positive,NA,90
+173,NA,décor,NA,nice,NA,AMBIENCE#GENERAL,NA,positive,90
+173,NA,service,NA,matches the food,NA,SERVICE#GENERAL,NA,positive,90
+174,Halal,Halal,excellent,excellent,FOOD#QUALITY,FOOD#QUALITY,positive,positive,21
+174,NULL,NULL,nice,friendly,RESTAURANT#GENERAL,SERVICE#GENERAL,positive,positive,21
+174,NULL,NA,friendly,NA,SERVICE#GENERAL,NA,positive,NA,21
+174,NULL,NA,wide selection of dishes,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,21
+174,NULL,NA,enjoyed,NA,FOOD#QUALITY,NA,positive,NA,21
+175,staff,staff,friendly,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,38
+175,staff,NA,friendly,NA,SERVICE#GENERAL,NA,positive,NA,38
+175,staff,NA,friendly,NA,SERVICE#GENERAL,NA,positive,NA,38
+175,food,food,delicious,friendly,FOOD#QUALITY,SERVICE#GENERAL,positive,positive,38
+176,foods,NA,disappointing,NA,FOOD#QUALITY,NA,negative,NA,112
+176,bread,bread,thin slice,thin slice,FOOD#STYLE_OPTIONS,FOOD#QUALITY,negative,negative,112
+176,bread,NA,tasteless,NA,FOOD#QUALITY,NA,negative,NA,112
+176,lambs cutlets,NA,slightly rare cold,NA,FOOD#QUALITY,NA,negative,NA,112
+176,NULL,NULL,ok,NULL,FOOD#QUALITY,SERVICE#GENERAL,negative,negative,112
+176,lamb shank,NA,too dry,NA,FOOD#QUALITY,NA,negative,NA,112
+176,services,services,average,average,SERVICE#GENERAL,SERVICE#GENERAL,negative,negative,112
+176,NA,food,NA,disappointment,NA,FOOD#QUALITY,NA,negative,112
+176,NA,olive oil,NA,tasteless,NA,FOOD#QUALITY,NA,negative,112
+176,NA,lemon oil,NA,tasteless,NA,FOOD#QUALITY,NA,negative,112
+177,selection of pastries,selection of pastries,way too many sweet items,way too many sweet items,FOOD#STYLE_OPTIONS,FOOD#QUALITY,negative,negative,51
+177,selection of pastries,NA,should be balanced with more savouries,NA,FOOD#STYLE_OPTIONS,NA,negative,NA,51
+177,selection of pastries,NA,premium,NA,FOOD#QUALITY,NA,positive,NA,51
+177,portion per piece,portion per piece,not big,not big,FOOD#STYLE_OPTIONS,FOOD#QUALITY,negative,negative,51
+177,service,service,nice,nice,SERVICE#GENERAL,SERVICE#GENERAL,positive,negative,51
+177,setting,setting,nice,nice,AMBIENCE#GENERAL,SERVICE#GENERAL,positive,positive,51
+177,NA,savouries,NA,balanced,NA,FOOD#QUALITY,NA,negative,51
+178,paratha,paratha,awesome,awesome,FOOD#QUALITY,FOOD#QUALITY,positive,positive,84
+178,aloo paratha,NA,nyums,NA,FOOD#QUALITY,NA,positive,NA,84
+178,Tiki Masala,NA,NULL,NA,FOOD#QUALITY,NA,positive,NA,84
+178,Palak Paneer,NA,OMG i am literally drooling right now,NA,FOOD#QUALITY,NA,positive,NA,84
+178,food,food,finger licking good,finger licking good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,84
+178,staff,staff,friendly,friendly,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,84
+178,owner,NA,friendly,NA,SERVICE#GENERAL,NA,positive,NA,84
+178,NA,tiki masala,NA,awesome,NA,FOOD#QUALITY,NA,positive,84
+178,NA,palak paneer,NA,good,NA,FOOD#QUALITY,NA,positive,84
+178,NA,owner himself,NA,friendly,NA,SERVICE#GENERAL,NA,positive,84
+178,NA,NULL,NA,hidden gem,NA,SERVICE#GENERAL,NA,positive,84
+179,staff,staff,fun,amazing,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,96
+179,staff,NA,positive attitude,NA,SERVICE#GENERAL,NA,positive,NA,96
+179,staff,NA,considerate,NA,SERVICE#GENERAL,NA,positive,NA,96
+179,NULL,NULL,amazing,friendly,RESTAURANT#GENERAL,SERVICE#GENERAL,positive,positive,96
+180,staff,staff,helpful,helpful,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,35
+180,NA,Grab service,NA,correct address,NA,SERVICE#GENERAL,NA,positive,35
+181,restaurant,NA,Amazing,NA,RESTAURANT#GENERAL,NA,positive,NA,53
+181,setting,setting,Fantastic,Amazing,AMBIENCE#GENERAL,SERVICE#GENERAL,positive,positive,53
+181,view,view,stunning,cool,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,53
+181,design,design,cool,delicious,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,53
+181,”nouvelle cuisine”,NA,Delicious,NA,FOOD#QUALITY,NA,positive,NA,53
+181,dishes,NA,exciting,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,53
+181,NULL,NULL,worth it,delicious,FOOD#PRICES,AMBIENCE#GENERAL,positive,positive,53
+182,food,food,good,good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,48
+182,NA,waiting line,NA,long,NA,SERVICE#GENERAL,NA,positive,48
+183,view,view,unbelievable,unbelievable,AMBIENCE#GENERAL,FOOD#QUALITY,positive,positive,54
+183,music,music,nice,nice,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,54
+183,staff,staff,top notch,top notch,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,54
+183,hospitality,hospitality,enjoyed my time,enjoyed,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,54
+184,waitress,waitress,excellent,excellent,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,108
+184,seaweed taco,NA,excellent,NA,FOOD#QUALITY,NA,positive,NA,108
+184,chicken 'ribs',NA,best,NA,FOOD#QUALITY,NA,positive,NA,108
+184,NA,NULL,NA,helpful,NA,SERVICE#GENERAL,NA,positive,108
+185,salmon fried rice,salmon fried rice,great,great,FOOD#QUALITY,FOOD#QUALITY,positive,positive,43
+185,duck ramen,duck ramen,great,great,FOOD#QUALITY,FOOD#QUALITY,positive,positive,43
+185,Monster burger,NA,great,NA,FOOD#QUALITY,NA,positive,NA,43
+185,macaroni & cheese,macaroni & cheese,great,great,FOOD#QUALITY,FOOD#QUALITY,positive,positive,43
+185,portion,portion,no big,no big,FOOD#STYLE_OPTIONS,FOOD#QUALITY,neutral,negative,43
+185,waitress,NA,friendly,NA,SERVICE#GENERAL,NA,positive,NA,43
+185,waitress,NA,helpful,NA,SERVICE#GENERAL,NA,positive,NA,43
+185,NULL,NA,resonance,NA,SERVICE#GENERAL,NA,positive,NA,43
+185,NA,Mountain burger,NA,great,NA,FOOD#QUALITY,NA,positive,43
+186,black pepper and mushroom pasta,black pepper and mushroom pasta,outstanding,exceptional,FOOD#QUALITY,FOOD#QUALITY,positive,positive,26
+186,prices,prices,reasonable,reasonable,RESTAURANT#PRICES,AMBIENCE#GENERAL,positive,positive,26
+186,food,food,good,good,FOOD#QUALITY,FOOD#QUALITY,positive,positive,26
+187,Shafiq,Shafiq,excellent job,excellent job,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,25
+187,NA,drinks,NA,best,NA,FOOD#QUALITY,NA,positive,25
+187,NA,NULL,NA,best,NA,SERVICE#GENERAL,NA,positive,25
+188,view,view,great,Great,AMBIENCE#GENERAL,FOOD#QUALITY,positive,positive,41
+188,hospitality,hospitality,great,Great,SERVICE#GENERAL,AMBIENCE#GENERAL,positive,positive,41
+188,service,service,great,Great,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,41
+188,NULL,NA,Awesome,NA,RESTAURANT#GENERAL,NA,positive,NA,41
+188,NA,staff,NA,Awesome,NA,SERVICE#GENERAL,NA,positive,41
+189,food,food,perfect,perfect,FOOD#QUALITY,FOOD#QUALITY,positive,positive,69
+189,service,service,even better,even better,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,69
+189,Sarmila,Sarmila,kind,kind,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,69
+189,Sarmila,NA,helpful,NA,SERVICE#GENERAL,NA,positive,NA,69
+189,NULL,NA,best value for your money,NA,RESTAURANT#PRICES,NA,positive,NA,69
+190,ambience,ambience,love,love,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,53
+190,service,NA,awesome,NA,SERVICE#GENERAL,NA,positive,NA,53
+190,food portion,food portion,just nice,nice,FOOD#STYLE_OPTIONS,FOOD#QUALITY,positive,positive,53
+190,sushi maki,NA,love,NA,FOOD#QUALITY,NA,positive,NA,53
+190,pomelo salad,NA,love,NA,FOOD#QUALITY,NA,positive,NA,53
+190,steak,NA,love,NA,FOOD#QUALITY,NA,positive,NA,53
+190,durian panna cotta dessert,NA,love,NA,FOOD#QUALITY,NA,positive,NA,53
+190,NA,Service,NA,awesome,NA,SERVICE#GENERAL,NA,positive,53
+190,NA,NULL,NA,favourite,NA,AMBIENCE#GENERAL,NA,positive,53
+191,NULL,NA,expensive,NA,PRICES#GENERAL,NA,negative,NA,32
+191,NA,burger,NA,abundant,NA,FOOD#QUALITY,NA,positive,32
+191,NA,beer,NA,charged,NA,FOOD#QUALITY,NA,positive,32
+191,NA,charge,NA,extreme,NA,SERVICE#GENERAL,NA,negative,32
+192,Signature Ramen,Signature Ramen,NULL,loved,FOOD#QUALITY,FOOD#QUALITY,positive,positive,97
+192,NULL,NA,pleasant,NA,RESTAURANT#GENERAL,NA,positive,NA,97
+192,fried rice,fried rice,yummy,better,FOOD#QUALITY,FOOD#QUALITY,positive,positive,97
+192,Pavilion,NA,better,NA,FOOD#QUALITY,NA,positive,NA,97
+193,food,food,decent,decent,FOOD#QUALITY,FOOD#QUALITY,neutral,positive,19
+193,ambience,ambience,nice,nice,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,19
+193,service,service,exceptional,exceptional,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,19
+193,hospitality,hospitality,Good,good,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,19
+194,Desserts like cakes,Desserts like cakes,delicious treat,delicious treat,FOOD#QUALITY,FOOD#QUALITY,positive,positive,72
+194,caesar salad,caesar salad,horrified,horrified,FOOD#QUALITY,FOOD#QUALITY,negative,negative,72
+194,lobster roll,NA,hardly any lobster swimming in the mayo - appeared more like diced prawns,NA,FOOD#QUALITY,NA,negative,NA,72
+194,Service,NA,inconsistent,NA,SERVICE#GENERAL,NA,negative,NA,72
+194,Menu,NA,good selection of western and asian dishes for variety,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,72
+194,NA,loose lobster roll,NA,not much lobster swimming in the mayo,NA,FOOD#QUALITY,NA,negative,72
+194,NA,NULL,NA,NULL,NA,SERVICE#GENERAL,NA,negative,72
+194,NA,NULL,NA,NULL,NA,SERVICE#GENERAL,NA,negative,72
+194,NA,NULL,NA,NULL,NA,SERVICE#GENERAL,NA,negative,72
+194,NA,NULL,NA,NULL,NA,SERVICE#GENERAL,NA,negative,72
+194,NA,NULL,NA,NULL,NA,SERVICE#GENERAL,NA,negative,72
+194,NA,NULL,NA,NULL,NA,SERVICE#GENERAL,NA,negative,72
+195,staff,staff,attentive,attentive,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,95
+195,staff,NA,friendly,NA,SERVICE#GENERAL,NA,positive,NA,95
+195,staff,NA,accommodating,NA,SERVICE#GENERAL,NA,positive,NA,95
+195,Aliff,NA,good,NA,SERVICE#GENERAL,NA,positive,NA,95
+195,view,view,Great,friendly,AMBIENCE#GENERAL,SERVICE#GENERAL,positive,positive,95
+195,NA,skyline,NA,accommodating,NA,AMBIENCE#GENERAL,NA,positive,95
+196,ambient,ambient,Excellent,Excellent,AMBIENCE#GENERAL,AMBIENCE#GENERAL,positive,positive,20
+196,services,services,friendly,Excellent,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,20
+196,services,NA,warm,NA,SERVICE#GENERAL,NA,positive,NA,20
+196,coffee,coffee,nice,friendly,FOOD#QUALITY,AMBIENCE#GENERAL,positive,positive,20
+197,Chicken Barbecue salad,Chicken Barbecue salad,wonderful,big chunks of barbecue chick pieces,FOOD#QUALITY,FOOD#QUALITY,positive,positive,150
+197,service,service,wonderful,beat,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,150
+197,NULL,NULL,huge,wonderful,FOOD#STYLE_OPTIONS,AMBIENCE#GENERAL,positive,positive,150
+197,NULL,NA,stripped with the barbecue sauce and grated Parisian cheese,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,150
+197,NULL,NA,big,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,150
+197,NULL,NA,wonderful,NA,FOOD#QUALITY,NA,positive,NA,150
+197,NULL,NA,thick,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,150
+197,NULL,NA,gooey,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,150
+197,bread,NA,wonderful,NA,FOOD#QUALITY,NA,positive,NA,150
+197,NULL,NA,wonderful,NA,DRINKS#QUALITY,NA,positive,NA,150
+197,NULL,NA,wonderful,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,150
+197,NULL,NA,wonderful,NA,FOOD#QUALITY,NA,positive,NA,150
+197,selection of beer,NA,wonderful,NA,DRINKS#QUALITY,NA,positive,NA,150
+197,soft drink,NA,wonderful,NA,DRINKS#QUALITY,NA,positive,NA,150
+197,NULL,NA,wonderful,NA,SERVICE#GENERAL,NA,positive,NA,150
+198,food,food,Nice,Nice,FOOD#QUALITY,FOOD#QUALITY,positive,positive,20
+198,food,NA,plenty of choices,NA,FOOD#STYLE_OPTIONS,NA,positive,NA,20
+198,food,NA,taste good,NA,FOOD#QUALITY,NA,positive,NA,20
+198,ambience,NA,nice,NA,AMBIENCE#GENERAL,NA,positive,NA,20
+198,ambience,NA,not really crowded,NA,AMBIENCE#GENERAL,NA,positive,NA,20
+198,ambience,NA,best place for family,NA,AMBIENCE#GENERAL,NA,positive,NA,20
+198,NA,environment,NA,NULL,NA,FOOD#QUALITY,NA,positive,20
+198,NA,NULL,NA,nice,NA,AMBIENCE#GENERAL,NA,positive,20
+199,meals,NA,best,NA,FOOD#QUALITY,NA,positive,NA,116
+199,staff,staff,professional,professional,SERVICE#GENERAL,SERVICE#GENERAL,positive,positive,116
+199,wine list,wine list,amazing,amazing,DRINKS#STYLE_OPTIONS,AMBIENCE#GENERAL,positive,positive,116
+199,NULL,NULL,enjoyed,5 star,RESTAURANT#GENERAL,AMBIENCE#GENERAL,positive,positive,116
+199,NULL,NA,5 star,NA,RESTAURANT#GENERAL,NA,positive,NA,116
+199,NULL,NA,grumbling,NA,RESTAURANT#GENERAL,NA,negative,NA,116
