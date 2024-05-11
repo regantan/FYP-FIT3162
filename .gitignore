@@ -161,5 +161,6 @@ cython_debug/
 #.idea/
 
 Pyabsa/absa_model/checkpoints/
+Pyabsa/absa_model/checkpoints_old/
 Pyabsa/absa_model/integrated_datasets/
 Pyabsa/absa_model/checkpoints.json
