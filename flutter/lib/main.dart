@@ -9,6 +9,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'data_classes/restaurant.dart';
 import 'widgets/restaurant_card.dart';
 import 'package:flutter/material.dart';
+import 'dart:convert';
+
 
 /**
  * Main entry point of the application
@@ -48,8 +50,6 @@ class App extends StatelessWidget {
 Future<String> fetchTotalPagesOfRestaurants(String city) async {
   final response = await http.get(Uri.parse('https://api.coindesk.com/v1/bpi/currentprice.json'));
 
-  print(city);
-
   if (response.statusCode == 200) {
     //final Map<String, dynamic> data = json.decode(response.body);
 
@@ -79,10 +79,13 @@ Future<String> fetchTotalPagesOfRestaurants(String city) async {
  * Method to fetch a list of restaurants from the API
  */
 Future<List<Restaurant>> fetchRestaurants(String city, int page) async {
-  final response = await http.get(Uri.parse('https://api.coindesk.com/v1/bpi/currentprice.json'));
+  final http.Response response = await http.get(Uri.parse('http://127.0.0.1:8079/api/recommended_restaurants/kl/1'));
 
   if (response.statusCode == 200) {
-    //final Map<String, dynamic> data = json.decode(response.body);
+    print(response.body);
+    final Map<String, dynamic> data2 = json.decode(response.body);
+    print('2success status code');
+    print(data2);
 
     // TEST DATA
     final Map<String, dynamic> data;

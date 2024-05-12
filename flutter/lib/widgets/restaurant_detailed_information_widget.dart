@@ -6,6 +6,7 @@ import 'dart:convert';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:http/http.dart' as http;
 import 'package:fyp_fit3161_team8_web_app/data_classes/restaurant_details.dart';
+import 'package:fl_chart/fl_chart.dart';
 
 class RestaurantDetailedInformationWidget extends StatefulWidget {
 
@@ -131,8 +132,189 @@ class _RestaurantDetailedInformationWidgetState extends State<RestaurantDetailed
               ),
             ],
           ),
+          Container(
+            height: 300,
+            child: AspectsOverTimeLineChart(),
+          ),
         ],
       )
+    );
+  }
+}
+//
+// class AspectsOverTimeLineChart extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return LineChart(
+//       LineChartData(
+//         minY: -1, // Minimum value of Y-axis
+//         maxY: 1,  // Maximum value of Y-axisX: 2016,
+//         gridData: FlGridData(show: true),
+//         titlesData: FlTitlesData(
+//           show: true,
+//           leftTitles: AxisTitles(sideTitles: SideTitles(
+//             showTitles: true,  // Ensure this is true to show titles
+//             reservedSize: 30,  // Adjust size to make sure titles fit without being cut off
+//             interval: 1,
+//             getTitlesWidget: (double value, TitleMeta meta) {
+//               return Text('${value.toInt()}',
+//                   style: TextStyle(
+//                     color: Colors.black,
+//                     fontSize: 14,
+//                   ));
+//             },
+//           )),
+//           bottomTitles: AxisTitles(sideTitles: SideTitles(
+//             showTitles: true,  // Ensure this is true to show titles
+//             reservedSize: 40,  // Adjust size to make sure titles fit without being cut off
+//             interval: 1,
+//             getTitlesWidget: (double value, TitleMeta meta) {
+//               return Text('${value.toInt()}',
+//                   style: TextStyle(
+//                     color: Colors.black,
+//                     fontSize: 14,
+//                   ));
+//             },
+//           )),
+//           rightTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+//           topTitles:AxisTitles(sideTitles: SideTitles(showTitles: false)),
+//         ),
+//         borderData: FlBorderData(show: true),
+//         lineBarsData: [
+//           LineChartBarData(
+//             spots: [FlSpot(2020, -1), FlSpot(2021, 0.2)], // Line 1 with negative value
+//             isCurved: false,
+//             color: Colors.red,
+//             barWidth: 2,
+//             isStrokeCapRound: true,
+//             dotData: FlDotData(show: true),
+//           ),
+//           LineChartBarData(
+//             spots: [FlSpot(2019, 1), FlSpot(2023, 0)], // Line 2 with negative value
+//             isCurved: false,
+//             color: Colors.blue,
+//             barWidth: 2,
+//             isStrokeCapRound: true,
+//             dotData: FlDotData(show: true),
+//           ),
+//           LineChartBarData(
+//             spots: [FlSpot(2020, 0.5), FlSpot(2022, -1)], // Line 3 with negative value
+//             isCurved: false,
+//             color: Colors.green,
+//             barWidth: 2,
+//             isStrokeCapRound: true,
+//             dotData: FlDotData(show: true),
+//           ),
+//           LineChartBarData(
+//             spots: [FlSpot(2018, -1), FlSpot(2019, 0.7)], // Line 4 with negative value
+//             isCurved: false,
+//             color: Colors.orange,
+//             barWidth: 2,
+//             isStrokeCapRound: true,
+//             dotData: FlDotData(show: true),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
+
+class AspectsOverTimeLineChart extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Container(
+          width: 30,
+          child: RotatedBox(
+            quarterTurns: 3,
+            child: Text('Polarity Value', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)), // Y-axis subtitle
+          ),
+        ),
+        Expanded(
+          child: Center(
+            child: Column(
+              children: [
+                Expanded(
+                  child: LineChart(
+                    LineChartData(
+                      minY: -1,
+                      maxY: 1,
+                      gridData: FlGridData(show: true),
+                      titlesData: FlTitlesData(
+                        show: true,
+                        leftTitles: AxisTitles(sideTitles: SideTitles(
+                          showTitles: true,
+                          reservedSize: 30,
+                          interval: 1,
+                          getTitlesWidget: (double value, TitleMeta meta) {
+                            return Text('${value.toInt()}',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 14,
+                                ));
+                          },
+                        )),
+                        bottomTitles: AxisTitles(sideTitles: SideTitles(
+                          showTitles: true,
+                          reservedSize: 40,
+                          interval: 1,
+                          getTitlesWidget: (double value, TitleMeta meta) {
+                            return Text('${value.toInt()}',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 14,
+                                ));
+                          },
+                        )),
+                        rightTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+                        topTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+                      ),
+                      borderData: FlBorderData(show: true),
+                      lineBarsData: [
+                        LineChartBarData(
+                          spots: [FlSpot(2020, -1), FlSpot(2021, 0.2)], // Line 1 with negative value
+                          isCurved: false,
+                          color: Colors.red,
+                          barWidth: 2,
+                          isStrokeCapRound: true,
+                          dotData: FlDotData(show: true),
+                        ),
+                        LineChartBarData(
+                          spots: [FlSpot(2019, 1), FlSpot(2023, 0)], // Line 2 with negative value
+                          isCurved: false,
+                          color: Colors.blue,
+                          barWidth: 2,
+                          isStrokeCapRound: true,
+                          dotData: FlDotData(show: true),
+                        ),
+                        LineChartBarData(
+                          spots: [FlSpot(2020, 0.5), FlSpot(2022, -1)], // Line 3 with negative value
+                          isCurved: false,
+                          color: Colors.green,
+                          barWidth: 2,
+                          isStrokeCapRound: true,
+                          dotData: FlDotData(show: true),
+                        ),
+                        LineChartBarData(
+                          spots: [FlSpot(2018, -1), FlSpot(2019, 0.7)], // Line 4 with negative value
+                          isCurved: false,
+                          color: Colors.orange,
+                          barWidth: 2,
+                          isStrokeCapRound: true,
+                          dotData: FlDotData(show: true),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Text('Year', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+              ],
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
