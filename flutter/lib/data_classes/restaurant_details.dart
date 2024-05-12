@@ -5,11 +5,8 @@ class RestaurantDetails {
   final int restaurantId;
   final String name;
   final String coverImage;
-  final String status;
-  final List<String> operatingHours;
   final double rating;
   final int totalReviews;
-  final int priceRange;
   final String fullAddress;
   final List<String> categories;
   final String websiteUrl;
@@ -18,16 +15,12 @@ class RestaurantDetails {
   final int totalPagesOfReviews;
   final int totalPagesOfRecommendedRestaurants;
 
-
   RestaurantDetails({
     required this.restaurantId,
     required this.name,
     required this.coverImage,
-    required this.status,
-    required this.operatingHours,
     required this.rating,
     required this.totalReviews,
-    required this.priceRange,
     required this.fullAddress,
     required this.categories,
     required this.websiteUrl,
@@ -42,11 +35,8 @@ class RestaurantDetails {
       restaurantId: json['restaurantId'],
       name: json['name'],
       coverImage: json['coverImage'],
-      status: json['status'],
-      operatingHours: json['operatingHours'],
       rating: json['rating'],
       totalReviews: json['totalReviews'],
-      priceRange: json['priceRange'],
       fullAddress: json['fullAddress'],
       categories: json['categories'],
       websiteUrl: json['websiteUrl'],

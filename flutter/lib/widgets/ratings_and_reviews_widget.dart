@@ -13,14 +13,12 @@ class RestaurantReviews {
   final int restaurantId;
   final double rating;
   final int totalReviews;
-  final List<int> totalReviewsFromEachStar;
   final List<Map<String, dynamic>> reviews;
 
   RestaurantReviews({
     required this.restaurantId,
     required this.rating,
     required this.totalReviews,
-    required this.totalReviewsFromEachStar,
     required this.reviews,
   });
 
@@ -29,7 +27,6 @@ class RestaurantReviews {
       restaurantId: json['restaurantId'],
       rating: json['rating'],
       totalReviews: json['totalReviews'],
-      totalReviewsFromEachStar: json['totalReviewsFromEachStar'],
       reviews: json['reviews'],
     );
   }
@@ -49,12 +46,12 @@ Future<RestaurantReviews> fetchRestaurantReviews(int restaurantId, int page) asy
       'restaurantId': 1,
       'rating': 4.5,
       'totalReviews': 100,
-      'totalReviewsFromEachStar': [10, 20, 30, 40, 50],
       'reviews': [
         {
           'reviewId': 1,
           'reviewerName': 'John Doe',
           'reviewDate': '2021-09-01',
+          'rating': 3.5,
           'reviewText': 'The stuff in this place is great! Every one of them had given us a big smile when we entered with a warm "Welcome!"',
           'aspectReviews': [
             {
@@ -73,6 +70,7 @@ Future<RestaurantReviews> fetchRestaurantReviews(int restaurantId, int page) asy
           'reviewId': 2,
           'reviewerName': 'Alice Looi',
           'reviewDate': '2022-10-01',
+          'rating': 4.5,
           'reviewText': 'The stuff in this place is great! Every one of them had given us a big smile when we entered with a warm "Welcome!"',
           'aspectReviews': [
             {
@@ -327,6 +325,15 @@ class ReviewWidget extends StatelessWidget {
                       children: [
                         Text(
                           review['reviewerName'],
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                        SizedBox(width: 5),
+                        Text(
+                          '(${review['rating']})',
                           style: TextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.bold,

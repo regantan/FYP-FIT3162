@@ -93,19 +93,8 @@ Future<List<Restaurant>> fetchRestaurants(String city, int page) async {
             'restaurantId': 1,
             'name': 'KL VCR Cafe',
             'coverImage': 'https://www.foodadvisor.my/attachments/902c3847bc35a626f8b303f489a7f8f3d82d3b8b/store/fill/800/500/c9906624687aab259426150e9cc46cf34cd2920b2d4d262be2a54d3f0c72/featured_image.jpg',
-            'status': 'Open now',
-            'operatingHours': [
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM'
-            ],
             'rating': 4.5,
             'totalReviews': 3512,
-            'priceRange': 2,
             'address': '31, Jln Telawi 3, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
             'categories': ['Cafe', 'American', 'European'],
           },
@@ -113,19 +102,8 @@ Future<List<Restaurant>> fetchRestaurants(String city, int page) async {
             'restaurantId': 2,
             'name': 'ZEN by MEL',
             'coverImage': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmi1L80uMKiW3ABUCMC0Zf-GbP2roGGc5Fvw&usqp=CAU',
-            'status': 'Closed',
-            'operatingHours': [
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM'
-            ],
             'rating': 3.3,
             'totalReviews': 47,
-            'priceRange': 3,
             'address': 'F-10-01, Pusat Perdagangan Bandar, Persiaran Jalil 1, Bukit Jalil, 57000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
             'categories': ['Fine dining restaurant'],
           },
@@ -138,19 +116,8 @@ Future<List<Restaurant>> fetchRestaurants(String city, int page) async {
             'restaurantId': 1,
             'name': 'ROME VCR Cafe',
             'coverImage': 'https://www.foodadvisor.my/attachments/902c3847bc35a626f8b303f489a7f8f3d82d3b8b/store/fill/800/500/c9906624687aab259426150e9cc46cf34cd2920b2d4d262be2a54d3f0c72/featured_image.jpg',
-            'status': 'Open now',
-            'operatingHours': [
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM'
-            ],
             'rating': 4.5,
             'totalReviews': 3512,
-            'priceRange': 2,
             'address': '31, Jln Telawi 3, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
             'categories': ['Cafe', 'American', 'European'],
           },
@@ -158,19 +125,8 @@ Future<List<Restaurant>> fetchRestaurants(String city, int page) async {
             'restaurantId': 2,
             'name': 'ZEN by MEL',
             'coverImage': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmi1L80uMKiW3ABUCMC0Zf-GbP2roGGc5Fvw&usqp=CAU',
-            'status': 'Closed',
-            'operatingHours': [
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM'
-            ],
             'rating': 3.3,
             'totalReviews': 47,
-            'priceRange': 3,
             'address': 'F-10-01, Pusat Perdagangan Bandar, Persiaran Jalil 1, Bukit Jalil, 57000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
             'categories': ['Fine dining restaurant'],
           },
@@ -183,19 +139,8 @@ Future<List<Restaurant>> fetchRestaurants(String city, int page) async {
             'restaurantId': 1,
             'name': 'FAILED VCR Cafe',
             'coverImage': 'https://www.foodadvisor.my/attachments/902c3847bc35a626f8b303f489a7f8f3d82d3b8b/store/fill/800/500/c9906624687aab259426150e9cc46cf34cd2920b2d4d262be2a54d3f0c72/featured_image.jpg',
-            'status': 'Open now',
-            'operatingHours': [
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM'
-            ],
             'rating': 4.5,
             'totalReviews': 3512,
-            'priceRange': 2,
             'address': '31, Jln Telawi 3, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
             'categories': ['Cafe', 'American', 'European'],
           },
@@ -203,19 +148,8 @@ Future<List<Restaurant>> fetchRestaurants(String city, int page) async {
             'restaurantId': 2,
             'name': 'ZEN by MEL',
             'coverImage': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmi1L80uMKiW3ABUCMC0Zf-GbP2roGGc5Fvw&usqp=CAU',
-            'status': 'Closed',
-            'operatingHours': [
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM',
-              '8:30 AM - 11:00 PM'
-            ],
             'rating': 3.3,
             'totalReviews': 47,
-            'priceRange': 3,
             'address': 'F-10-01, Pusat Perdagangan Bandar, Persiaran Jalil 1, Bukit Jalil, 57000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
             'categories': ['Fine dining restaurant'],
           },
@@ -336,7 +270,6 @@ class RestaurantsListingPage extends StatefulWidget {
  * _RestaurantsListingPageState is the state of the RestaurantsListingPage
  */
 class _RestaurantsListingPageState extends State<RestaurantsListingPage> {
-  final String restaurantsFromText = "Restaurants in Selangor";
 
   @override
   void initState() {
@@ -365,12 +298,13 @@ class _RestaurantsListingPageState extends State<RestaurantsListingPage> {
                 child: Row(
                   children: [
                     SizedBox(width: 6),
-                    Text(restaurantsFromText,
+                    Text('Restaurants from ${appState.getRestaurantsFromText()}',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 25,
                         overflow: TextOverflow.ellipsis,
                       ),),
+                    SizedBox(width: 10),
                     DropdownMenu(
                       initialSelection: appState.getRestaurantsFromText(),
                       onSelected: (selectedCity) async {
