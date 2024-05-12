@@ -6,12 +6,14 @@ from dotenv import load_dotenv
 from flask_restx import Api, Resource, fields
 from flask import jsonify
 from decimal import Decimal
-import pymysql.cursors
+from flask_cors import CORS
 
 
 load_dotenv()  # This is the crucial part
 
 app = Flask(__name__)
+CORS(app)
+
 api = Api(app, version='1.0', title='My API',
           description='A simple API', swagger_ui=True)
 
