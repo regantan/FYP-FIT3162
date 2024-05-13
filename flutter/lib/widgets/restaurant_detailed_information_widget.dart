@@ -23,9 +23,6 @@ class RestaurantDetailedInformationWidget extends StatefulWidget {
 
 class _RestaurantDetailedInformationWidgetState extends State<RestaurantDetailedInformationWidget> {
 
-  bool _isOperatingHoursExpanded = false;
-  List<String> dayNames = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-
   Future<void> _launchURL(String url) async {
     if (await canLaunch(url)) {
       await launch(url);
@@ -64,7 +61,7 @@ class _RestaurantDetailedInformationWidgetState extends State<RestaurantDetailed
               SizedBox(width: 10),
               Expanded(
                 child: Text(
-                  widget.restaurantDetails.fullAddress,
+                  widget.restaurantDetails.location,
                   style: TextStyle(
                     fontSize: 20.0,
                   ),

@@ -10,37 +10,38 @@ import 'package:fyp_fit3161_team8_web_app/widgets/restaurant_card.dart';
 import 'package:fyp_fit3161_team8_web_app/restaurant_details_page.dart';
 
 Future<List<Restaurant>> fetchRecommendedRestaurant(int restaurantId, int page) async {
-  final response = await http.get(Uri.parse('https://api.coindesk.com/v1/bpi/currentprice.json'));
+  final response = await http.get(Uri.parse('http://127.0.0.1:8079/api/recommended_restaurants/kl/${page}'));
 
   if (response.statusCode == 200) {
-    //final Map<String, dynamic> data = json.decode(response.body);
+    final List<dynamic> data = json.decode(response.body);
 
     // TEST DATA
-    final Map<String, dynamic> data = {
-      'restaurants': [
-        {
-          'id': 1,
-          'restaurant_name': "Iketeru Restaurant",
-          'coverImage': 'https://www.foodadvisor.my/attachments/902c3847bc35a626f8b303f489a7f8f3d82d3b8b/store/fill/800/500/c9906624687aab259426150e9cc46cf34cd2920b2d4d262be2a54d3f0c72/featured_image.jpg',
-          'cuisine': ['Cafe', 'American', 'European'],
-          'star_rating': 5,
-          'no_reviews': 2412,
-          'trip_advisor_url': "https://www.tripadvisor.com.my/Restaurant_Review-g298570-d796300-Reviews-Iketeru_Restaurant-Kuala_Lumpur_Wilayah_Persekutuan.html",
-        },
-        {
-          'id': 2,
-          'restaurant_name': "Iketeru Restaurant",
-          'coverImage': 'https://www.foodadvisor.my/attachments/902c3847bc35a626f8b303f489a7f8f3d82d3b8b/store/fill/800/500/c9906624687aab259426150e9cc46cf34cd2920b2d4d262be2a54d3f0c72/featured_image.jpg',
-          'cuisine': ['Cafe', 'American', 'European'],
-          'star_rating': 5,
-          'no_reviews': 2412,
-          'trip_advisor_url': "https://www.tripadvisor.com.my/Restaurant_Review-g298570-d796300-Reviews-Iketeru_Restaurant-Kuala_Lumpur_Wilayah_Persekutuan.html",
-        },
-      ],
-    };
+    // final Map<String, dynamic> data = {
+    //   'restaurants': [
+    //     {
+    //       'id': 1,
+    //       'restaurant_name': "Iketeru Restaurant",
+    //       'coverImage': 'https://www.foodadvisor.my/attachments/902c3847bc35a626f8b303f489a7f8f3d82d3b8b/store/fill/800/500/c9906624687aab259426150e9cc46cf34cd2920b2d4d262be2a54d3f0c72/featured_image.jpg',
+    //       'cuisine': ['Cafe', 'American', 'European'],
+    //       'star_rating': 5,
+    //       'no_reviews': 2412,
+    //       'trip_advisor_url': "https://www.tripadvisor.com.my/Restaurant_Review-g298570-d796300-Reviews-Iketeru_Restaurant-Kuala_Lumpur_Wilayah_Persekutuan.html",
+    //     },
+    //     {
+    //       'id': 2,
+    //       'restaurant_name': "Iketeru Restaurant",
+    //       'coverImage': 'https://www.foodadvisor.my/attachments/902c3847bc35a626f8b303f489a7f8f3d82d3b8b/store/fill/800/500/c9906624687aab259426150e9cc46cf34cd2920b2d4d262be2a54d3f0c72/featured_image.jpg',
+    //       'cuisine': ['Cafe', 'American', 'European'],
+    //       'star_rating': 5,
+    //       'no_reviews': 2412,
+    //       'trip_advisor_url': "https://www.tripadvisor.com.my/Restaurant_Review-g298570-d796300-Reviews-Iketeru_Restaurant-Kuala_Lumpur_Wilayah_Persekutuan.html",
+    //     },
+    //   ],
+    // };
 
-    final List<dynamic> restaurants = data['restaurants'];
-    return restaurants.map((json) => Restaurant.fromJson(json)).toList();
+    // final List<dynamic> restaurants = data['restaurants'];
+    // return restaurants.map((json) => Restaurant.fromJson(json)).toList();
+    return data.map((json) => Restaurant.fromJson(json)).toList();
   } else {
     throw Exception('Failed to load recommended restaurants');
   }

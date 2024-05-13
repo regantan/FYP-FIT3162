@@ -7,7 +7,7 @@ class Restaurant {
   final String coverImage;
   final double rating;
   final int totalReviews;
-  final List<String> categories;
+  final List<dynamic> categories;
   final String url;
 
   Restaurant({
@@ -27,7 +27,12 @@ class Restaurant {
       coverImage: 'https://media.timeout.com/images/101591411/image.jpg',
       rating: json['star_rating'],
       totalReviews: json['no_reviews'],
-      categories: ['japan', 'korea'],
+      categories: json['cuisine']
+          .substring(1, json['cuisine'].length - 1) // Remove the surrounding brackets
+          .split(',') // Split the string by commas
+          .map((item) => item.trim())
+          .map((item) => item.substring(1, item.length - 1))
+          .toList(),
       url: json['trip_advisor_url'],
     );
   }

@@ -7,8 +7,8 @@ class RestaurantDetails {
   final String coverImage;
   final double rating;
   final int totalReviews;
-  final String fullAddress;
-  final List<String> categories;
+  final String location;
+  final List<dynamic> categories;
   final String websiteUrl;
   final List<dynamic> aspectsSummary;
   final int totalPagesOfReviews;
@@ -20,7 +20,7 @@ class RestaurantDetails {
     required this.coverImage,
     required this.rating,
     required this.totalReviews,
-    required this.fullAddress,
+    required this.location,
     required this.categories,
     required this.websiteUrl,
     required this.aspectsSummary,
@@ -35,8 +35,8 @@ class RestaurantDetails {
       coverImage: 'https://media.timeout.com/images/101591411/image.jpg',
       rating: json['star_rating'],
       totalReviews: json['no_reviews'],
-      fullAddress: "Kuala Lumpur",
-      categories: ['Japanese', 'Seafood'],
+      location: json['location'].toLowerCase() == 'kl' ? "Kuala Lumpur" : json['location'],
+      categories: json['cuisine'],
       websiteUrl: json['trip_advisor_url'],
       aspectsSummary: json['aspectsSummary'],
       totalPagesOfReviews: json['totalPagesOfReviews'],

@@ -48,28 +48,28 @@ class App extends StatelessWidget {
  *  Method to fetch the total number of pages of restaurants from the API
  */
 Future<String> fetchTotalPagesOfRestaurants(String city) async {
-  final response = await http.get(Uri.parse('https://api.coindesk.com/v1/bpi/currentprice.json'));
+  final response = await http.get(Uri.parse('http://127.0.0.1:8079/api/number_of_restaurants/${city}'));
 
   if (response.statusCode == 200) {
-    //final Map<String, dynamic> data = json.decode(response.body);
+    final Map<String, dynamic> data = json.decode(response.body);
 
     // TEST DATA
-    final Map<String, dynamic> data;
-    if (city == "kl") {
-      data = {
-        'totalPages': 10,
-      };
-    } else if (city == "rome") {
-      data = {
-        'totalPages': 22,
-      };
-    } else {
-      data = {
-        'totalPages': 1000,
-      };
-    }
+    // final Map<String, dynamic> data;
+    // if (city == "kl") {
+    //   data = {
+    //     'totalPages': 10,
+    //   };
+    // } else if (city == "rome") {
+    //   data = {
+    //     'totalPages': 22,
+    //   };
+    // } else {
+    //   data = {
+    //     'totalPages': 1000,
+    //   };
+    // }
 
-    return data['totalPages'].toString();
+    return data['totalPagesOfRestaurants'].toString();
   } else {
     throw Exception('Failed to retrieve total pages from API');
   }

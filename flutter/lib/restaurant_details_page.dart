@@ -218,7 +218,7 @@ class _RestaurantDetailsPageState extends State<RestaurantDetailsPage> {
                                         width: 240,
                                         height: 50,
                                         decoration: BoxDecoration(
-                                          color: getColorFromPositivity(double.parse(aspectSummary['positivity'])),
+                                          color: getColorFromPositivity(aspectSummary['positivity']),
                                           borderRadius: BorderRadius.circular(20.0),
                                         ),
                                         child: Padding(
