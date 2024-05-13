@@ -305,7 +305,7 @@ class _RestaurantsListingPageState extends State<RestaurantsListingPage> {
                         fontSize: 25,
                         overflow: TextOverflow.ellipsis,
                       ),),
-                    SizedBox(width: 10),
+                    Spacer(),
                     DropdownMenu(
                       initialSelection: appState.getRestaurantsFromText(),
                       onSelected: (selectedCity) async {
@@ -320,7 +320,7 @@ class _RestaurantsListingPageState extends State<RestaurantsListingPage> {
                         DropdownMenuEntry(value: "rome", label: "Rome")
                       ],
                     ),
-                    Spacer(),
+                    SizedBox(width: 10),
                     InkWell(
                       onTap: () {
                         appState.loadPreviousPageOfRestaurants();

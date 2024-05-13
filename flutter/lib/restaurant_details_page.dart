@@ -109,6 +109,7 @@ class _RestaurantDetailsPageState extends State<RestaurantDetailsPage> {
       color: theme.colorScheme.secondary,
       fontSize: 16,
     );
+    double screenWidth = MediaQuery.of(context).size.width;
 
     return Scaffold(
       appBar: AppBar(
@@ -199,61 +200,99 @@ class _RestaurantDetailsPageState extends State<RestaurantDetailsPage> {
                                     ),
                                   ],
                                 ),
-                              ],
-                            ),
-                            Spacer(),
-                            Container(
-                              height: 100,
-                              width: 270,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    'Review Summary',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20,
-                                      overflow: TextOverflow.ellipsis,
-                                    ),
-                                  ),
-                                  Expanded(
+                                SizedBox(height: 10),
+                                Container(
+                                  height: 70,
+                                  width: screenWidth - 250,
+                                  child: Expanded(
                                     child: GridView(
                                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                                        crossAxisCount: 2,
+                                        crossAxisCount: 6,
                                         crossAxisSpacing: 5,
                                         mainAxisSpacing: 5,
-                                        childAspectRatio: 120 / 25,
+                                        childAspectRatio: 240 / 40,
                                       ),
-                                      children: [
-                                        for (var aspectSummary in restaurantDetails.aspectsSummary)
-                                          Container(
-                                            width: 120,
-                                            height: 25,
-                                            decoration: BoxDecoration(
-                                              color: getColorFromPositivity(double.parse(aspectSummary['positivity'])),
-                                              borderRadius: BorderRadius.circular(20.0),
-                                            ),
-                                            child: Padding(
-                                              padding: const EdgeInsets.only(left: 15.0, right: 15.0),
-                                              child: Center(
-                                                child: Text(
-                                                  aspectSummary['aspectName'].replaceAll(RegExp(r'[#_]'), ' ').trim(),
-                                                  style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontSize: 14,
-                                                    fontWeight: FontWeight.bold,
-                                                    overflow: TextOverflow.ellipsis,
-                                                  ),
-                                                ),
+                                      children: restaurantDetails.aspectsSummary
+                                          .where((aspect) => aspect['aspectName'] != null && aspect['aspectName'].isNotEmpty)
+                                          .map((aspectSummary) => Container(
+                                        width: 240,
+                                        height: 50,
+                                        decoration: BoxDecoration(
+                                          color: getColorFromPositivity(double.parse(aspectSummary['positivity'])),
+                                          borderRadius: BorderRadius.circular(20.0),
+                                        ),
+                                        child: Padding(
+                                          padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+                                          child: Center(
+                                            child: Text(
+                                              aspectSummary['aspectName'].replaceAll(RegExp(r'[#]'), ': ').trim(),
+                                              style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.bold,
+                                                overflow: TextOverflow.ellipsis,
                                               ),
                                             ),
                                           ),
-                                      ],
+                                        ),
+                                      )).toList(),
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
+                            // Spacer(),
+                            // Container(
+                            //   height: 100,
+                            //   width: 270,
+                            //   child: Column(
+                            //     crossAxisAlignment: CrossAxisAlignment.center,
+                            //     children: [
+                            //       Text(
+                            //         'Review Summary',
+                            //         style: TextStyle(
+                            //           fontWeight: FontWeight.bold,
+                            //           fontSize: 20,
+                            //           overflow: TextOverflow.ellipsis,
+                            //         ),
+                            //       ),
+                            //       Expanded(
+                            //         child: GridView(
+                            //           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                            //             crossAxisCount: 2,
+                            //             crossAxisSpacing: 5,
+                            //             mainAxisSpacing: 5,
+                            //             childAspectRatio: 120 / 25,
+                            //           ),
+                            //           children: restaurantDetails.aspectsSummary
+                            //               .where((aspect) => aspect['aspectName'] != null && aspect['aspectName'].isNotEmpty)
+                            //               .map((aspectSummary) => Container(
+                            //             width: 120,
+                            //             height: 25,
+                            //             decoration: BoxDecoration(
+                            //               color: getColorFromPositivity(double.parse(aspectSummary['positivity'])),
+                            //               borderRadius: BorderRadius.circular(20.0),
+                            //             ),
+                            //             child: Padding(
+                            //               padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+                            //               child: Center(
+                            //                 child: Text(
+                            //                   aspectSummary['aspectName'].replaceAll(RegExp(r'[#_]'), ' ').trim(),
+                            //                   style: TextStyle(
+                            //                     color: Colors.white,
+                            //                     fontSize: 14,
+                            //                     fontWeight: FontWeight.bold,
+                            //                     overflow: TextOverflow.ellipsis,
+                            //                   ),
+                            //                 ),
+                            //               ),
+                            //             ),
+                            //           )).toList(),
+                            //         ),
+                            //       ),
+                            //     ],
+                            //   ),
+                            // ),
                           ],
                         ),
                         SizedBox(height: 10),

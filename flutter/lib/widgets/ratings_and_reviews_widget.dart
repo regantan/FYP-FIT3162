@@ -485,7 +485,7 @@ class _ReviewWidgetState extends State<ReviewWidget> {
                             padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 3.0),
                             child: Center(
                               child: Text(
-                                aspectReview['categoryName'],
+                                aspectReview['categoryName'].replaceAll(RegExp(r'[#]'), ': ').trim(),
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 14,
