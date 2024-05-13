@@ -69,11 +69,13 @@ class _RecommendationsWidgetState extends State<RecommendationsWidget> {
       setState(() {
         currentRecommendationPage--;
       });
-      widget.scrollController.animateTo(
-        0.0, // Scroll to the top
-        duration: Duration(milliseconds: 500), // You can adjust the duration as needed
-        curve: Curves.easeInOut, // You can choose a different easing curve
-      );
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        widget.scrollController.animateTo(
+          0.0, // Scroll to the top
+          duration: Duration(milliseconds: 1000),
+          curve: Curves.easeInOut,
+        );
+      });
     }
   }
 
@@ -82,11 +84,13 @@ class _RecommendationsWidgetState extends State<RecommendationsWidget> {
       setState(() {
         currentRecommendationPage++;
       });
-      widget.scrollController.animateTo(
-        0.0, // Scroll to the top
-        duration: Duration(milliseconds: 500), // You can adjust the duration as needed
-        curve: Curves.easeInOut, // You can choose a different easing curve
-      );
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        widget.scrollController.animateTo(
+          0.0, // Scroll to the top
+          duration: Duration(milliseconds: 1000),
+          curve: Curves.easeInOut,
+        );
+      });
     }
   }
 
