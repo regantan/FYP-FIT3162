@@ -22,6 +22,9 @@ class RestaurantDetailedInformationWidget extends StatefulWidget {
 }
 
 class _RestaurantDetailedInformationWidgetState extends State<RestaurantDetailedInformationWidget> {
+  String? selectedAspect;
+  late List<DropdownMenuItem<String>> dropdownMenuItems;
+  List<FlSpot> lineChartData = [];
 
   Future<void> _launchURL(String url) async {
     if (await canLaunch(url)) {
@@ -29,6 +32,41 @@ class _RestaurantDetailedInformationWidgetState extends State<RestaurantDetailed
     } else {
       throw 'Could not launch $url';
     }
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    dropdownMenuItems = getDropdownMenuItems();
+    selectedAspect = dropdownMenuItems.first.value; // Set the default value to the first item
+    updateChartData();
+  }
+
+  List<DropdownMenuItem<String>> getDropdownMenuItems() {
+    return widget.restaurantDetails.averageScoresByYear
+        .map((data) => DropdownMenuItem<String>(
+      value: data['aspect_name'],
+      child: Text(data['aspect_name'].replaceAll('#', ': ')),
+    )).toList();
+  }
+
+  void updateChartData() {
+    var aspectData = widget.restaurantDetails.averageScoresByYear
+        .firstWhere((data) => data['aspect_name'] == selectedAspect, orElse: () => null);
+
+    if (aspectData != null) {
+      lineChartData = List.generate(
+        aspectData['years'].length,
+            (index) => FlSpot(
+          aspectData['years'][index].toDouble(),
+          aspectData['average_polarity'][index],
+        ),
+      );
+    } else {
+      lineChartData = []; // Ensure it's not null if no data matches
+    }
+
+    setState(() {});
   }
 
   @override
@@ -129,13 +167,25 @@ class _RestaurantDetailedInformationWidgetState extends State<RestaurantDetailed
               ),
             ),
           ),
+          Center(
+            child: DropdownButton<String>(
+              value: selectedAspect,
+              onChanged: (newValue) {
+                setState(() {
+                  selectedAspect = newValue;
+                  updateChartData();
+                });
+              },
+              items: dropdownMenuItems,
+            ),
+          ),
           SizedBox(height: 5),
           Text('Polarity Value', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
               height: 300,
-              child: AspectsOverTimeLineChart(),
+              child: AspectsOverTimeLineChart(dataSpots: lineChartData),
             ),
           ),
           Align(
@@ -149,6 +199,10 @@ class _RestaurantDetailedInformationWidgetState extends State<RestaurantDetailed
 }
 
 class AspectsOverTimeLineChart extends StatelessWidget {
+  final List<FlSpot> dataSpots;
+
+  const AspectsOverTimeLineChart({Key? key, required this.dataSpots}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -191,36 +245,12 @@ class AspectsOverTimeLineChart extends StatelessWidget {
               borderData: FlBorderData(show: true),
               lineBarsData: [
                 LineChartBarData(
-                  spots: [FlSpot(2020, -1), FlSpot(2021, 0.2)], // Line 1 with negative value
-                  isCurved: false,
-                  color: Colors.red,
-                  barWidth: 2,
-                  isStrokeCapRound: true,
-                  dotData: FlDotData(show: true),
-                ),
-                LineChartBarData(
-                  spots: [FlSpot(2019, 1), FlSpot(2023, 0)], // Line 2 with negative value
-                  isCurved: false,
-                  color: Colors.blue,
-                  barWidth: 2,
-                  isStrokeCapRound: true,
-                  dotData: FlDotData(show: true),
-                ),
-                LineChartBarData(
-                  spots: [FlSpot(2020, 0.5), FlSpot(2022, -1)], // Line 3 with negative value
-                  isCurved: false,
-                  color: Colors.green,
-                  barWidth: 2,
-                  isStrokeCapRound: true,
-                  dotData: FlDotData(show: true),
-                ),
-                LineChartBarData(
-                  spots: [FlSpot(2018, -1), FlSpot(2019, 0.7)], // Line 4 with negative value
-                  isCurved: false,
-                  color: Colors.orange,
-                  barWidth: 2,
-                  isStrokeCapRound: true,
-                  dotData: FlDotData(show: true),
+                    spots: dataSpots,
+                    isCurved: false,
+                    color: Colors.black,
+                    barWidth: 2,
+                    isStrokeCapRound: true,
+                    dotData: FlDotData(show: true),
                 ),
               ],
             ),

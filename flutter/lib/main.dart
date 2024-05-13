@@ -307,7 +307,7 @@ class _RestaurantsListingPageState extends State<RestaurantsListingPage> {
                       ),),
                     Spacer(),
                     DropdownMenu(
-                      initialSelection: appState.getRestaurantsFromText(),
+                      initialSelection: appState.getRestaurantsFrom(),
                       onSelected: (selectedCity) async {
                         if (selectedCity != null && selectedCity != appState.getRestaurantsFrom()) {
                           appState.updateRestaurantsFrom(selectedCity);
