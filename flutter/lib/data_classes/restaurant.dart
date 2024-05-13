@@ -7,8 +7,8 @@ class Restaurant {
   final String coverImage;
   final double rating;
   final int totalReviews;
-  final String address;
   final List<String> categories;
+  final String url;
 
   Restaurant({
     required this.restaurantId,
@@ -16,19 +16,19 @@ class Restaurant {
     required this.coverImage,
     required this.rating,
     required this.totalReviews,
-    required this.address,
     required this.categories,
+    required this.url,
   });
 
   factory Restaurant.fromJson(Map<String, dynamic> json) {
     return Restaurant(
-      restaurantId: json['restaurantId'],
-      name: json['name'],
-      coverImage: json['coverImage'],
-      rating: json['rating'],
-      totalReviews: json['totalReviews'],
-      address: json['address'],
-      categories: json['categories'],
+      restaurantId: json['id'],
+      name: json['restaurant_name'],
+      coverImage: 'https://media.timeout.com/images/101591411/image.jpg',
+      rating: json['star_rating'],
+      totalReviews: json['no_reviews'],
+      categories: ['japan', 'korea'],
+      url: json['trip_advisor_url'],
     );
   }
 }

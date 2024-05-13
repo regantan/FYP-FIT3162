@@ -79,89 +79,87 @@ Future<String> fetchTotalPagesOfRestaurants(String city) async {
  * Method to fetch a list of restaurants from the API
  */
 Future<List<Restaurant>> fetchRestaurants(String city, int page) async {
-  final http.Response response = await http.get(Uri.parse('http://127.0.0.1:8079/api/recommended_restaurants/kl/1'));
+  final http.Response response = await http.get(Uri.parse('http://127.0.0.1:8079/api/recommended_restaurants/${city}/${page}'));
 
   if (response.statusCode == 200) {
-    print(response.body);
-    final Map<String, dynamic> data2 = json.decode(response.body);
-    print('2success status code');
-    print(data2);
+    final List<dynamic> data = json.decode(response.body);
 
     // TEST DATA
-    final Map<String, dynamic> data;
-    if (city == 'kl') {
-      data = {
-        'restaurants': [
-          {
-            'restaurantId': 1,
-            'name': 'KL VCR Cafe',
-            'coverImage': 'https://www.foodadvisor.my/attachments/902c3847bc35a626f8b303f489a7f8f3d82d3b8b/store/fill/800/500/c9906624687aab259426150e9cc46cf34cd2920b2d4d262be2a54d3f0c72/featured_image.jpg',
-            'rating': 4.5,
-            'totalReviews': 3512,
-            'address': '31, Jln Telawi 3, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-            'categories': ['Cafe', 'American', 'European'],
-          },
-          {
-            'restaurantId': 2,
-            'name': 'ZEN by MEL',
-            'coverImage': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmi1L80uMKiW3ABUCMC0Zf-GbP2roGGc5Fvw&usqp=CAU',
-            'rating': 3.3,
-            'totalReviews': 47,
-            'address': 'F-10-01, Pusat Perdagangan Bandar, Persiaran Jalil 1, Bukit Jalil, 57000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-            'categories': ['Fine dining restaurant'],
-          },
-        ],
-      };
-    } else if (city == "rome") {
-      data = {
-        'restaurants': [
-          {
-            'restaurantId': 1,
-            'name': 'ROME VCR Cafe',
-            'coverImage': 'https://www.foodadvisor.my/attachments/902c3847bc35a626f8b303f489a7f8f3d82d3b8b/store/fill/800/500/c9906624687aab259426150e9cc46cf34cd2920b2d4d262be2a54d3f0c72/featured_image.jpg',
-            'rating': 4.5,
-            'totalReviews': 3512,
-            'address': '31, Jln Telawi 3, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-            'categories': ['Cafe', 'American', 'European'],
-          },
-          {
-            'restaurantId': 2,
-            'name': 'ZEN by MEL',
-            'coverImage': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmi1L80uMKiW3ABUCMC0Zf-GbP2roGGc5Fvw&usqp=CAU',
-            'rating': 3.3,
-            'totalReviews': 47,
-            'address': 'F-10-01, Pusat Perdagangan Bandar, Persiaran Jalil 1, Bukit Jalil, 57000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-            'categories': ['Fine dining restaurant'],
-          },
-        ],
-      };
-    } else {
-      data = {
-        'restaurants': [
-          {
-            'restaurantId': 1,
-            'name': 'FAILED VCR Cafe',
-            'coverImage': 'https://www.foodadvisor.my/attachments/902c3847bc35a626f8b303f489a7f8f3d82d3b8b/store/fill/800/500/c9906624687aab259426150e9cc46cf34cd2920b2d4d262be2a54d3f0c72/featured_image.jpg',
-            'rating': 4.5,
-            'totalReviews': 3512,
-            'address': '31, Jln Telawi 3, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-            'categories': ['Cafe', 'American', 'European'],
-          },
-          {
-            'restaurantId': 2,
-            'name': 'ZEN by MEL',
-            'coverImage': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmi1L80uMKiW3ABUCMC0Zf-GbP2roGGc5Fvw&usqp=CAU',
-            'rating': 3.3,
-            'totalReviews': 47,
-            'address': 'F-10-01, Pusat Perdagangan Bandar, Persiaran Jalil 1, Bukit Jalil, 57000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-            'categories': ['Fine dining restaurant'],
-          },
-        ],
-      };
-    }
+    // final Map<String, dynamic> data;
+    // if (city == 'kl') {
+    //   data = {
+    //     'restaurants': [
+    //       {
+    //         'restaurantId': 1,
+    //         'name': 'KL VCR Cafe',
+    //         'coverImage': 'https://www.foodadvisor.my/attachments/902c3847bc35a626f8b303f489a7f8f3d82d3b8b/store/fill/800/500/c9906624687aab259426150e9cc46cf34cd2920b2d4d262be2a54d3f0c72/featured_image.jpg',
+    //         'rating': 4.5,
+    //         'totalReviews': 3512,
+    //         'address': '31, Jln Telawi 3, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+    //         'categories': ['Cafe', 'American', 'European'],
+    //       },
+    //       {
+    //         'restaurantId': 2,
+    //         'name': 'ZEN by MEL',
+    //         'coverImage': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmi1L80uMKiW3ABUCMC0Zf-GbP2roGGc5Fvw&usqp=CAU',
+    //         'rating': 3.3,
+    //         'totalReviews': 47,
+    //         'address': 'F-10-01, Pusat Perdagangan Bandar, Persiaran Jalil 1, Bukit Jalil, 57000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+    //         'categories': ['Fine dining restaurant'],
+    //       },
+    //     ],
+    //   };
+    // } else if (city == "rome") {
+    //   data = {
+    //     'restaurants': [
+    //       {
+    //         'restaurantId': 1,
+    //         'name': 'ROME VCR Cafe',
+    //         'coverImage': 'https://www.foodadvisor.my/attachments/902c3847bc35a626f8b303f489a7f8f3d82d3b8b/store/fill/800/500/c9906624687aab259426150e9cc46cf34cd2920b2d4d262be2a54d3f0c72/featured_image.jpg',
+    //         'rating': 4.5,
+    //         'totalReviews': 3512,
+    //         'address': '31, Jln Telawi 3, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+    //         'categories': ['Cafe', 'American', 'European'],
+    //       },
+    //       {
+    //         'restaurantId': 2,
+    //         'name': 'ZEN by MEL',
+    //         'coverImage': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmi1L80uMKiW3ABUCMC0Zf-GbP2roGGc5Fvw&usqp=CAU',
+    //         'rating': 3.3,
+    //         'totalReviews': 47,
+    //         'address': 'F-10-01, Pusat Perdagangan Bandar, Persiaran Jalil 1, Bukit Jalil, 57000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+    //         'categories': ['Fine dining restaurant'],
+    //       },
+    //     ],
+    //   };
+    // } else {
+    //   data = {
+    //     'restaurants': [
+    //       {
+    //         'restaurantId': 1,
+    //         'name': 'FAILED VCR Cafe',
+    //         'coverImage': 'https://www.foodadvisor.my/attachments/902c3847bc35a626f8b303f489a7f8f3d82d3b8b/store/fill/800/500/c9906624687aab259426150e9cc46cf34cd2920b2d4d262be2a54d3f0c72/featured_image.jpg',
+    //         'rating': 4.5,
+    //         'totalReviews': 3512,
+    //         'address': '31, Jln Telawi 3, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+    //         'categories': ['Cafe', 'American', 'European'],
+    //       },
+    //       {
+    //         'restaurantId': 2,
+    //         'name': 'ZEN by MEL',
+    //         'coverImage': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmi1L80uMKiW3ABUCMC0Zf-GbP2roGGc5Fvw&usqp=CAU',
+    //         'rating': 3.3,
+    //         'totalReviews': 47,
+    //         'address': 'F-10-01, Pusat Perdagangan Bandar, Persiaran Jalil 1, Bukit Jalil, 57000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
+    //         'categories': ['Fine dining restaurant'],
+    //       },
+    //     ],
+    //   };
+    // }
 
-    final List<dynamic> restaurants = data['restaurants'];
-    return restaurants.map((json) => Restaurant.fromJson(json)).toList();
+    // final List<dynamic> restaurants = data['restaurants'];
+    // return restaurants.map((json) => Restaurant.fromJson(json)).toList();
+    return data.map((json) => Restaurant.fromJson(json)).toList();
   } else {
     throw Exception('Failed to load restaurants');
   }
