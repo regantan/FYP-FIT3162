@@ -281,43 +281,62 @@ class Reviews(Resource):
 
 
         # Query for basic restaurant information
-        cursor.execute("SELECT star_rating, no_reviews FROM restaurant_info WHERE id = %s", (restaurant_id,))
+        cursor.execute("SELECT star_rating, no_reviews, restaurant_name FROM restaurant_info WHERE id = %s", (restaurant_id,))
         restaurant_info = cursor.fetchone()
         if not restaurant_info:
             return {"error": "Restaurant not found"}, 404
 
+        restaurant_name = restaurant_info[2] 
+
         # Query for reviews
         cursor.execute("""
-            SELECT r.id AS reviewId, r.author AS reviewerName, r.date AS reviewDate, r.review AS reviewText,
-            q.category, 
-                CASE 
-                    WHEN q.polarity = 'positive' THEN 1 
-                    WHEN q.polarity = 'negative' THEN 0 
-                    ELSE -1  -- Assuming you may want a default value for other cases
-                END AS polarity,
-            q.opinion
+            SELECT r.id AS reviewId, r.author AS reviewerName, r.date AS reviewDate, r.review AS reviewText
             FROM reviews r
-            LEFT JOIN quadruples q ON r.id = q.review_id
             WHERE r.restaurant = %s
             LIMIT %s OFFSET %s
-        """, (restaurant_id, per_page, offset))
-        reviews_data = cursor.fetchall()
+        """, (restaurant_name, per_page, offset))
+        reviews_basic = cursor.fetchall()
 
-        # Organizing reviews by id to handle aspect reviews
+        review_ids = [review[0] for review in reviews_basic]
+        
+        # Fetch aspects and polarities for these reviews if they exist
+        if review_ids:
+            cursor.execute("""
+                SELECT q.review_id AS reviewId, q.category, 
+                    CASE 
+                        WHEN q.polarity = 'positive' THEN 1 
+                        WHEN q.polarity = 'neutral' THEN 0 
+                        WHEN q.polarity = 'negative' THEN -1 
+                    ELSE NULL 
+                    END AS polarity,
+                    q.opinion,
+                    q.aspect
+                FROM quadruples q
+                WHERE q.review_id IN (%s)
+            """ % ','.join(['%s'] * len(review_ids)), tuple(review_ids))
+            aspects_data = cursor.fetchall()
+        else:
+            aspects_data = []
+
         reviews = {}
-        for row in reviews_data:
+        for row in reviews_basic:
             if row[0] not in reviews:
                 reviews[row[0]] = {
                     'reviewId': row[0],
                     'reviewerName': row[1],
-                    'reviewDate': row[2],
+                    'reviewDate': row[2].strftime('%d/%m/%Y'),
                     'reviewText': row[3],
                     'aspectReviews': []
                 }
-            reviews[row[0]]['aspectReviews'].append({
-                'categoryName': row[4],
-                'positivity': row[5]
-            })
+
+        for aspect in aspects_data:
+            if aspect[0] in reviews:
+                reviews[aspect[0]]['aspectReviews'].append({
+                    'categoryName': aspect[1],
+                    'positivity': aspect[2],
+                    'opinion': aspect[3],
+                    'aspectTerm': aspect[4]
+                })
 
         # Fetching total review counts from each star rating
         cursor.execute("""
@@ -325,9 +344,16 @@ class Reviews(Resource):
             FROM reviews
             WHERE restaurant = %s
             GROUP BY rating
-        """, (restaurant_id,))
+        """, (restaurant_name,))
         ratings_breakdown = cursor.fetchall()
-        total_reviews_from_each_star = {row[0]: row[1] for row in ratings_breakdown}
+
+        # Initialize counts for all star ratings from 1 to 5
+        total_reviews_from_each_star = [0] * 5
+        for row in ratings_breakdown:
+            if 1 <= int(row[0]) <= 5:  # Ensure rating is within the expected range
+                total_reviews_from_each_star[int(row[0]) - 1] = row[1]
+        
+        # total_reviews_from_each_star = {row[0]: row[1] for row in ratings_breakdown}
 
         # Closing the cursor and database connection
         cursor.close()
