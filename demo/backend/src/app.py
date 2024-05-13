@@ -253,7 +253,7 @@ class RestaurantDetails(Resource):
                 'restaurant_name': row[1],
                 'cuisine': [cuisine.strip() for cuisine in row[2].split(',')],
                 'star_rating': float(row[3]) if isinstance(row[3], Decimal) else row[3],
-                'no_reviews': float(row[4]) if isinstance(row[4], Decimal) else row[4],
+                'no_reviews': total_reviews,
                 'trip_advisor_url': row[5],
                 'aspectsSummary': aspects_summary,
                 'totalPagesOfReviews': total_pages_of_reviews,
@@ -288,6 +288,10 @@ class Reviews(Resource):
 
         restaurant_name = restaurant_info[2] 
 
+        # Calculate total number of review
+        cursor.execute("SELECT COUNT(*) FROM reviews WHERE restaurant = %s", (restaurant_name,))
+        total_reviews = cursor.fetchone()[0]
+        
         # Query for reviews
         cursor.execute("""
             SELECT r.id AS reviewId, r.author AS reviewerName, r.date AS reviewDate, r.review AS reviewText
@@ -362,21 +366,64 @@ class Reviews(Resource):
         response = {
             'restaurantId': restaurant_id,
             'rating': float(restaurant_info[0]),
-            'totalReviews': int(restaurant_info[1]),
+            'totalReviews': total_reviews,
             'totalReviewsFromEachStar': total_reviews_from_each_star,
             'reviews': list(reviews.values())
         }
         return jsonify(response)
 
 
-# @app.route('/api/similar_restaurants/<int:restaurant_id>')
-# def similar_restaurants(restaurant_id):
+# @api.route('/api/similar_restaurants/<int:restaurant_id>/<int:page>')
+# class SimilarRestaurants(Resource):
+#     def get(self, restaurant_id, page):
+#         similar = find_similar_restaurants(restaurant_id)
+#         return jsonify(similar)
+
+# def get_aspect_scores(restaurant_id):
 #     cursor = mysql.connection.cursor()
-#     # Implement your logic for finding similar restaurants, for example:
-#     cursor.execute("SELECT * FROM restaurants WHERE category = (SELECT category FROM restaurants WHERE restaurantId = %s) AND restaurantId != %s", (restaurant_id, restaurant_id))
-#     similar_restaurants = cursor.fetchall()
+#     cursor.execute("""
+#         SELECT q.category, AVG(
+#             CASE
+#                 WHEN q.polarity = 'positive' THEN 1
+#                 WHEN q.polarity = 'neutral' THEN 0
+#                 WHEN q.polarity = 'negative' THEN -1
+#             END) AS score
+#         FROM quadruples q
+#         JOIN reviews r ON q.review_id = r.id
+#         WHERE r.restaurant = %s
+#         GROUP BY q.category
+#     """, (restaurant_id,))
+#     results = cursor.fetchall()
 #     cursor.close()
-#     return {'similar_restaurants': [dict(restaurant) for restaurant in similar_restaurants]}
+#     return dict(results)
+
+# def find_similar_restaurants(target_restaurant_id):
+#     target_cuisine, target_scores = get_restaurant_details(target_restaurant_id)
+    
+#     cursor = mysql.connection.cursor()
+#     cursor.execute("SELECT id, restaurant_name, cuisine FROM restaurant_info")
+#     all_restaurants = cursor.fetchall()
+    
+#     similarities = []
+#     for id, name, cuisine in all_restaurants:
+#         if id == target_restaurant_id:
+#             continue
+        
+#         aspect_scores = get_aspect_scores(id)
+#         # Simplified similarity: check for matching cuisine and similar aspect score patterns
+#         similarity = 0
+#         if cuisine == target_cuisine:
+#             similarity += 1  # Increment if cuisines match
+            
+#         # Compare aspect scores (placeholder for actual cosine similarity)
+#         for category, score in target_scores.items():
+#             similarity += score * aspect_scores.get(category, 0)
+        
+#         similarities.append((name, similarity))
+    
+#     # Sort based on similarity score
+#     similarities.sort(key=lambda x: x[1], reverse=True)
+#     return similarities
 
 def find_free_port():
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
