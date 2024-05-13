@@ -58,6 +58,26 @@ Future<RestaurantDetails> fetchRestaurantDetails(int restaurantId) async {
   }
 }
 
+Color getColorFromPositivity(double positivity) {
+  // Define your color ranges
+  Color red = Colors.red;
+  Color? lightRed = Colors.red[100];
+  Color? green = Colors.green;
+  Color? lightGreen = Colors.green[100];
+  Color neutral = Colors.grey;
+
+  if (positivity == 0.0) {
+    return neutral;
+  } else if (positivity < 0) {
+    // Calculate how far the value is between -1 and 0
+    return Color.lerp(red, lightRed, positivity.abs())!;
+  } else {
+    // Calculate how far the value is between 0 and 1
+    double ratio = positivity / 1;
+    return Color.lerp(lightGreen, green, positivity)!;
+  }
+}
+
 /**
  * Restaurant details page
  */
@@ -211,14 +231,14 @@ class _RestaurantDetailsPageState extends State<RestaurantDetailsPage> {
                                             width: 120,
                                             height: 25,
                                             decoration: BoxDecoration(
-                                              color: aspectSummary['positivity'] == 1 ? Colors.lightGreen : Colors.red,
+                                              color: getColorFromPositivity(double.parse(aspectSummary['positivity'])),
                                               borderRadius: BorderRadius.circular(20.0),
                                             ),
                                             child: Padding(
                                               padding: const EdgeInsets.only(left: 15.0, right: 15.0),
                                               child: Center(
                                                 child: Text(
-                                                  aspectSummary['aspectName'],
+                                                  aspectSummary['aspectName'].replaceAll(RegExp(r'[#_]'), ' ').trim(),
                                                   style: TextStyle(
                                                     color: Colors.white,
                                                     fontSize: 14,

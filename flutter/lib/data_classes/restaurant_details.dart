@@ -10,7 +10,6 @@ class RestaurantDetails {
   final String fullAddress;
   final List<String> categories;
   final String websiteUrl;
-  final String phoneNumber;
   final List<dynamic> aspectsSummary;
   final int totalPagesOfReviews;
   final int totalPagesOfRecommendedRestaurants;
@@ -24,7 +23,6 @@ class RestaurantDetails {
     required this.fullAddress,
     required this.categories,
     required this.websiteUrl,
-    required this.phoneNumber,
     required this.aspectsSummary,
     required this.totalPagesOfReviews,
     required this.totalPagesOfRecommendedRestaurants,
@@ -40,7 +38,6 @@ class RestaurantDetails {
       fullAddress: "Kuala Lumpur",
       categories: ['Japanese', 'Seafood'],
       websiteUrl: json['trip_advisor_url'],
-      phoneNumber: "123-456 678",
       aspectsSummary: json['aspectsSummary'],
       totalPagesOfReviews: json['totalPagesOfReviews'],
       totalPagesOfRecommendedRestaurants: 12,

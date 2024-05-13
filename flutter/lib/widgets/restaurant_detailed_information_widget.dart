@@ -110,29 +110,6 @@ class _RestaurantDetailedInformationWidgetState extends State<RestaurantDetailed
             ],
           ),
           SizedBox(height: 10),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 3.0),
-                child: Icon(
-                  Icons.local_phone_outlined,
-                  size: 24.0,
-                  color: Colors.black,
-                ),
-              ),
-              SizedBox(width: 10),
-              Expanded(
-                child: Text(
-                  widget.restaurantDetails.phoneNumber,
-                  style: TextStyle(
-                    fontSize: 20.0,
-                  ),
-                ),
-              ),
-            ],
-          ),
-          SizedBox(height: 10),
           Center(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
