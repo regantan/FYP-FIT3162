@@ -47,11 +47,19 @@ restaurant_details_model = api.model('restaurant_details', {
 })
 
 ##### API SECTION #####
-@api.route('/')
+@api.route('/api/number_of_restaurants/<string:location>')
 class home(Resource):
-    def get(self):
-        default_location = 'KL'  
-        return redirect(url_for('recommended_restaurants', location=default_location))
+    def get(self, location):
+        cursor = mysql.connection.cursor()
+        cursor.execute("SELECT COUNT(*) FROM restaurant_info WHERE location = %s", (location,))
+
+        total_restaurants = cursor.fetchone()[0]
+        total_pages_of_restaurants = (total_restaurants + 9) // 10  # Calculating the number of pages, each page has 10 reviews
+        
+        cursor.close()
+        return jsonify({'totalPagesOfRestaurants': total_pages_of_restaurants})
+
+        
 
 @api.route('/api/recommended_restaurants/<string:location>/<int:page>')
 @api.doc(params={'location': 'The location for which to find restaurants'})
@@ -65,7 +73,7 @@ class recommended_restaurants(Resource):
         cursor.execute("SELECT id, restaurant_name, cuisine, star_rating, no_reviews, url FROM restaurant_info WHERE location = %s LIMIT %s OFFSET %s", (location, per_page, offset))
         restaurants = cursor.fetchall()
         cursor.close()
-        return [{'id': row[0], 'restaurant_name': row[1], 'cuisine': row[2], 'star_rating': row[3], 'no_reviews': row[4], 'trip_advisor_url' : row[5]} for row in restaurants]
+        return [{'id': row[0], 'restaurant_name': row[1], 'cuisine': [cuisine.strip() for cuisine in row[2].split(',')], 'star_rating': row[3], 'no_reviews': row[4], 'trip_advisor_url' : row[5]} for row in restaurants]
 
 # @api.route('/api/restaurant_details/<int:restaurant_id>')
 # class restaurant_details(Resource):
@@ -159,7 +167,7 @@ class recommended_restaurants(Resource):
 class RestaurantDetails(Resource):
     def get(self, restaurant_id):
         cursor = mysql.connection.cursor()
-        cursor.execute("SELECT id, restaurant_name, cuisine, star_rating, no_reviews, url FROM restaurant_info WHERE id = %s", (restaurant_id,))
+        cursor.execute("SELECT id, restaurant_name, cuisine, star_rating, no_reviews, url, location FROM restaurant_info WHERE id = %s", (restaurant_id,))
         row = cursor.fetchone()
 
         if row:
@@ -170,9 +178,20 @@ class RestaurantDetails(Resource):
             total_reviews = cursor.fetchone()[0]
             total_pages_of_reviews = (total_reviews + 9) // 10  # Calculating the number of pages, each page has 10 reviews
 
+            # The average score of the aspects across multiple years
+
             # Fetch positivity for each aspect from quadruples
             cursor.execute("""
-                SELECT COALESCE(category, 'Uncategorized') AS category, AVG(CASE WHEN polarity = 'positive' THEN 1 ELSE 0 END) AS positivity
+                SELECT
+                IF(category = '' OR category IS NULL, 'Uncategorized', category) AS category,
+                AVG(
+                    CASE 
+                        WHEN polarity = 'positive' THEN 1 
+                        WHEN polarity = 'neutral' THEN 0 
+                        WHEN polarity = 'negative' THEN -1 
+                        ELSE NULL 
+                    END
+                ) AS average_polarity
                 FROM quadruples
                 JOIN reviews ON quadruples.review_id = reviews.id
                 WHERE reviews.restaurant = %s
@@ -180,9 +199,48 @@ class RestaurantDetails(Resource):
             """, (restaurant_name,))
             aspect_data = cursor.fetchall()
 
+            # Fetch average scores of aspects per year
+            cursor.execute("""
+                SELECT
+                IF(category = '' OR category IS NULL, 'Uncategorized', category) AS category,
+                YEAR(reviews.date) AS year,
+                AVG(
+                    CASE 
+                        WHEN polarity = 'positive' THEN 1 
+                        WHEN polarity = 'neutral' THEN 0 
+                        WHEN polarity = 'negative' THEN -1 
+                    END
+                ) AS average_polarity
+                FROM quadruples
+                JOIN reviews ON quadruples.review_id = reviews.id
+                WHERE reviews.restaurant = %s
+                GROUP BY category, YEAR(reviews.date)
+            """, (restaurant_name,))
+            yearly_aspect_data = cursor.fetchall()
+
+            # Prepare average scores of aspects per year for JSON output
+            average_scores = {}
+            for aspect in yearly_aspect_data:
+                if aspect[0] not in average_scores:
+                    average_scores[aspect[0]] = {
+                        "aspect_name": aspect[0],
+                        "years": [],
+                        "average_polarity": []
+                    }
+                average_scores[aspect[0]]["years"].append(aspect[1])
+                average_scores[aspect[0]]["average_polarity"].append(float(round(aspect[2], 2)))
+
+            # Sorting years and syncing polarities
+            for aspect, data in average_scores.items():
+                years_and_polarities = sorted(zip(data["years"], data["average_polarity"]), key=lambda x: x[0])  # Sort by year
+                data["years"], data["average_polarity"] = zip(*years_and_polarities)  # Unzip sorted tuples back to lists
+            
+            # Convert dict to list for JSON output
+            average_scores_list = list(average_scores.values())
+
             # Prepare aspects summary from the fetched data
             aspects_summary = [
-                {'aspectName': aspect[0], 'positivity': round(aspect[1], 2) if aspect[1] is not None else 0}
+                {'aspectName': aspect[0], 'positivity': float(round(aspect[1], 2)) if aspect[1] is not None else 0}
                 for aspect in aspect_data
             ]
 
@@ -193,12 +251,14 @@ class RestaurantDetails(Resource):
             restaurant = {
                 'id': row[0],
                 'restaurant_name': row[1],
-                'cuisine': row[2],
+                'cuisine': [cuisine.strip() for cuisine in row[2].split(',')],
                 'star_rating': float(row[3]) if isinstance(row[3], Decimal) else row[3],
                 'no_reviews': float(row[4]) if isinstance(row[4], Decimal) else row[4],
                 'trip_advisor_url': row[5],
                 'aspectsSummary': aspects_summary,
-                'totalPagesOfReviews': total_pages_of_reviews
+                'totalPagesOfReviews': total_pages_of_reviews,
+                'average_scores_by_year': average_scores_list,
+                'location': row[6],
             }
         else:
             restaurant = {}
