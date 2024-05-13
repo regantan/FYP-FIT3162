@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:intl/intl.dart';
 import 'dart:convert';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:http/http.dart' as http;
 
 /**
@@ -402,12 +399,6 @@ class _ReviewWidgetState extends State<ReviewWidget> {
 
   @override
   Widget build(BuildContext context) {
-    var theme = Theme.of(context);
-    var style = theme.textTheme.displaySmall!.copyWith(
-      color: theme.colorScheme.secondary,
-      fontSize: 16,
-    );
-
     return Card(
       color: Colors.white,
       clipBehavior: Clip.hardEdge,
@@ -526,7 +517,6 @@ Color getColorFromPositivity(double positivity) {
     return Color.lerp(red, lightRed, positivity.abs())!;
   } else {
     // Calculate how far the value is between 0 and 1
-    double ratio = positivity / 1;
     return Color.lerp(lightGreen, green, positivity)!;
   }
 }

@@ -1,16 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:intl/intl.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'restaurant_details_page.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'data_classes/restaurant.dart';
 import 'widgets/restaurant_card.dart';
-import 'package:flutter/material.dart';
-import 'dart:convert';
-
 
 /**
  * Main entry point of the application

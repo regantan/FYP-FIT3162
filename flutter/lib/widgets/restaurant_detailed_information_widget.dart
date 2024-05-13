@@ -1,10 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:intl/intl.dart';
-import 'dart:convert';
-import 'package:cached_network_image/cached_network_image.dart';
-import 'package:http/http.dart' as http;
 import 'package:fyp_fit3161_team8_web_app/data_classes/restaurant_details.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -27,8 +21,8 @@ class _RestaurantDetailedInformationWidgetState extends State<RestaurantDetailed
   List<FlSpot> lineChartData = [];
 
   Future<void> _launchURL(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
+    if (await canLaunchUrl(Uri.parse(url))) {
+      await launchUrl(Uri.parse(url));
     } else {
       throw 'Could not launch $url';
     }
@@ -71,8 +65,6 @@ class _RestaurantDetailedInformationWidgetState extends State<RestaurantDetailed
 
   @override
   Widget build(BuildContext context) {
-    var theme = Theme.of(context);
-
     return Container(
       decoration: BoxDecoration(
         border: Border.all(

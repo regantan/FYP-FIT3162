@@ -1,11 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fyp_fit3161_team8_web_app/data_classes/restaurant.dart';
-import 'package:provider/provider.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:intl/intl.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fyp_fit3161_team8_web_app/widgets/restaurant_card.dart';
 import 'package:fyp_fit3161_team8_web_app/restaurant_details_page.dart';
 

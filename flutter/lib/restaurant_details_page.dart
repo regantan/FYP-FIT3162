@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fyp_fit3161_team8_web_app/widgets/restaurant_detailed_information_widget.dart';
-import 'package:provider/provider.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:intl/intl.dart';
 import 'dart:convert';
@@ -72,7 +71,6 @@ Color getColorFromPositivity(double positivity) {
     return Color.lerp(red, lightRed, positivity.abs())!;
   } else {
     // Calculate how far the value is between 0 and 1
-    double ratio = positivity / 1;
     return Color.lerp(lightGreen, green, positivity)!;
   }
 }
