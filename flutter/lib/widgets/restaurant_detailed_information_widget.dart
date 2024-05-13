@@ -132,9 +132,28 @@ class _RestaurantDetailedInformationWidgetState extends State<RestaurantDetailed
               ),
             ],
           ),
-          Container(
-            height: 300,
-            child: AspectsOverTimeLineChart(),
+          SizedBox(height: 10),
+          Center(
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'Aspects Over Time',
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+              ),
+            ),
+          ),
+          SizedBox(height: 5),
+          Text('Polarity Value', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 300,
+              child: AspectsOverTimeLineChart(),
+            ),
+          ),
+          Align(
+            alignment: Alignment.centerRight,
+            child: Text('Year', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
           ),
         ],
       )
@@ -222,99 +241,82 @@ class _RestaurantDetailedInformationWidgetState extends State<RestaurantDetailed
 class AspectsOverTimeLineChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Container(
-          width: 30,
-          child: RotatedBox(
-            quarterTurns: 3,
-            child: Text('Polarity Value', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)), // Y-axis subtitle
-          ),
-        ),
-        Expanded(
-          child: Center(
-            child: Column(
-              children: [
-                Expanded(
-                  child: LineChart(
-                    LineChartData(
-                      minY: -1,
-                      maxY: 1,
-                      gridData: FlGridData(show: true),
-                      titlesData: FlTitlesData(
-                        show: true,
-                        leftTitles: AxisTitles(sideTitles: SideTitles(
-                          showTitles: true,
-                          reservedSize: 30,
-                          interval: 1,
-                          getTitlesWidget: (double value, TitleMeta meta) {
-                            return Text('${value.toInt()}',
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 14,
-                                ));
-                          },
-                        )),
-                        bottomTitles: AxisTitles(sideTitles: SideTitles(
-                          showTitles: true,
-                          reservedSize: 40,
-                          interval: 1,
-                          getTitlesWidget: (double value, TitleMeta meta) {
-                            return Text('${value.toInt()}',
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 14,
-                                ));
-                          },
-                        )),
-                        rightTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
-                        topTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
-                      ),
-                      borderData: FlBorderData(show: true),
-                      lineBarsData: [
-                        LineChartBarData(
-                          spots: [FlSpot(2020, -1), FlSpot(2021, 0.2)], // Line 1 with negative value
-                          isCurved: false,
-                          color: Colors.red,
-                          barWidth: 2,
-                          isStrokeCapRound: true,
-                          dotData: FlDotData(show: true),
-                        ),
-                        LineChartBarData(
-                          spots: [FlSpot(2019, 1), FlSpot(2023, 0)], // Line 2 with negative value
-                          isCurved: false,
-                          color: Colors.blue,
-                          barWidth: 2,
-                          isStrokeCapRound: true,
-                          dotData: FlDotData(show: true),
-                        ),
-                        LineChartBarData(
-                          spots: [FlSpot(2020, 0.5), FlSpot(2022, -1)], // Line 3 with negative value
-                          isCurved: false,
-                          color: Colors.green,
-                          barWidth: 2,
-                          isStrokeCapRound: true,
-                          dotData: FlDotData(show: true),
-                        ),
-                        LineChartBarData(
-                          spots: [FlSpot(2018, -1), FlSpot(2019, 0.7)], // Line 4 with negative value
-                          isCurved: false,
-                          color: Colors.orange,
-                          barWidth: 2,
-                          isStrokeCapRound: true,
-                          dotData: FlDotData(show: true),
-                        ),
-                      ],
-                    ),
-                  ),
+    return Expanded(
+      child: Center(
+        child: Expanded(
+          child: LineChart(
+            LineChartData(
+              minY: -1,
+              maxY: 1,
+              gridData: FlGridData(show: true),
+              titlesData: FlTitlesData(
+                show: true,
+                leftTitles: AxisTitles(sideTitles: SideTitles(
+                  showTitles: true,
+                  reservedSize: 20,
+                  interval: 1,
+                  getTitlesWidget: (double value, TitleMeta meta) {
+                    return Text('${value.toInt()}',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 16,
+                        ));
+                  },
+                )),
+                bottomTitles: AxisTitles(sideTitles: SideTitles(
+                  showTitles: true,
+                  reservedSize: 20,
+                  interval: 1,
+                  getTitlesWidget: (double value, TitleMeta meta) {
+                    return Text('${value.toInt()}',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 16,
+                        ));
+                  },
+                )),
+                rightTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+                topTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+              ),
+              borderData: FlBorderData(show: true),
+              lineBarsData: [
+                LineChartBarData(
+                  spots: [FlSpot(2020, -1), FlSpot(2021, 0.2)], // Line 1 with negative value
+                  isCurved: false,
+                  color: Colors.red,
+                  barWidth: 2,
+                  isStrokeCapRound: true,
+                  dotData: FlDotData(show: true),
                 ),
-                Text('Year', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                LineChartBarData(
+                  spots: [FlSpot(2019, 1), FlSpot(2023, 0)], // Line 2 with negative value
+                  isCurved: false,
+                  color: Colors.blue,
+                  barWidth: 2,
+                  isStrokeCapRound: true,
+                  dotData: FlDotData(show: true),
+                ),
+                LineChartBarData(
+                  spots: [FlSpot(2020, 0.5), FlSpot(2022, -1)], // Line 3 with negative value
+                  isCurved: false,
+                  color: Colors.green,
+                  barWidth: 2,
+                  isStrokeCapRound: true,
+                  dotData: FlDotData(show: true),
+                ),
+                LineChartBarData(
+                  spots: [FlSpot(2018, -1), FlSpot(2019, 0.7)], // Line 4 with negative value
+                  isCurved: false,
+                  color: Colors.orange,
+                  barWidth: 2,
+                  isStrokeCapRound: true,
+                  dotData: FlDotData(show: true),
+                ),
               ],
             ),
           ),
         ),
-      ],
+      ),
     );
   }
 }

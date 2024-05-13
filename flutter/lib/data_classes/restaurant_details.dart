@@ -11,7 +11,7 @@ class RestaurantDetails {
   final List<String> categories;
   final String websiteUrl;
   final String phoneNumber;
-  final List<Map<String, dynamic>> aspectsSummary;
+  final List<dynamic> aspectsSummary;
   final int totalPagesOfReviews;
   final int totalPagesOfRecommendedRestaurants;
 
@@ -32,18 +32,18 @@ class RestaurantDetails {
 
   factory RestaurantDetails.fromJson(Map<String, dynamic> json) {
     return RestaurantDetails(
-      restaurantId: json['restaurantId'],
-      name: json['name'],
-      coverImage: json['coverImage'],
-      rating: json['rating'],
-      totalReviews: json['totalReviews'],
-      fullAddress: json['fullAddress'],
-      categories: json['categories'],
-      websiteUrl: json['websiteUrl'],
-      phoneNumber: json['phoneNumber'],
+      restaurantId: json['id'],
+      name: json['restaurant_name'],
+      coverImage: 'https://media.timeout.com/images/101591411/image.jpg',
+      rating: json['star_rating'],
+      totalReviews: json['no_reviews'],
+      fullAddress: "Kuala Lumpur",
+      categories: ['Japanese', 'Seafood'],
+      websiteUrl: json['trip_advisor_url'],
+      phoneNumber: "123-456 678",
       aspectsSummary: json['aspectsSummary'],
       totalPagesOfReviews: json['totalPagesOfReviews'],
-      totalPagesOfRecommendedRestaurants: json['totalPagesOfRecommendedRestaurants'],
+      totalPagesOfRecommendedRestaurants: 12,
     );
   }
 }

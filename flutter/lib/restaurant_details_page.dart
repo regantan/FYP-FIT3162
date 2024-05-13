@@ -14,43 +14,43 @@ import 'widgets/recommendations_widget.dart';
  * Fetches restaurant details from the API
  */
 Future<RestaurantDetails> fetchRestaurantDetails(int restaurantId) async {
-  final response = await http.get(Uri.parse('https://api.coindesk.com/v1/bpi/currentprice.json'));
+  final response = await http.get(Uri.parse('http://127.0.0.1:8079/api/restaurant_details/${restaurantId}'));
 
   if (response.statusCode == 200) {
-    //final Map<String, dynamic> data = json.decode(response.body);
+    final Map<String, dynamic> data = json.decode(response.body);
 
     // TEST DATA
-    final Map<String, dynamic> data = {
-      'restaurantId': 1,
-      'name': 'VCR Cafe',
-      'coverImage': 'https://1.bp.blogspot.com/-8z3AlAEUiIc/XXEho3EiRtI/AAAAAAACjp4/VtJyYjtGIZIplaFWQgQ98df6MpNnRe_owCLcBGAs/s1600/L1000346.jpg',
-      'rating': 4.5,
-      'totalReviews': 100,
-      'fullAddress': '123 Main Street, City, State, Zip Code',
-      'categories': ['American', 'Asian'],
-      'websiteUrl': 'https://www.example.com',
-      'phoneNumber': '123-456-7890',
-      'aspectsSummary': [
-        {
-          'aspectName': 'Entertainment',
-          'positivity': 1,
-        },
-        {
-          'aspectName': 'Service',
-          'positivity': 0,
-        },
-        {
-          'aspectName': 'Food',
-          'positivity': 1,
-        },
-        {
-          'aspectName': 'Ambience',
-          'positivity': 0,
-        },
-      ],
-      'totalPagesOfReviews': 20,
-      'totalPagesOfRecommendedRestaurants': 5,
-    };
+    // final Map<String, dynamic> data = {
+    //   'restaurantId': 1,
+    //   'name': 'VCR Cafe',
+    //   'coverImage': 'https://1.bp.blogspot.com/-8z3AlAEUiIc/XXEho3EiRtI/AAAAAAACjp4/VtJyYjtGIZIplaFWQgQ98df6MpNnRe_owCLcBGAs/s1600/L1000346.jpg',
+    //   'rating': 4.5,
+    //   'totalReviews': 100,
+    //   'fullAddress': '123 Main Street, City, State, Zip Code',
+    //   'categories': ['American', 'Asian'],
+    //   'websiteUrl': 'https://www.example.com',
+    //   'phoneNumber': '123-456-7890',
+    //   'aspectsSummary': [
+    //     {
+    //       'aspectName': 'Entertainment',
+    //       'positivity': 1,
+    //     },
+    //     {
+    //       'aspectName': 'Service',
+    //       'positivity': 0,
+    //     },
+    //     {
+    //       'aspectName': 'Food',
+    //       'positivity': 1,
+    //     },
+    //     {
+    //       'aspectName': 'Ambience',
+    //       'positivity': 0,
+    //     },
+    //   ],
+    //   'totalPagesOfReviews': 20,
+    //   'totalPagesOfRecommendedRestaurants': 5,
+    // };
 
     return RestaurantDetails.fromJson(data);
   } else {
