@@ -509,11 +509,10 @@ class _ReviewWidgetState extends State<ReviewWidget> {
 }
 
 Color getColorFromPositivity(double positivity) {
-  // Define your color ranges
-  Color red = Colors.red;
-  Color? lightRed = Colors.red[100];
-  Color? green = Colors.green;
-  Color? lightGreen = Colors.green[100];
+  Color? red = Colors.red[600];
+  Color? lightRed = Colors.red[300];
+  Color? green = Colors.green[600];
+  Color? lightGreen = Colors.green[300];
   Color neutral = Colors.grey;
 
   if (positivity == 0.0) {

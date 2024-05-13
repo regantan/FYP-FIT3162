@@ -59,11 +59,10 @@ Future<RestaurantDetails> fetchRestaurantDetails(int restaurantId) async {
 }
 
 Color getColorFromPositivity(double positivity) {
-  // Define your color ranges
-  Color red = Colors.red;
-  Color? lightRed = Colors.red[100];
-  Color? green = Colors.green;
-  Color? lightGreen = Colors.green[100];
+  Color? red = Colors.red[600];
+  Color? lightRed = Colors.red[300];
+  Color? green = Colors.green[600];
+  Color? lightGreen = Colors.green[300];
   Color neutral = Colors.grey;
 
   if (positivity == 0.0) {
@@ -327,7 +326,7 @@ class _RestaurantDetailsPageState extends State<RestaurantDetailsPage> {
                                           ),
                                         ),
                                         style: ElevatedButton.styleFrom(
-                                          primary: Colors.orange,
+                                          backgroundColor: Colors.orange,
                                         ),
                                       ),
                                     ),

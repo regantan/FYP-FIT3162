@@ -7,6 +7,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:http/http.dart' as http;
 import 'package:fyp_fit3161_team8_web_app/data_classes/restaurant_details.dart';
 import 'package:fl_chart/fl_chart.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class RestaurantDetailedInformationWidget extends StatefulWidget {
 
@@ -24,6 +25,14 @@ class _RestaurantDetailedInformationWidgetState extends State<RestaurantDetailed
 
   bool _isOperatingHoursExpanded = false;
   List<String> dayNames = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+  Future<void> _launchURL(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -100,10 +109,14 @@ class _RestaurantDetailedInformationWidgetState extends State<RestaurantDetailed
               ),
               SizedBox(width: 10),
               Expanded(
-                child: Text(
-                  widget.restaurantDetails.websiteUrl,
-                  style: TextStyle(
-                    fontSize: 20.0,
+                child: GestureDetector(
+                  onTap: () => _launchURL(widget.restaurantDetails.websiteUrl),
+                  child: Text(
+                    widget.restaurantDetails.websiteUrl,
+                    style: TextStyle(
+                      color: Colors.blue,  // Make it look like a link
+                      decoration: TextDecoration.underline,
+                    ),
                   ),
                 ),
               ),
