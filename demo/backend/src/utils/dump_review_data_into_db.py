@@ -83,28 +83,46 @@ def main():
     # execute_query(connection, create_reviews_table)
     # execute_query(connection, create_quadruples_table)
 
-    # Insert data from JSONL file
-    with open('/Users/wongcheehao/Documents/Monash/FIT3162/FYP-FIT3162/dataset/predicted_reviews/reviews_KL.jsonl', 'r') as file:
-        cursor = connection.cursor()
-        for line in file:
-            data = json.loads(line)
-            insert_review_query = """
-            INSERT INTO reviews (author, title, review, rating, date, restaurant)
-            VALUES (%s, %s, %s, %s, %s, %s);
-            """
-            review_data = (data['Author'], data['Title'], data['Review'], data['Rating'], data['Dates'], data['Restaurant'])
-            cursor.execute(insert_review_query, review_data)
-            review_id = cursor.lastrowid
-
-            for quad in data['Quadruples']:
-                insert_quad_query = """
-                INSERT INTO quadruples (review_id, aspect, polarity, opinion, category)
-                VALUES (%s, %s, %s, %s, %s);
+    cursor = connection.cursor(buffered=True)
+    try:
+        with open('/Users/wongcheehao/Documents/Monash/FIT3162/FYP-FIT3162/dataset/predicted_reviews/reviews_ROME.jsonl', 'r') as file:
+            for line in file:
+                data = json.loads(line)
+                
+                # Check if the review already exists
+                check_review_query = """
+                SELECT 1 FROM reviews WHERE author = %s AND date = %s AND restaurant = %s;
                 """
-                quad_data = (review_id, quad['aspect'], quad['polarity'], quad['opinion'], quad['category'])
-                cursor.execute(insert_quad_query, quad_data)
+                cursor.execute(check_review_query, (data['Author'], data['Dates'], data['Restaurant']))
+                if cursor.fetchone():
+                    print(f"Review already exists for author {data['Author']} on {data['Dates']} at {data['Restaurant']}. Skipping insertion.")
+                    continue  # Skip if review exists
+                
+                insert_review_query = """
+                INSERT INTO reviews (author, title, review, rating, date, restaurant)
+                VALUES (%s, %s, %s, %s, %s, %s);
+                """
+                review_data = (data['Author'], data['Title'], data['Review'], data['Rating'], data['Dates'], data['Restaurant'])
+                cursor.execute(insert_review_query, review_data)
+                print(f"Inserted review for author {data['Author']} on {data['Dates']} at {data['Restaurant']}.")
+                
+                review_id = cursor.lastrowid
+                for quad in data['Quadruples']:
+                    insert_quad_query = """
+                    INSERT INTO quadruples (review_id, aspect, polarity, opinion, category)
+                    VALUES (%s, %s, %s, %s, %s);
+                    """
+                    quad_data = (review_id, quad['aspect'], quad['polarity'], quad['opinion'], quad['category'])
+                    cursor.execute(insert_quad_query, quad_data)
+                    print(f"Inserted quadruple with aspect {quad['aspect']} and opinion {quad['opinion']}.")
 
-            connection.commit()
-
+                connection.commit()  # Commit after all inserts for a single review
+    except Error as e:
+        print("An error occurred:", e)
+        connection.rollback()
+    finally:
+        cursor.close()
+        connection.close()
+    
 if __name__ == "__main__":
     main()
