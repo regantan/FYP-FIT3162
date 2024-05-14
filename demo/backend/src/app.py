@@ -109,7 +109,7 @@ class recommended_restaurants(Resource):
                 'id': restaurant_id,
                 'restaurant_name': restaurant_name,
                 'cuisine': [c.strip() for c in cuisine.split(',')] if cuisine else [],
-                'star_rating': star_rating,
+                'star_rating': float(star_rating),
                 'no_reviews': total_reviews,
                 'trip_advisor_url': url
             })
