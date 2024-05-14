@@ -51,14 +51,20 @@ restaurant_details_model = api.model('restaurant_details', {
 @api.route('/api/number_of_restaurants/<string:location>')
 class home(Resource):
     def get(self, location):
-        cursor = mysql.connezction.cursor()
+        cursor = mysql.connection.cursor()
         cursor.execute("SELECT COUNT(*) FROM restaurant_info WHERE location = %s", (location,))
 
         total_restaurants = cursor.fetchone()[0]
         total_pages_of_restaurants = (total_restaurants + 9) // 10  # Calculating the number of pages, each page has 10 reviews
         
+        cursor.execute("SELECT id, restaurant_name FROM restaurant_info WHERE location = %s", (location,))
+        restaurants = cursor.fetchall()
+        restaurants = [{'restaurantId': restaurant[0], 'restaurant_name': restaurant[1]} for restaurant in restaurants]
         cursor.close()
-        return jsonify({'totalPagesOfRestaurants': total_pages_of_restaurants})
+
+        return jsonify({'totalPagesOfRestaurants': total_pages_of_restaurants,
+                        'restaurants': restaurants,
+                        })
 
         
 @api.route('/api/recommended_restaurants/<string:location>/<int:page>')
