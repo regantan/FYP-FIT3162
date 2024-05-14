@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'restaurant_details_page.dart';
 import 'data_classes/restaurant.dart';
+import 'data_classes/restaurant_name_info.dart';
 import 'widgets/restaurant_card.dart';
 
 /**
@@ -41,29 +42,76 @@ class App extends StatelessWidget {
 /**
  *  Method to fetch the total number of pages of restaurants from the API
  */
-Future<String> fetchTotalPagesOfRestaurants(String city) async {
+Future<Map<String, dynamic>> fetchTotalPagesOfRestaurants(String city) async {
   final response = await http.get(Uri.parse('http://127.0.0.1:8079/api/number_of_restaurants/${city}'));
 
   if (response.statusCode == 200) {
-    final Map<String, dynamic> data = json.decode(response.body);
+    //final Map<String, dynamic> data = json.decode(response.body);
 
     // TEST DATA
-    // final Map<String, dynamic> data;
-    // if (city == "kl") {
-    //   data = {
-    //     'totalPages': 10,
-    //   };
-    // } else if (city == "rome") {
-    //   data = {
-    //     'totalPages': 22,
-    //   };
-    // } else {
-    //   data = {
-    //     'totalPages': 1000,
-    //   };
-    // }
+    final Map<String, dynamic> data;
+    if (city == "kl") {
+      data = {
+        "totalPagesOfRestaurants": 51,
+        "restaurants": [
+          {
+            "restaurantId": 1,
+            "restaurant_name": "Iketaru Restaurant",
+          },
+          {
+            "restaurantId": 2,
+            "restaurant_name": "Ishin Japanese Dining",
+          },
+          {
+            "restaurantId": 3,
+            "restaurant_name": "Chambers Grill",
+          },
+        ],
+      };
+    } else if (city == "rome") {
+      data = {
+        "totalPagesOfRestaurants": 22,
+        "restaurants": [
+          {
+            "restaurantId": 1,
+            "restaurant_name": "Adesso Vineria-bistrot",
+          },
+          {
+            "restaurantId": 2,
+            "restaurant_name": "La Fata Ignorante - Rooftop Restaurant & Bar",
+          },
+          {
+            "restaurantId": 3,
+            "restaurant_name": "Ad Hoc Ristorante (Circo Massimo)",
+          },
+        ],
+      };
+    } else {
+      data = {
+        "totalPagesOfRestaurants": 1000,
+        "restaurants": [
+          {
+            "restaurantId": 1,
+            "restaurant_name": "Iketaru Restaurant",
+          },
+          {
+            "restaurantId": 2,
+            "restaurant_name": "Ishin Japanese Dining",
+          },
+          {
+            "restaurantId": 3,
+            "restaurant_name": "Chambers Grill",
+          },
+        ],
+      };
+    }
 
-    return data['totalPagesOfRestaurants'].toString();
+    final List<dynamic> restaurantInfo = data['restaurants'];
+    return {
+      "totalPagesOfRestaurants": data['totalPagesOfRestaurants'],
+      "restaurants": restaurantInfo.map((json) => RestaurantNameInfo.fromJson(json)).toList(),
+    };
+    //return data.map((json) => CityInfo.fromJson(json)).toList();
   } else {
     throw Exception('Failed to retrieve total pages from API');
   }
@@ -166,6 +214,7 @@ class AppState extends ChangeNotifier {
   String restaurantsFrom = "kl";
   int currentPageOfRestaurants = 1;
   int totalPagesOfRestaurants = 1;
+  List<dynamic> restaurantsNameInfo = [];
 
   String getRestaurantsFrom() {
     return restaurantsFrom;
@@ -213,6 +262,15 @@ class AppState extends ChangeNotifier {
   void updateTotalPagesOfRestaurants(int totalPages) {
     totalPagesOfRestaurants = totalPages;
     notifyListeners();
+  }
+
+  void updateRestaurantsNameInfo(List<dynamic> restaurantsInfo) {
+    restaurantsNameInfo = restaurantsInfo;
+    notifyListeners();
+  }
+
+  List<dynamic> getRestaurantsNameInfo() {
+    return restaurantsNameInfo;
   }
 }
 
@@ -270,8 +328,9 @@ class _RestaurantsListingPageState extends State<RestaurantsListingPage> {
   void initState() {
     super.initState();
     // fetch total pages of restaurants
-    fetchTotalPagesOfRestaurants(context.read<AppState>().getRestaurantsFrom()).then((totalPages) {
-      context.read<AppState>().updateTotalPagesOfRestaurants(int.parse(totalPages));
+    fetchTotalPagesOfRestaurants(context.read<AppState>().getRestaurantsFrom()).then((restaurantsInfo) {
+      context.read<AppState>().updateTotalPagesOfRestaurants(restaurantsInfo['totalPagesOfRestaurants']);
+      context.read<AppState>().updateRestaurantsNameInfo(restaurantsInfo['restaurants']);
     }).catchError((error) {
       // Handle errors if the request fails
       print('Error fetching total pages: $error');
@@ -299,14 +358,42 @@ class _RestaurantsListingPageState extends State<RestaurantsListingPage> {
                         fontSize: 25,
                         overflow: TextOverflow.ellipsis,
                       ),),
+                    SizedBox(width: 10),
+                    DropdownMenu(
+                      width: 300,
+                      onSelected: (selectedRestaurantId) {
+                        if (selectedRestaurantId != null) {
+                          int restaurantId = int.parse(selectedRestaurantId);
+                          String restaurantName = appState.getRestaurantsNameInfo().firstWhere((restaurantInfo) => restaurantInfo.restaurantId == restaurantId).restaurantName;
+
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => RestaurantDetailsPage(
+                                restaurantId: restaurantId,
+                                restaurantName: restaurantName,
+                              ),
+                            ),
+                          );
+                        }
+                      },
+                      dropdownMenuEntries: appState.getRestaurantsNameInfo()
+                          .map<DropdownMenuEntry<String>>((restaurantInfo) => DropdownMenuEntry(
+                        value: restaurantInfo.restaurantId.toString(),
+                        label: restaurantInfo.restaurantName,
+                      ))
+                          .toList(),
+                    ),
                     Spacer(),
                     DropdownMenu(
                       initialSelection: appState.getRestaurantsFrom(),
                       onSelected: (selectedCity) async {
                         if (selectedCity != null && selectedCity != appState.getRestaurantsFrom()) {
                           appState.updateRestaurantsFrom(selectedCity);
-                          String totalPages = await fetchTotalPagesOfRestaurants(selectedCity);
-                          appState.updateTotalPagesOfRestaurants(int.parse(totalPages));
+                          Map<String, dynamic> restaurantsInfo = await fetchTotalPagesOfRestaurants(selectedCity);
+                          int totalPages = restaurantsInfo['totalPagesOfRestaurants'];
+                          appState.updateTotalPagesOfRestaurants(totalPages);
+                          appState.updateRestaurantsNameInfo(restaurantsInfo['restaurants']);
                         }
                       },
                       dropdownMenuEntries: <DropdownMenuEntry<String>>[

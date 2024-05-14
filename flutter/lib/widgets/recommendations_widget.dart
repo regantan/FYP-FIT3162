@@ -132,7 +132,7 @@ class _RecommendationsWidgetState extends State<RecommendationsWidget> {
                 Padding(
                   padding: const EdgeInsets.only(left: 12.0),
                   child: Text(
-                    'Racommendations',
+                    'Recommendations',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 25.0,
