@@ -106,10 +106,10 @@ Future<Map<String, dynamic>> fetchTotalPagesOfRestaurants(String city) async {
     //   };
     // }
 
-    final List<dynamic> restaurantInfo = data['restaurants'];
+    // final List<dynamic> restaurantInfo = data['restaurants'];
     return {
       "totalPagesOfRestaurants": data['totalPagesOfRestaurants'],
-      "restaurants": restaurantInfo.map((json) => RestaurantNameInfo.fromJson(json)).toList(),
+      // "restaurants": restaurantInfo.map((json) => RestaurantNameInfo.fromJson(json)).toList(),
     };
     //return data.map((json) => CityInfo.fromJson(json)).toList();
   } else {
@@ -120,11 +120,17 @@ Future<Map<String, dynamic>> fetchTotalPagesOfRestaurants(String city) async {
 /**
  * Method to fetch a list of restaurants from the API
  */
-Future<List<Restaurant>> fetchRestaurants(String city, int page) async {
-  final http.Response response = await http.get(Uri.parse('http://127.0.0.1:8079/api/recommended_restaurants/${city}/${page}'));
+Future<List<Restaurant>> fetchRestaurants(String city, int page, String searchTerm) async {
+  http.Response response;
+  if (searchTerm.isEmpty) {
+    response = await http.get(Uri.parse('http://127.0.0.1:8079/api/recommended_restaurants/${city}/${page}'));
+  }
+  else {
+    response = await http.get(Uri.parse('http://127.0.0.1:8079/api/search/${searchTerm}/${city}/${page}'));
+  }
 
   if (response.statusCode == 200) {
-    final List<dynamic> data = json.decode(response.body);
+    List<dynamic> data = json.decode(response.body);
 
     // TEST DATA
     // final Map<String, dynamic> data;
@@ -215,6 +221,7 @@ class AppState extends ChangeNotifier {
   int currentPageOfRestaurants = 1;
   int totalPagesOfRestaurants = 1;
   List<dynamic> restaurantsNameInfo = [];
+  String searchTerm = "";
 
   String getRestaurantsFrom() {
     return restaurantsFrom;
@@ -271,6 +278,21 @@ class AppState extends ChangeNotifier {
 
   List<dynamic> getRestaurantsNameInfo() {
     return restaurantsNameInfo;
+  }
+
+  void updateSearch(String term) async {
+    searchTerm = term;
+    currentPageOfRestaurants = 1;
+    http.Response response;
+    if (term.isEmpty) {
+      response = await http.get(Uri.parse('http://127.0.0.1:8079/api/number_of_restaurants/${restaurantsFrom}'));
+    } else {
+      response = await http.get(Uri.parse('http://127.0.0.1:8079/api/search_page/${term}/${restaurantsFrom}'));
+    }
+    if (response.statusCode == 200) {
+      totalPagesOfRestaurants = json.decode(response.body)['totalPagesOfRestaurants'];
+    }
+    notifyListeners();
   }
 }
 
@@ -330,7 +352,7 @@ class _RestaurantsListingPageState extends State<RestaurantsListingPage> {
     // fetch total pages of restaurants
     fetchTotalPagesOfRestaurants(context.read<AppState>().getRestaurantsFrom()).then((restaurantsInfo) {
       context.read<AppState>().updateTotalPagesOfRestaurants(restaurantsInfo['totalPagesOfRestaurants']);
-      context.read<AppState>().updateRestaurantsNameInfo(restaurantsInfo['restaurants']);
+      // context.read<AppState>().updateRestaurantsNameInfo(restaurantsInfo['restaurants']);
     }).catchError((error) {
       // Handle errors if the request fails
       print('Error fetching total pages: $error');
@@ -359,30 +381,15 @@ class _RestaurantsListingPageState extends State<RestaurantsListingPage> {
                         overflow: TextOverflow.ellipsis,
                       ),),
                     SizedBox(width: 10),
-                    DropdownMenu(
+                    Container(
                       width: 300,
-                      onSelected: (selectedRestaurantId) {
-                        if (selectedRestaurantId != null) {
-                          int restaurantId = int.parse(selectedRestaurantId);
-                          String restaurantName = appState.getRestaurantsNameInfo().firstWhere((restaurantInfo) => restaurantInfo.restaurantId == restaurantId).restaurantName;
-
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => RestaurantDetailsPage(
-                                restaurantId: restaurantId,
-                                restaurantName: restaurantName,
-                              ),
-                            ),
-                          );
-                        }
-                      },
-                      dropdownMenuEntries: appState.getRestaurantsNameInfo()
-                          .map<DropdownMenuEntry<String>>((restaurantInfo) => DropdownMenuEntry(
-                        value: restaurantInfo.restaurantId.toString(),
-                        label: restaurantInfo.restaurantName,
-                      ))
-                          .toList(),
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: "Search Restaurant",
+                          border: OutlineInputBorder(),
+                        ),
+                        onChanged: (String value) => appState.updateSearch(value),
+                      ),
                     ),
                     Spacer(),
                     DropdownMenu(
@@ -393,7 +400,8 @@ class _RestaurantsListingPageState extends State<RestaurantsListingPage> {
                           Map<String, dynamic> restaurantsInfo = await fetchTotalPagesOfRestaurants(selectedCity);
                           int totalPages = restaurantsInfo['totalPagesOfRestaurants'];
                           appState.updateTotalPagesOfRestaurants(totalPages);
-                          appState.updateRestaurantsNameInfo(restaurantsInfo['restaurants']);
+                          appState.updateSearch(appState.searchTerm);
+                          // appState.updateRestaurantsNameInfo(restaurantsInfo['restaurants']);
                         }
                       },
                       dropdownMenuEntries: <DropdownMenuEntry<String>>[
@@ -439,7 +447,7 @@ class _RestaurantsListingPageState extends State<RestaurantsListingPage> {
               ),
               Expanded(
                 child: FutureBuilder<List<Restaurant>>(
-                  future: fetchRestaurants(appState.getRestaurantsFrom(), appState.currentPageOfRestaurants),
+                  future: fetchRestaurants(appState.getRestaurantsFrom(), appState.currentPageOfRestaurants, appState.searchTerm),
                   builder: (context, snapshot) {
                     if (snapshot.connectionState == ConnectionState.waiting) {
                       // Display a loading indicator while the data is being fetched
