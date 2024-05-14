@@ -1,3 +1,4 @@
+import pickle
 import socket
 from flask import Flask, redirect, url_for
 from flask_mysqldb import MySQL
@@ -401,51 +402,70 @@ class Reviews(Resource):
 #         similar = find_similar_restaurants(restaurant_id)
 #         return jsonify(similar)
 
-# def get_aspect_scores(restaurant_id):
-#     cursor = mysql.connection.cursor()
-#     cursor.execute("""
-#         SELECT q.category, AVG(
-#             CASE
-#                 WHEN q.polarity = 'positive' THEN 1
-#                 WHEN q.polarity = 'neutral' THEN 0
-#                 WHEN q.polarity = 'negative' THEN -1
-#             END) AS score
-#         FROM quadruples q
-#         JOIN reviews r ON q.review_id = r.id
-#         WHERE r.restaurant = %s
-#         GROUP BY q.category
-#     """, (restaurant_id,))
-#     results = cursor.fetchall()
-#     cursor.close()
-#     return dict(results)
 
-# def find_similar_restaurants(target_restaurant_id):
-#     target_cuisine, target_scores = get_restaurant_details(target_restaurant_id)
-    
-#     cursor = mysql.connection.cursor()
-#     cursor.execute("SELECT id, restaurant_name, cuisine FROM restaurant_info")
-#     all_restaurants = cursor.fetchall()
-    
-#     similarities = []
-#     for id, name, cuisine in all_restaurants:
-#         if id == target_restaurant_id:
-#             continue
-        
-#         aspect_scores = get_aspect_scores(id)
-#         # Simplified similarity: check for matching cuisine and similar aspect score patterns
-#         similarity = 0
-#         if cuisine == target_cuisine:
-#             similarity += 1  # Increment if cuisines match
+@api.route('/api/similar_restaurants/<int:restaurant_id>/<int:page>')
+class SimilarRestaurants(Resource):
+    def get(self,restaurant_id, page):
+        items_per_page = 10
+
+        cursor = mysql.connection.cursor()
+        cursor.execute("SELECT restaurant_name FROM restaurant_info WHERE id = %s", (restaurant_id,))
+        row = cursor.fetchone()
+        restaurant_name = row[0]
+        cursor.close()
+
+        try:
+            with open('similarities.pkl', 'rb') as f:
+                similarities = pickle.load(f)
+            print("Loaded similarities from file.")  # Debug print
+
+            # Check if the restaurant_id exists in the dataset
+            similar_list = similarities.get(str(restaurant_name), [])
+            # similar_list = similarities.get[(str(restaurant_id), [])]
+            print(f"Similar list for restaurant {restaurant_name}: {similar_list}")  # Debug print
+
+            # Calculate the pagination boundaries
+            start = (page - 1) * items_per_page
+            end = start + items_per_page
+            print(f"Pagination from {start} to {end}")  # Debug print
+
+            # Get the names of similar restaurants for this page
+            page_restaurant_details = similar_list[start:end]
+            print(f"Page items: {page_restaurant_details}")  # Debug print
+
+            # Now fetch details for these restaurants from the database
+            restaurants_data = []
+            for name, similarity_score in page_restaurant_details:
+                cursor = mysql.connection.cursor()
+                cursor.execute("""
+                    SELECT id, restaurant_name, cuisine, star_rating, url 
+                    FROM restaurant_info 
+                    WHERE restaurant_name = %s
+                """, (name,))
+                restaurant_info = cursor.fetchone()
+                if restaurant_info:
+                    restaurant_id, restaurant_name, cuisine, star_rating, url = restaurant_info
+                    
+                    # Execute query to count the number of reviews for the current restaurant
+                    cursor.execute("SELECT COUNT(*) FROM reviews WHERE restaurant = %s", (restaurant_name,))
+                    total_reviews = cursor.fetchone()[0]
+
+                    # Append the restaurant data with the number of reviews
+                    restaurants_data.append({
+                        'id': restaurant_id,
+                        'restaurant_name': restaurant_name,
+                        'cuisine': [c.strip() for c in cuisine.split(',')] if cuisine else [],
+                        'star_rating': float(star_rating),
+                        'no_reviews': total_reviews,
+                        'trip_advisor_url': url,
+                        'similarity_score': float(similarity_score) 
+                    })
+                cursor.close()
             
-#         # Compare aspect scores (placeholder for actual cosine similarity)
-#         for category, score in target_scores.items():
-#             similarity += score * aspect_scores.get(category, 0)
-        
-#         similarities.append((name, similarity))
-    
-#     # Sort based on similarity score
-#     similarities.sort(key=lambda x: x[1], reverse=True)
-#     return similarities
+            return jsonify(restaurants_data)        
+        except Exception as e:
+            print(f"Error: {e}")  # Debug print
+            return jsonify({'error': str(e)}), 500
 
 def find_free_port():
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
