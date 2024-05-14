@@ -205,7 +205,7 @@ class _RestaurantDetailsPageState extends State<RestaurantDetailsPage> {
                                   child: Expanded(
                                     child: GridView(
                                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                                        crossAxisCount: 6,
+                                        crossAxisCount: 5,
                                         crossAxisSpacing: 5,
                                         mainAxisSpacing: 5,
                                         childAspectRatio: 240 / 40,
@@ -223,7 +223,7 @@ class _RestaurantDetailsPageState extends State<RestaurantDetailsPage> {
                                           padding: const EdgeInsets.only(left: 15.0, right: 15.0),
                                           child: Center(
                                             child: Text(
-                                              aspectSummary['aspectName'].replaceAll(RegExp(r'[#]'), ': ').trim(),
+                                              '${aspectSummary['aspectName'].replaceAll(RegExp(r'[#]'), ': ').trim()} | ${aspectSummary['positivity']}',
                                               style: TextStyle(
                                                 color: Colors.white,
                                                 fontSize: 12,

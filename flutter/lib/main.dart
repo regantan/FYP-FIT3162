@@ -6,7 +6,6 @@ import 'restaurant_details_page.dart';
 import 'data_classes/restaurant.dart';
 import 'data_classes/restaurant_name_info.dart';
 import 'widgets/restaurant_card.dart';
-import 'package:dropdown_search/dropdown_search.dart';
 
 /**
  * Main entry point of the application
@@ -360,41 +359,6 @@ class _RestaurantsListingPageState extends State<RestaurantsListingPage> {
                         overflow: TextOverflow.ellipsis,
                       ),),
                     SizedBox(width: 10),
-                    DropdownSearch<dynamic>(
-                      items: appState.getRestaurantsNameInfo(),
-                      itemAsString: (dynamic r) => r.restaurantName,
-                      onChanged: (dynamic selectedRestaurant) {
-                        if (selectedRestaurant != null) {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => RestaurantDetailsPage(
-                                restaurantId: selectedRestaurant.restaurantId,
-                                restaurantName: selectedRestaurant.restaurantName,
-                              ),
-                            ),
-                          );
-                        }
-                      },
-                      dropdownDecoratorProps: DropDownDecoratorProps(
-                        dropdownSearchDecoration: InputDecoration(
-                          labelText: "Select a Restaurant",
-                          contentPadding: EdgeInsets.fromLTRB(12, 12, 0, 0),
-                          border: OutlineInputBorder(),
-                        ),
-                      ),
-                      dropdownBuilder: (context, selectedItem) {
-                        return Text(selectedItem?.restaurantName ?? "Select a Restaurant");
-                      },
-                      popupProps: PopupProps.bottomSheet(
-                        showSearchBox: true,
-                        itemBuilder: (context, item, isSelected) {
-                          return ListTile(
-                            title: Text(item.restaurantName),
-                          );
-                        },
-                      ),
-                    ),
                     DropdownMenu(
                       width: 300,
                       onSelected: (selectedRestaurantId) {
