@@ -85,7 +85,7 @@ def main():
 
     cursor = connection.cursor(buffered=True)
     try:
-        with open('/Users/wongcheehao/Documents/Monash/FIT3162/FYP-FIT3162/dataset/predicted_reviews/reviews_ROME.jsonl', 'r') as file:
+        with open('C:/Users/cibei/OneDrive/Documents/IdeaProjects/FYP-FIT3162/dataset/predicted_reviews/reviews_ROME.jsonl', 'r') as file:
             for line in file:
                 data = json.loads(line)
                 

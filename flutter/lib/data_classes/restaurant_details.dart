@@ -7,11 +7,11 @@ class RestaurantDetails {
   final String coverImage;
   final double rating;
   final int totalReviews;
-  final String fullAddress;
-  final List<String> categories;
+  final String location;
+  final List<dynamic> categories;
   final String websiteUrl;
-  final String phoneNumber;
-  final List<Map<String, dynamic>> aspectsSummary;
+  final List<dynamic> aspectsSummary;
+  final List<dynamic> averageScoresByYear;
   final int totalPagesOfReviews;
   final int totalPagesOfRecommendedRestaurants;
 
@@ -21,29 +21,29 @@ class RestaurantDetails {
     required this.coverImage,
     required this.rating,
     required this.totalReviews,
-    required this.fullAddress,
+    required this.location,
     required this.categories,
     required this.websiteUrl,
-    required this.phoneNumber,
     required this.aspectsSummary,
+    required this.averageScoresByYear,
     required this.totalPagesOfReviews,
     required this.totalPagesOfRecommendedRestaurants,
   });
 
   factory RestaurantDetails.fromJson(Map<String, dynamic> json) {
     return RestaurantDetails(
-      restaurantId: json['restaurantId'],
-      name: json['name'],
-      coverImage: json['coverImage'],
-      rating: json['rating'],
-      totalReviews: json['totalReviews'],
-      fullAddress: json['fullAddress'],
-      categories: json['categories'],
-      websiteUrl: json['websiteUrl'],
-      phoneNumber: json['phoneNumber'],
+      restaurantId: json['id'],
+      name: json['restaurant_name'],
+      coverImage: 'https://media.timeout.com/images/101591411/image.jpg',
+      rating: json['star_rating'],
+      totalReviews: json['no_reviews'],
+      location: json['location'].toLowerCase() == 'kl' ? "Kuala Lumpur" : json['location'],
+      categories: json['cuisine'],
+      websiteUrl: json['trip_advisor_url'],
       aspectsSummary: json['aspectsSummary'],
+      averageScoresByYear: json['average_scores_by_year'],
       totalPagesOfReviews: json['totalPagesOfReviews'],
-      totalPagesOfRecommendedRestaurants: json['totalPagesOfRecommendedRestaurants'],
+      totalPagesOfRecommendedRestaurants: 5,
     );
   }
 }

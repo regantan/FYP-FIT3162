@@ -1,16 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:intl/intl.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'restaurant_details_page.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'data_classes/restaurant.dart';
 import 'widgets/restaurant_card.dart';
-import 'package:flutter/material.dart';
-import 'dart:convert';
-
 
 /**
  * Main entry point of the application
@@ -47,29 +41,15 @@ class App extends StatelessWidget {
 /**
  *  Method to fetch the total number of pages of restaurants from the API
  */
-Future<String> fetchTotalPagesOfRestaurants(String city) async {
-  final response = await http.get(Uri.parse('https://api.coindesk.com/v1/bpi/currentprice.json'));
+Future<Map<String, dynamic>> fetchTotalPagesOfRestaurants(String city) async {
+  final response = await http.get(Uri.parse('http://127.0.0.1:8079/api/number_of_restaurants/${city}'));
 
   if (response.statusCode == 200) {
-    //final Map<String, dynamic> data = json.decode(response.body);
+    final Map<String, dynamic> data = json.decode(response.body);
 
-    // TEST DATA
-    final Map<String, dynamic> data;
-    if (city == "kl") {
-      data = {
-        'totalPages': 10,
-      };
-    } else if (city == "rome") {
-      data = {
-        'totalPages': 22,
-      };
-    } else {
-      data = {
-        'totalPages': 1000,
-      };
-    }
-
-    return data['totalPages'].toString();
+    return {
+      "totalPagesOfRestaurants": data['totalPagesOfRestaurants'],
+    };
   } else {
     throw Exception('Failed to retrieve total pages from API');
   }
@@ -78,87 +58,18 @@ Future<String> fetchTotalPagesOfRestaurants(String city) async {
 /**
  * Method to fetch a list of restaurants from the API
  */
-Future<List<Restaurant>> fetchRestaurants(String city, int page) async {
-  final http.Response response = await http.get(Uri.parse('http://127.0.0.1:8079/api/recommended_restaurants/${city}/${page}'));
+Future<List<Restaurant>> fetchRestaurants(String city, int page, String searchTerm) async {
+  http.Response response;
+  if (searchTerm.isEmpty) {
+    response = await http.get(Uri.parse('http://127.0.0.1:8079/api/recommended_restaurants/${city}/${page}'));
+  }
+  else {
+    response = await http.get(Uri.parse('http://127.0.0.1:8079/api/search/${searchTerm}/${city}/${page}'));
+  }
 
   if (response.statusCode == 200) {
-    final List<dynamic> data = json.decode(response.body);
+    List<dynamic> data = json.decode(response.body);
 
-    // TEST DATA
-    // final Map<String, dynamic> data;
-    // if (city == 'kl') {
-    //   data = {
-    //     'restaurants': [
-    //       {
-    //         'restaurantId': 1,
-    //         'name': 'KL VCR Cafe',
-    //         'coverImage': 'https://www.foodadvisor.my/attachments/902c3847bc35a626f8b303f489a7f8f3d82d3b8b/store/fill/800/500/c9906624687aab259426150e9cc46cf34cd2920b2d4d262be2a54d3f0c72/featured_image.jpg',
-    //         'rating': 4.5,
-    //         'totalReviews': 3512,
-    //         'address': '31, Jln Telawi 3, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-    //         'categories': ['Cafe', 'American', 'European'],
-    //       },
-    //       {
-    //         'restaurantId': 2,
-    //         'name': 'ZEN by MEL',
-    //         'coverImage': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmi1L80uMKiW3ABUCMC0Zf-GbP2roGGc5Fvw&usqp=CAU',
-    //         'rating': 3.3,
-    //         'totalReviews': 47,
-    //         'address': 'F-10-01, Pusat Perdagangan Bandar, Persiaran Jalil 1, Bukit Jalil, 57000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-    //         'categories': ['Fine dining restaurant'],
-    //       },
-    //     ],
-    //   };
-    // } else if (city == "rome") {
-    //   data = {
-    //     'restaurants': [
-    //       {
-    //         'restaurantId': 1,
-    //         'name': 'ROME VCR Cafe',
-    //         'coverImage': 'https://www.foodadvisor.my/attachments/902c3847bc35a626f8b303f489a7f8f3d82d3b8b/store/fill/800/500/c9906624687aab259426150e9cc46cf34cd2920b2d4d262be2a54d3f0c72/featured_image.jpg',
-    //         'rating': 4.5,
-    //         'totalReviews': 3512,
-    //         'address': '31, Jln Telawi 3, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-    //         'categories': ['Cafe', 'American', 'European'],
-    //       },
-    //       {
-    //         'restaurantId': 2,
-    //         'name': 'ZEN by MEL',
-    //         'coverImage': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmi1L80uMKiW3ABUCMC0Zf-GbP2roGGc5Fvw&usqp=CAU',
-    //         'rating': 3.3,
-    //         'totalReviews': 47,
-    //         'address': 'F-10-01, Pusat Perdagangan Bandar, Persiaran Jalil 1, Bukit Jalil, 57000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-    //         'categories': ['Fine dining restaurant'],
-    //       },
-    //     ],
-    //   };
-    // } else {
-    //   data = {
-    //     'restaurants': [
-    //       {
-    //         'restaurantId': 1,
-    //         'name': 'FAILED VCR Cafe',
-    //         'coverImage': 'https://www.foodadvisor.my/attachments/902c3847bc35a626f8b303f489a7f8f3d82d3b8b/store/fill/800/500/c9906624687aab259426150e9cc46cf34cd2920b2d4d262be2a54d3f0c72/featured_image.jpg',
-    //         'rating': 4.5,
-    //         'totalReviews': 3512,
-    //         'address': '31, Jln Telawi 3, Bangsar, 59100 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-    //         'categories': ['Cafe', 'American', 'European'],
-    //       },
-    //       {
-    //         'restaurantId': 2,
-    //         'name': 'ZEN by MEL',
-    //         'coverImage': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmi1L80uMKiW3ABUCMC0Zf-GbP2roGGc5Fvw&usqp=CAU',
-    //         'rating': 3.3,
-    //         'totalReviews': 47,
-    //         'address': 'F-10-01, Pusat Perdagangan Bandar, Persiaran Jalil 1, Bukit Jalil, 57000 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur',
-    //         'categories': ['Fine dining restaurant'],
-    //       },
-    //     ],
-    //   };
-    // }
-
-    // final List<dynamic> restaurants = data['restaurants'];
-    // return restaurants.map((json) => Restaurant.fromJson(json)).toList();
     return data.map((json) => Restaurant.fromJson(json)).toList();
   } else {
     throw Exception('Failed to load restaurants');
@@ -172,6 +83,8 @@ class AppState extends ChangeNotifier {
   String restaurantsFrom = "kl";
   int currentPageOfRestaurants = 1;
   int totalPagesOfRestaurants = 1;
+  List<dynamic> restaurantsNameInfo = [];
+  String searchTerm = "";
 
   String getRestaurantsFrom() {
     return restaurantsFrom;
@@ -218,6 +131,30 @@ class AppState extends ChangeNotifier {
    */
   void updateTotalPagesOfRestaurants(int totalPages) {
     totalPagesOfRestaurants = totalPages;
+    notifyListeners();
+  }
+
+  void updateRestaurantsNameInfo(List<dynamic> restaurantsInfo) {
+    restaurantsNameInfo = restaurantsInfo;
+    notifyListeners();
+  }
+
+  List<dynamic> getRestaurantsNameInfo() {
+    return restaurantsNameInfo;
+  }
+
+  void updateSearch(String term) async {
+    searchTerm = term;
+    currentPageOfRestaurants = 1;
+    http.Response response;
+    if (term.isEmpty) {
+      response = await http.get(Uri.parse('http://127.0.0.1:8079/api/number_of_restaurants/${restaurantsFrom}'));
+    } else {
+      response = await http.get(Uri.parse('http://127.0.0.1:8079/api/search_page/${term}/${restaurantsFrom}'));
+    }
+    if (response.statusCode == 200) {
+      totalPagesOfRestaurants = json.decode(response.body)['totalPagesOfRestaurants'];
+    }
     notifyListeners();
   }
 }
@@ -276,8 +213,8 @@ class _RestaurantsListingPageState extends State<RestaurantsListingPage> {
   void initState() {
     super.initState();
     // fetch total pages of restaurants
-    fetchTotalPagesOfRestaurants(context.read<AppState>().getRestaurantsFrom()).then((totalPages) {
-      context.read<AppState>().updateTotalPagesOfRestaurants(int.parse(totalPages));
+    fetchTotalPagesOfRestaurants(context.read<AppState>().getRestaurantsFrom()).then((restaurantsInfo) {
+      context.read<AppState>().updateTotalPagesOfRestaurants(restaurantsInfo['totalPagesOfRestaurants']);
     }).catchError((error) {
       // Handle errors if the request fails
       print('Error fetching total pages: $error');
@@ -306,13 +243,26 @@ class _RestaurantsListingPageState extends State<RestaurantsListingPage> {
                         overflow: TextOverflow.ellipsis,
                       ),),
                     SizedBox(width: 10),
+                    Container(
+                      width: 300,
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: "Search Restaurant",
+                          border: OutlineInputBorder(),
+                        ),
+                        onChanged: (String value) => appState.updateSearch(value),
+                      ),
+                    ),
+                    Spacer(),
                     DropdownMenu(
-                      initialSelection: appState.getRestaurantsFromText(),
+                      initialSelection: appState.getRestaurantsFrom(),
                       onSelected: (selectedCity) async {
                         if (selectedCity != null && selectedCity != appState.getRestaurantsFrom()) {
                           appState.updateRestaurantsFrom(selectedCity);
-                          String totalPages = await fetchTotalPagesOfRestaurants(selectedCity);
-                          appState.updateTotalPagesOfRestaurants(int.parse(totalPages));
+                          Map<String, dynamic> restaurantsInfo = await fetchTotalPagesOfRestaurants(selectedCity);
+                          int totalPages = restaurantsInfo['totalPagesOfRestaurants'];
+                          appState.updateTotalPagesOfRestaurants(totalPages);
+                          appState.updateSearch(appState.searchTerm);
                         }
                       },
                       dropdownMenuEntries: <DropdownMenuEntry<String>>[
@@ -320,7 +270,7 @@ class _RestaurantsListingPageState extends State<RestaurantsListingPage> {
                         DropdownMenuEntry(value: "rome", label: "Rome")
                       ],
                     ),
-                    Spacer(),
+                    SizedBox(width: 10),
                     InkWell(
                       onTap: () {
                         appState.loadPreviousPageOfRestaurants();
@@ -358,7 +308,7 @@ class _RestaurantsListingPageState extends State<RestaurantsListingPage> {
               ),
               Expanded(
                 child: FutureBuilder<List<Restaurant>>(
-                  future: fetchRestaurants(appState.getRestaurantsFrom(), appState.currentPageOfRestaurants),
+                  future: fetchRestaurants(appState.getRestaurantsFrom(), appState.currentPageOfRestaurants, appState.searchTerm),
                   builder: (context, snapshot) {
                     if (snapshot.connectionState == ConnectionState.waiting) {
                       // Display a loading indicator while the data is being fetched
@@ -385,7 +335,7 @@ class _RestaurantsListingPageState extends State<RestaurantsListingPage> {
                       return GridView(
                         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                           maxCrossAxisExtent: 400,
-                          childAspectRatio: 400 / 420,
+                          childAspectRatio: 400 / 220,
                         ),
                         children: [
                           for (var restaurant in restaurants!)

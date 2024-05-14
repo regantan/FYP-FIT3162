@@ -1,13 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:intl/intl.dart';
-import 'dart:convert';
-import 'package:http/http.dart' as http;
-import 'package:fyp_fit3161_team8_web_app/restaurant_details_page.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fyp_fit3161_team8_web_app/data_classes/restaurant.dart';
-
 
 class RestaurantCard extends StatelessWidget {
   const RestaurantCard({
@@ -37,31 +31,31 @@ class RestaurantCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Flexible(
-                  flex: 5,
-                  child: Center(
-                    child: AspectRatio(
-                      aspectRatio: 16 / 9,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(15.0), // Adjust the radius to control the roundness of corners
-                        child: CachedNetworkImage(
-                          imageUrl: restaurant.coverImage,
-                          fit: BoxFit.cover,
-                          placeholder: (context, url) => Image.asset(
-                            'assets/images/image_placeholder.jpg',
-                            fit: BoxFit.cover,
-                          ),
-                          errorWidget: (context, url, error) => Container(
-                              child: Icon(
-                                Icons.error,
-                                size: 50,
-                              )
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
+                // Flexible(
+                //   flex: 5,
+                //   child: Center(
+                //     child: AspectRatio(
+                //       aspectRatio: 16 / 9,
+                //       child: ClipRRect(
+                //         borderRadius: BorderRadius.circular(15.0), // Adjust the radius to control the roundness of corners
+                //         child: CachedNetworkImage(
+                //           imageUrl: restaurant.coverImage,
+                //           fit: BoxFit.cover,
+                //           placeholder: (context, url) => Image.asset(
+                //             'assets/images/image_placeholder.jpg',
+                //             fit: BoxFit.cover,
+                //           ),
+                //           errorWidget: (context, url, error) => Container(
+                //               child: Icon(
+                //                 Icons.error,
+                //                 size: 50,
+                //               )
+                //           ),
+                //         ),
+                //       ),
+                //     ),
+                //   ),
+                // ),
                 Flexible(
                   flex: 5,
                   child: Column(
@@ -117,12 +111,17 @@ class RestaurantCard extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                       ),
                       SizedBox(height: 5),
-                      Expanded(
-                        child: Text(
-                          restaurant.categories.join(', '),
+                      Text(
+                        restaurant.categories.join(', '),
+                        style: style,
+                      ),
+                      if (restaurant.similarityScore != null) ...[
+                        SizedBox(height: 5),
+                        Text(
+                          'Similarity Score: ${restaurant.similarityScore!.toStringAsFixed(2)}',
                           style: style,
                         ),
-                      ),
+                      ],
                     ],
                   ),
                 ),

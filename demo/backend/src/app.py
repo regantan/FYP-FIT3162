@@ -80,10 +80,6 @@ class recommended_restaurants(Resource):
 
         cursor.execute("SELECT id, restaurant_name, cuisine, star_rating, url FROM restaurant_info WHERE location = %s LIMIT %s OFFSET %s", (location, per_page, offset))
         restaurants = cursor.fetchall()
-
-        # row = cursor.fetchone()
-        # cuisines_list = [c.strip() for c in row[2].split(',')]
-
         
         # Initialize a list to hold the final restaurant data
         restaurants_data = []
@@ -91,14 +87,6 @@ class recommended_restaurants(Resource):
         # Process each restaurant to fetch the number of reviews
         for restaurant in restaurants:
             restaurant_id, restaurant_name, cuisine, star_rating, url = restaurant
-
-             # Split and clean each cuisine item
-            # print(restaurants[2][2])
-
-            # cuisines_list = [c.strip() for c in restaurants[2][2].split(',')]
-            # # cuisine.strip() for cuisine in row[2].split(',')
-            # Split and clean each cuisine item
-            # cuisines_list = [c.strip() for c in cuisine.split(',')]
 
             # Execute query to count the number of reviews for the current restaurant
             cursor.execute("SELECT COUNT(*) FROM reviews WHERE restaurant = %s", (restaurant_name,))
@@ -114,8 +102,6 @@ class recommended_restaurants(Resource):
                 'trip_advisor_url': url
             })
 
-        # print(restaurants_data)
-        # print(jsonify(restaurants_data))
         cursor.close()
         return jsonify(restaurants_data)
 
@@ -401,6 +387,59 @@ class SimilarRestaurants(Resource):
             print(f"Error: {e}")  # Debug print
             return jsonify({'error': str(e)}), 500
 
+@api.route('/api/search/<string:name>/<string:location>/<int:page>')
+class Search(Resource):
+    def get(self, name, location, page):
+        per_page = 10
+        offset = (page - 1) * per_page
+        try:
+            cursor = mysql.connection.cursor()
+            query = "SELECT id, restaurant_name, cuisine, star_rating, url FROM restaurant_info WHERE restaurant_name LIKE %s AND location = %s LIMIT %s OFFSET %s"
+            cursor.execute(query, (f"%{name}%", location, per_page, offset))
+            restaurants = cursor.fetchall()
+            # Initialize a list to hold the final restaurant data
+            restaurants_data = []
+
+            # Process each restaurant to fetch the number of reviews
+            for restaurant in restaurants:
+                restaurant_id, restaurant_name, cuisine, star_rating, url = restaurant
+
+                # Execute query to count the number of reviews for the current restaurant
+                cursor.execute("SELECT COUNT(*) FROM reviews WHERE restaurant = %s", (restaurant_name,))
+                total_reviews = cursor.fetchone()[0]
+
+                # Append the restaurant data with the number of reviews
+                restaurants_data.append({
+                    'id': restaurant_id,
+                    'restaurant_name': restaurant_name,
+                    'cuisine': [c.strip() for c in cuisine.split(',')],
+                    'star_rating': int(star_rating),
+                    'no_reviews': total_reviews,
+                    'trip_advisor_url': url
+                })
+
+            cursor.close()
+            return jsonify(restaurants_data)
+        except Exception as e:
+            print(f"Error: {e}")  # Debug print
+            return jsonify({'error': str(e)}), 500
+
+@api.route('/api/search_page/<string:name>/<string:location>')
+class search_page(Resource):
+    def get(self, name, location):
+        query_count = "SELECT COUNT(*) FROM restaurant_info WHERE restaurant_name LIKE %s AND location = %s"
+        cursor = mysql.connection.cursor()
+        cursor.execute(query_count, (f"%{name}%", location))
+        total_restaurants = cursor.fetchone()[0]
+        total_pages_of_restaurants = (total_restaurants + 9) // 10  # Calculating the number of pages, each page has 10 reviews
+        if total_pages_of_restaurants == 0:
+            total_pages_of_restaurants = 1
+
+        cursor.close()
+        return jsonify({
+            "totalPagesOfRestaurants": total_pages_of_restaurants
+        })
+
 def find_free_port():
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.bind(('', 0))
@@ -409,4 +448,4 @@ def find_free_port():
 
 if __name__ == '__main__':
     port = find_free_port()
-    app.run(debug=True, host='0.0.0.0', port=port)
+    app.run(debug=True, host='0.0.0.0', port=8079)

@@ -1,46 +1,43 @@
 import 'package:flutter/material.dart';
 import 'package:fyp_fit3161_team8_web_app/data_classes/restaurant.dart';
-import 'package:provider/provider.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:intl/intl.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fyp_fit3161_team8_web_app/widgets/restaurant_card.dart';
 import 'package:fyp_fit3161_team8_web_app/restaurant_details_page.dart';
 
 Future<List<Restaurant>> fetchRecommendedRestaurant(int restaurantId, int page) async {
-  final response = await http.get(Uri.parse('https://api.coindesk.com/v1/bpi/currentprice.json'));
+  final response = await http.get(Uri.parse('http://127.0.0.1:8079/api/similar_restaurants/${restaurantId}/${page}'));
 
   if (response.statusCode == 200) {
-    //final Map<String, dynamic> data = json.decode(response.body);
+    final List<dynamic> data = json.decode(response.body);
 
     // TEST DATA
-    final Map<String, dynamic> data = {
-      'restaurants': [
-        {
-          'id': 1,
-          'restaurant_name': "Iketeru Restaurant",
-          'coverImage': 'https://www.foodadvisor.my/attachments/902c3847bc35a626f8b303f489a7f8f3d82d3b8b/store/fill/800/500/c9906624687aab259426150e9cc46cf34cd2920b2d4d262be2a54d3f0c72/featured_image.jpg',
-          'cuisine': ['Cafe', 'American', 'European'],
-          'star_rating': 5,
-          'no_reviews': 2412,
-          'trip_advisor_url': "https://www.tripadvisor.com.my/Restaurant_Review-g298570-d796300-Reviews-Iketeru_Restaurant-Kuala_Lumpur_Wilayah_Persekutuan.html",
-        },
-        {
-          'id': 2,
-          'restaurant_name': "Iketeru Restaurant",
-          'coverImage': 'https://www.foodadvisor.my/attachments/902c3847bc35a626f8b303f489a7f8f3d82d3b8b/store/fill/800/500/c9906624687aab259426150e9cc46cf34cd2920b2d4d262be2a54d3f0c72/featured_image.jpg',
-          'cuisine': ['Cafe', 'American', 'European'],
-          'star_rating': 5,
-          'no_reviews': 2412,
-          'trip_advisor_url': "https://www.tripadvisor.com.my/Restaurant_Review-g298570-d796300-Reviews-Iketeru_Restaurant-Kuala_Lumpur_Wilayah_Persekutuan.html",
-        },
-      ],
-    };
+    // final Map<String, dynamic> data = {
+    //   'restaurants': [
+    //     {
+    //       'id': 1,
+    //       'restaurant_name': "Iketeru Restaurant",
+    //       'coverImage': 'https://www.foodadvisor.my/attachments/902c3847bc35a626f8b303f489a7f8f3d82d3b8b/store/fill/800/500/c9906624687aab259426150e9cc46cf34cd2920b2d4d262be2a54d3f0c72/featured_image.jpg',
+    //       'cuisine': ['Cafe', 'American', 'European'],
+    //       'star_rating': 5,
+    //       'no_reviews': 2412,
+    //       'trip_advisor_url': "https://www.tripadvisor.com.my/Restaurant_Review-g298570-d796300-Reviews-Iketeru_Restaurant-Kuala_Lumpur_Wilayah_Persekutuan.html",
+    //     },
+    //     {
+    //       'id': 2,
+    //       'restaurant_name': "Iketeru Restaurant",
+    //       'coverImage': 'https://www.foodadvisor.my/attachments/902c3847bc35a626f8b303f489a7f8f3d82d3b8b/store/fill/800/500/c9906624687aab259426150e9cc46cf34cd2920b2d4d262be2a54d3f0c72/featured_image.jpg',
+    //       'cuisine': ['Cafe', 'American', 'European'],
+    //       'star_rating': 5,
+    //       'no_reviews': 2412,
+    //       'trip_advisor_url': "https://www.tripadvisor.com.my/Restaurant_Review-g298570-d796300-Reviews-Iketeru_Restaurant-Kuala_Lumpur_Wilayah_Persekutuan.html",
+    //     },
+    //   ],
+    // };
 
-    final List<dynamic> restaurants = data['restaurants'];
-    return restaurants.map((json) => Restaurant.fromJson(json)).toList();
+    // final List<dynamic> restaurants = data['restaurants'];
+    // return restaurants.map((json) => Restaurant.fromJson(json)).toList();
+    return data.map((json) => Restaurant.fromJson(json)).toList();
   } else {
     throw Exception('Failed to load recommended restaurants');
   }
@@ -68,11 +65,13 @@ class _RecommendationsWidgetState extends State<RecommendationsWidget> {
       setState(() {
         currentRecommendationPage--;
       });
-      widget.scrollController.animateTo(
-        0.0, // Scroll to the top
-        duration: Duration(milliseconds: 500), // You can adjust the duration as needed
-        curve: Curves.easeInOut, // You can choose a different easing curve
-      );
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        widget.scrollController.animateTo(
+          0.0, // Scroll to the top
+          duration: Duration(milliseconds: 1000),
+          curve: Curves.easeInOut,
+        );
+      });
     }
   }
 
@@ -81,11 +80,13 @@ class _RecommendationsWidgetState extends State<RecommendationsWidget> {
       setState(() {
         currentRecommendationPage++;
       });
-      widget.scrollController.animateTo(
-        0.0, // Scroll to the top
-        duration: Duration(milliseconds: 500), // You can adjust the duration as needed
-        curve: Curves.easeInOut, // You can choose a different easing curve
-      );
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        widget.scrollController.animateTo(
+          0.0, // Scroll to the top
+          duration: Duration(milliseconds: 1000),
+          curve: Curves.easeInOut,
+        );
+      });
     }
   }
 
@@ -105,7 +106,6 @@ class _RecommendationsWidgetState extends State<RecommendationsWidget> {
       child: FutureBuilder<List<Restaurant>>(
         future: fetchRecommendedRestaurant(widget.restaurantId, currentRecommendationPage),
         builder: (context, snapshot) {
-          print('Fetch recommended restaurant');
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(
               child: CircularProgressIndicator(
@@ -131,7 +131,7 @@ class _RecommendationsWidgetState extends State<RecommendationsWidget> {
                 Padding(
                   padding: const EdgeInsets.only(left: 12.0),
                   child: Text(
-                    'Racommendations',
+                    'Recommendations',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 25.0,
@@ -146,7 +146,7 @@ class _RecommendationsWidgetState extends State<RecommendationsWidget> {
                       Container(
                         constraints: BoxConstraints(maxHeight: 400.0),
                         child: AspectRatio(
-                          aspectRatio: 370 / 400,
+                          aspectRatio: 400 / 220,
                           child: RestaurantCard(
                               restaurant: restaurant,
                               onCardTap: () {
@@ -159,7 +159,6 @@ class _RecommendationsWidgetState extends State<RecommendationsWidget> {
                                     ),
                                   ),
                                 );
-                                debugPrint('Restaurant recommendations clicked');
                               }
                           ),
                         ),
