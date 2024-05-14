@@ -50,7 +50,7 @@ restaurant_details_model = api.model('restaurant_details', {
 @api.route('/api/number_of_restaurants/<string:location>')
 class home(Resource):
     def get(self, location):
-        cursor = mysql.connection.cursor()
+        cursor = mysql.connezction.cursor()
         cursor.execute("SELECT COUNT(*) FROM restaurant_info WHERE location = %s", (location,))
 
         total_restaurants = cursor.fetchone()[0]
@@ -60,20 +60,42 @@ class home(Resource):
         return jsonify({'totalPagesOfRestaurants': total_pages_of_restaurants})
 
         
-
 @api.route('/api/recommended_restaurants/<string:location>/<int:page>')
 @api.doc(params={'location': 'The location for which to find restaurants'})
 class recommended_restaurants(Resource):
     @api.marshal_list_with(recommended_restaurant_model)
     def get(self, location, page):
         per_page = 10
-        offset = (page - 1) * per_page
+        offset = (page - 1) * per_page  
 
         cursor = mysql.connection.cursor()
-        cursor.execute("SELECT id, restaurant_name, cuisine, star_rating, no_reviews, url FROM restaurant_info WHERE location = %s LIMIT %s OFFSET %s", (location, per_page, offset))
+
+        cursor.execute("SELECT id, restaurant_name, cuisine, star_rating, url FROM restaurant_info WHERE location = %s LIMIT %s OFFSET %s", (location, per_page, offset))
         restaurants = cursor.fetchall()
+        
+        # Initialize a list to hold the final restaurant data
+        restaurants_data = []
+
+        # Process each restaurant to fetch the number of reviews
+        for restaurant in restaurants:
+            restaurant_id, restaurant_name, cuisine, star_rating, url = restaurant
+
+            # Execute query to count the number of reviews for the current restaurant
+            cursor.execute("SELECT COUNT(*) FROM reviews WHERE restaurant = %s", (restaurant_name,))
+            total_reviews = cursor.fetchone()[0]
+
+            # Append the restaurant data with the number of reviews
+            restaurants_data.append({
+                'id': restaurant_id,
+                'restaurant_name': restaurant_name,
+                'cuisine': [c.strip() for c in cuisine.split(',')],
+                'star_rating': star_rating,
+                'no_reviews': total_reviews,
+                'trip_advisor_url': url
+            })
+
         cursor.close()
-        return [{'id': row[0], 'restaurant_name': row[1], 'cuisine': [cuisine.strip() for cuisine in row[2].split(',')], 'star_rating': row[3], 'no_reviews': row[4], 'trip_advisor_url' : row[5]} for row in restaurants]
+        return restaurants_data
 
 # @api.route('/api/restaurant_details/<int:restaurant_id>')
 # class restaurant_details(Resource):
@@ -433,4 +455,4 @@ def find_free_port():
 
 if __name__ == '__main__':
     port = find_free_port()
-    app.run(debug=True, host='0.0.0.0', port='8079')
+    app.run(debug=True, host='0.0.0.0', port=port)
