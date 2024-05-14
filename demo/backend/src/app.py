@@ -1,3 +1,5 @@
+import json
+import pickle
 import socket
 from flask import Flask, redirect, url_for
 from flask_mysqldb import MySQL
@@ -56,112 +58,66 @@ class home(Resource):
         total_restaurants = cursor.fetchone()[0]
         total_pages_of_restaurants = (total_restaurants + 9) // 10  # Calculating the number of pages, each page has 10 reviews
         
+        cursor.execute("SELECT id, restaurant_name FROM restaurant_info WHERE location = %s", (location,))
+        restaurants = cursor.fetchall()
+        restaurants = [{'restaurantId': restaurant[0], 'restaurant_name': restaurant[1]} for restaurant in restaurants]
         cursor.close()
-        return jsonify({'totalPagesOfRestaurants': total_pages_of_restaurants})
+
+        return jsonify({'totalPagesOfRestaurants': total_pages_of_restaurants,
+                        'restaurants': restaurants,
+                        })
 
         
-
 @api.route('/api/recommended_restaurants/<string:location>/<int:page>')
 @api.doc(params={'location': 'The location for which to find restaurants'})
 class recommended_restaurants(Resource):
-    @api.marshal_list_with(recommended_restaurant_model)
+    # @api.marshal_list_with(recommended_restaurant_model)
     def get(self, location, page):
         per_page = 10
-        offset = (page - 1) * per_page
+        offset = (page - 1) * per_page  
 
         cursor = mysql.connection.cursor()
-        cursor.execute("SELECT id, restaurant_name, cuisine, star_rating, no_reviews, url FROM restaurant_info WHERE location = %s LIMIT %s OFFSET %s", (location, per_page, offset))
+
+        cursor.execute("SELECT id, restaurant_name, cuisine, star_rating, url FROM restaurant_info WHERE location = %s LIMIT %s OFFSET %s", (location, per_page, offset))
         restaurants = cursor.fetchall()
+
+        # row = cursor.fetchone()
+        # cuisines_list = [c.strip() for c in row[2].split(',')]
+
+        
+        # Initialize a list to hold the final restaurant data
+        restaurants_data = []
+
+        # Process each restaurant to fetch the number of reviews
+        for restaurant in restaurants:
+            restaurant_id, restaurant_name, cuisine, star_rating, url = restaurant
+
+             # Split and clean each cuisine item
+            # print(restaurants[2][2])
+
+            # cuisines_list = [c.strip() for c in restaurants[2][2].split(',')]
+            # # cuisine.strip() for cuisine in row[2].split(',')
+            # Split and clean each cuisine item
+            # cuisines_list = [c.strip() for c in cuisine.split(',')]
+
+            # Execute query to count the number of reviews for the current restaurant
+            cursor.execute("SELECT COUNT(*) FROM reviews WHERE restaurant = %s", (restaurant_name,))
+            total_reviews = cursor.fetchone()[0]
+
+            # Append the restaurant data with the number of reviews
+            restaurants_data.append({
+                'id': restaurant_id,
+                'restaurant_name': restaurant_name,
+                'cuisine': [c.strip() for c in cuisine.split(',')] if cuisine else [],
+                'star_rating': float(star_rating),
+                'no_reviews': total_reviews,
+                'trip_advisor_url': url
+            })
+
+        # print(restaurants_data)
+        # print(jsonify(restaurants_data))
         cursor.close()
-        return [{'id': row[0], 'restaurant_name': row[1], 'cuisine': [cuisine.strip() for cuisine in row[2].split(',')], 'star_rating': row[3], 'no_reviews': row[4], 'trip_advisor_url' : row[5]} for row in restaurants]
-
-# @api.route('/api/restaurant_details/<int:restaurant_id>')
-# class restaurant_details(Resource):
-#     def get(self,restaurant_id):
-#         cursor = mysql.connection.cursor()
-#         cursor.execute("SELECT id, restaurant_name, cuisine, star_rating, no_reviews, url FROM restaurant_info WHERE id = %s", (restaurant_id,))
-#         row = cursor.fetchone()
-
-#         # Fetch positivity for each aspect from quadruples
-#         cursor.execute("""
-#             SELECT category, AVG(CASE WHEN polarity = 'positive' THEN 1 ELSE 0 END) AS positivity
-#             FROM quadruples
-#             JOIN reviews ON quadruples.review_id = reviews.id
-#             WHERE reviews.restaurant = %s
-#             GROUP BY category
-#         """, (row[1],))  # Assuming restaurant name is the link between tables
-#         aspect_data = cursor.fetchall()
-
-#         # Prepare aspects summary from the fetched data
-#         aspects_summary = [
-#             {'aspectName': aspect[0], 'positivity': round(aspect[1], 2)}
-#             for aspect in aspect_data
-#         ]
-
-#         cursor.close()
-
-#         # Prepare the response
-#         if row:
-#             restaurant = {
-#                 'id': row[0],
-#                 'restaurant_name': row[1],
-#                 'cuisine': row[2],
-#                 'star_rating': float(row[3]) if isinstance(row[3], Decimal) else row[3],
-#                 'no_reviews': float(row[4]) if isinstance(row[4], Decimal) else row[4],
-#                 'trip_advisor_url': row[5],
-#                 'aspectsSummary': aspects_summary,
-#                 'totalPagesOfReviews': 20  # Static value or calculated dynamically
-#             }
-#         else:
-#             restaurant = {}
-#         return jsonify(restaurant)
-    
-
-# @api.route('/api/restaurant_details/<int:restaurant_id>')
-# class RestaurantDetails(Resource):
-#     def get(self, restaurant_id):
-#         cursor = mysql.connection.cursor()
-#         cursor.execute("SELECT id, restaurant_name, cuisine, star_rating, no_reviews, url FROM restaurant_info WHERE id = %s", (restaurant_id,))
-#         row = cursor.fetchone()
-
-#         if row:
-#             restaurant_name = row[1]  # Ensuring we have the restaurant name before querying aspects
-
-#             # Fetch positivity for each aspect from quadruples
-#             cursor.execute("""
-#                 SELECT COALESCE(category, 'Uncategorized') AS category, AVG(CASE WHEN polarity = 'positive' THEN 1 ELSE 0 END) AS positivity
-#                 FROM quadruples
-#                 JOIN reviews ON quadruples.review_id = reviews.id
-#                 WHERE reviews.restaurant = %s
-#                 GROUP BY category
-#             """, (restaurant_name,))
-#             aspect_data = cursor.fetchall()
-
-#             # Prepare aspects summary from the fetched data
-#             aspects_summary = [
-#                 {'aspectName': aspect[0], 'positivity': round(aspect[1], 2) if aspect[1] is not None else 0}
-#                 for aspect in aspect_data
-#             ]
-
-#             # Close the cursor
-#             cursor.close()
-
-#             # Prepare the response
-#             restaurant = {
-#                 'id': row[0],
-#                 'restaurant_name': row[1],
-#                 'cuisine': row[2],
-#                 'star_rating': float(row[3]) if isinstance(row[3], Decimal) else row[3],
-#                 'no_reviews': float(row[4]) if isinstance(row[4], Decimal) else row[4],
-#                 'trip_advisor_url': row[5],
-#                 'aspectsSummary': aspects_summary,
-#                 'totalPagesOfReviews': 20
-#             }
-#         else:
-#             restaurant = {}
-#             cursor.close()
-
-#         return jsonify(restaurant)
+        return jsonify(restaurants_data)
 
 @api.route('/api/restaurant_details/<int:restaurant_id>')
 class RestaurantDetails(Resource):
@@ -259,6 +215,7 @@ class RestaurantDetails(Resource):
                 'totalPagesOfReviews': total_pages_of_reviews,
                 'average_scores_by_year': average_scores_list,
                 'location': row[6],
+                'totalPagesOfRecommendedRestaurants': 51 if row[6] == 'KL' else 54
             }
         else:
             restaurant = {}
@@ -379,51 +336,70 @@ class Reviews(Resource):
 #         similar = find_similar_restaurants(restaurant_id)
 #         return jsonify(similar)
 
-# def get_aspect_scores(restaurant_id):
-#     cursor = mysql.connection.cursor()
-#     cursor.execute("""
-#         SELECT q.category, AVG(
-#             CASE
-#                 WHEN q.polarity = 'positive' THEN 1
-#                 WHEN q.polarity = 'neutral' THEN 0
-#                 WHEN q.polarity = 'negative' THEN -1
-#             END) AS score
-#         FROM quadruples q
-#         JOIN reviews r ON q.review_id = r.id
-#         WHERE r.restaurant = %s
-#         GROUP BY q.category
-#     """, (restaurant_id,))
-#     results = cursor.fetchall()
-#     cursor.close()
-#     return dict(results)
 
-# def find_similar_restaurants(target_restaurant_id):
-#     target_cuisine, target_scores = get_restaurant_details(target_restaurant_id)
-    
-#     cursor = mysql.connection.cursor()
-#     cursor.execute("SELECT id, restaurant_name, cuisine FROM restaurant_info")
-#     all_restaurants = cursor.fetchall()
-    
-#     similarities = []
-#     for id, name, cuisine in all_restaurants:
-#         if id == target_restaurant_id:
-#             continue
-        
-#         aspect_scores = get_aspect_scores(id)
-#         # Simplified similarity: check for matching cuisine and similar aspect score patterns
-#         similarity = 0
-#         if cuisine == target_cuisine:
-#             similarity += 1  # Increment if cuisines match
+@api.route('/api/similar_restaurants/<int:restaurant_id>/<int:page>')
+class SimilarRestaurants(Resource):
+    def get(self,restaurant_id, page):
+        items_per_page = 10
+
+        cursor = mysql.connection.cursor()
+        cursor.execute("SELECT restaurant_name FROM restaurant_info WHERE id = %s", (restaurant_id,))
+        row = cursor.fetchone()
+        restaurant_name = row[0]
+        cursor.close()
+
+        try:
+            with open('similarities.pkl', 'rb') as f:
+                similarities = pickle.load(f)
+            print("Loaded similarities from file.")  # Debug print
+
+            # Check if the restaurant_id exists in the dataset
+            similar_list = similarities.get(str(restaurant_name), [])
+            # similar_list = similarities.get[(str(restaurant_id), [])]
+            print(f"Similar list for restaurant {restaurant_name}: {similar_list}")  # Debug print
+
+            # Calculate the pagination boundaries
+            start = (page - 1) * items_per_page
+            end = start + items_per_page
+            print(f"Pagination from {start} to {end}")  # Debug print
+
+            # Get the names of similar restaurants for this page
+            page_restaurant_details = similar_list[start:end]
+            print(f"Page items: {page_restaurant_details}")  # Debug print
+
+            # Now fetch details for these restaurants from the database
+            restaurants_data = []
+            for name, similarity_score in page_restaurant_details:
+                cursor = mysql.connection.cursor()
+                cursor.execute("""
+                    SELECT id, restaurant_name, cuisine, star_rating, url 
+                    FROM restaurant_info 
+                    WHERE restaurant_name = %s
+                """, (name,))
+                restaurant_info = cursor.fetchone()
+                if restaurant_info:
+                    restaurant_id, restaurant_name, cuisine, star_rating, url = restaurant_info
+                    
+                    # Execute query to count the number of reviews for the current restaurant
+                    cursor.execute("SELECT COUNT(*) FROM reviews WHERE restaurant = %s", (restaurant_name,))
+                    total_reviews = cursor.fetchone()[0]
+
+                    # Append the restaurant data with the number of reviews
+                    restaurants_data.append({
+                        'id': restaurant_id,
+                        'restaurant_name': restaurant_name,
+                        'cuisine': [c.strip() for c in cuisine.split(',')] if cuisine else [],
+                        'star_rating': float(star_rating),
+                        'no_reviews': total_reviews,
+                        'trip_advisor_url': url,
+                        'similarity_score': float(similarity_score) 
+                    })
+                cursor.close()
             
-#         # Compare aspect scores (placeholder for actual cosine similarity)
-#         for category, score in target_scores.items():
-#             similarity += score * aspect_scores.get(category, 0)
-        
-#         similarities.append((name, similarity))
-    
-#     # Sort based on similarity score
-#     similarities.sort(key=lambda x: x[1], reverse=True)
-#     return similarities
+            return jsonify(restaurants_data)        
+        except Exception as e:
+            print(f"Error: {e}")  # Debug print
+            return jsonify({'error': str(e)}), 500
 
 def find_free_port():
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
@@ -433,4 +409,4 @@ def find_free_port():
 
 if __name__ == '__main__':
     port = find_free_port()
-    app.run(debug=True, host='0.0.0.0', port='8079')
+    app.run(debug=True, host='0.0.0.0', port=port)
