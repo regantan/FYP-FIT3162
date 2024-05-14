@@ -466,7 +466,7 @@ class _RestaurantsListingPageState extends State<RestaurantsListingPage> {
                       return GridView(
                         gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                           maxCrossAxisExtent: 400,
-                          childAspectRatio: 400 / 420,
+                          childAspectRatio: 400 / 220,
                         ),
                         children: [
                           for (var restaurant in restaurants!)

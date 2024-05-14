@@ -5,7 +5,6 @@ import 'package:intl/intl.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'widgets/ratings_and_reviews_widget.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'data_classes/restaurant_details.dart';
 import 'widgets/recommendations_widget.dart';
 
@@ -304,26 +303,26 @@ class _RestaurantDetailsPageState extends State<RestaurantDetailsPage> {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    AspectRatio(
-                                      aspectRatio: 16 / 9,
-                                      child: ClipRRect(
-                                        borderRadius: BorderRadius.circular(15.0),
-                                        child: CachedNetworkImage(
-                                          imageUrl: restaurantDetails.coverImage,
-                                          fit: BoxFit.cover,
-                                          placeholder: (context, url) => Image.asset(
-                                            'assets/images/image_placeholder.jpg',
-                                            fit: BoxFit.cover,
-                                          ),
-                                          errorWidget: (context, url, error) => Container(
-                                              child: Icon(
-                                                Icons.error,
-                                                size: 50,
-                                              )
-                                          ),
-                                        ),
-                                      ),
-                                    ),
+                                    // AspectRatio(
+                                    //   aspectRatio: 16 / 9,
+                                    //   child: ClipRRect(
+                                    //     borderRadius: BorderRadius.circular(15.0),
+                                    //     child: CachedNetworkImage(
+                                    //       imageUrl: restaurantDetails.coverImage,
+                                    //       fit: BoxFit.cover,
+                                    //       placeholder: (context, url) => Image.asset(
+                                    //         'assets/images/image_placeholder.jpg',
+                                    //         fit: BoxFit.cover,
+                                    //       ),
+                                    //       errorWidget: (context, url, error) => Container(
+                                    //           child: Icon(
+                                    //             Icons.error,
+                                    //             size: 50,
+                                    //           )
+                                    //       ),
+                                    //     ),
+                                    //   ),
+                                    // ),
                                     SizedBox(height: 10),
                                     RestaurantDetailedInformationWidget(restaurantDetails: restaurantDetails),
                                   ],

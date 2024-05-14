@@ -29,7 +29,7 @@ class Restaurant {
       coverImage: 'https://media.timeout.com/images/101591411/image.jpg',
       rating: json['star_rating'],
       totalReviews: json['no_reviews'],
-      categories: ['japan', 'seafood'],
+      categories: json['cuisine'],
       url: json['trip_advisor_url'],
       similarityScore: (json['similarity_score'] as num?)?.toDouble(),
     );

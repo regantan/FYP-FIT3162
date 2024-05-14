@@ -147,7 +147,7 @@ class _RecommendationsWidgetState extends State<RecommendationsWidget> {
                       Container(
                         constraints: BoxConstraints(maxHeight: 400.0),
                         child: AspectRatio(
-                          aspectRatio: 370 / 400,
+                          aspectRatio: 400 / 220,
                           child: RestaurantCard(
                               restaurant: restaurant,
                               onCardTap: () {
