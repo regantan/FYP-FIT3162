@@ -171,7 +171,6 @@ class _RatingsAndReviewsWidgetState extends State<RatingsAndReviewsWidget> {
       child: FutureBuilder<RestaurantReviews>(
         future: fetchRestaurantReviews(widget.restaurantId, currentReviewPage),
         builder: (context, snapshot) {
-          print('Fetch restaurant reviews');
           if (snapshot.connectionState == ConnectionState.waiting) {
             // Display a loading indicator when still loading
             return Center(

@@ -3,7 +3,6 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:intl/intl.dart';
 import 'package:fyp_fit3161_team8_web_app/data_classes/restaurant.dart';
 
-
 class RestaurantCard extends StatelessWidget {
   const RestaurantCard({
     Key? key,

@@ -129,7 +129,6 @@ class _RestaurantDetailsPageState extends State<RestaurantDetailsPage> {
         child: FutureBuilder<RestaurantDetails>(
           future: fetchRestaurantDetails(widget.restaurantId),
           builder: (context, snapshot) {
-            print('Fetch restaurant details');
             if (snapshot.connectionState == ConnectionState.waiting) {
               return Center(
                 child: CircularProgressIndicator(

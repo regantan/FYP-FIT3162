@@ -106,7 +106,6 @@ class _RecommendationsWidgetState extends State<RecommendationsWidget> {
       child: FutureBuilder<List<Restaurant>>(
         future: fetchRecommendedRestaurant(widget.restaurantId, currentRecommendationPage),
         builder: (context, snapshot) {
-          print('Fetch recommended restaurant');
           if (snapshot.connectionState == ConnectionState.waiting) {
             return Center(
               child: CircularProgressIndicator(
@@ -160,7 +159,6 @@ class _RecommendationsWidgetState extends State<RecommendationsWidget> {
                                     ),
                                   ),
                                 );
-                                debugPrint('Restaurant recommendations clicked');
                               }
                           ),
                         ),
