@@ -1,3 +1,4 @@
+import json
 import pickle
 import socket
 from flask import Flask, redirect, url_for
@@ -79,6 +80,10 @@ class recommended_restaurants(Resource):
 
         cursor.execute("SELECT id, restaurant_name, cuisine, star_rating, url FROM restaurant_info WHERE location = %s LIMIT %s OFFSET %s", (location, per_page, offset))
         restaurants = cursor.fetchall()
+
+        # row = cursor.fetchone()
+        # cuisines_list = [c.strip() for c in row[2].split(',')]
+
         
         # Initialize a list to hold the final restaurant data
         restaurants_data = []
@@ -86,6 +91,14 @@ class recommended_restaurants(Resource):
         # Process each restaurant to fetch the number of reviews
         for restaurant in restaurants:
             restaurant_id, restaurant_name, cuisine, star_rating, url = restaurant
+
+             # Split and clean each cuisine item
+            # print(restaurants[2][2])
+
+            # cuisines_list = [c.strip() for c in restaurants[2][2].split(',')]
+            # # cuisine.strip() for cuisine in row[2].split(',')
+            # Split and clean each cuisine item
+            # cuisines_list = [c.strip() for c in cuisine.split(',')]
 
             # Execute query to count the number of reviews for the current restaurant
             cursor.execute("SELECT COUNT(*) FROM reviews WHERE restaurant = %s", (restaurant_name,))
@@ -95,12 +108,14 @@ class recommended_restaurants(Resource):
             restaurants_data.append({
                 'id': restaurant_id,
                 'restaurant_name': restaurant_name,
-                'cuisine': [c.strip() for c in cuisine.split(',')],
+                'cuisine': [c.strip() for c in cuisine.split(',')] if cuisine else [],
                 'star_rating': star_rating,
                 'no_reviews': total_reviews,
                 'trip_advisor_url': url
             })
 
+        # print(restaurants_data)
+        # print(jsonify(restaurants_data))
         cursor.close()
         return restaurants_data
 
@@ -288,6 +303,7 @@ class RestaurantDetails(Resource):
                 'totalPagesOfReviews': total_pages_of_reviews,
                 'average_scores_by_year': average_scores_list,
                 'location': row[6],
+                'totalPagesOfRecommendedRestaurants': 51 if row[6] == 'KL' else 54
             }
         else:
             restaurant = {}
