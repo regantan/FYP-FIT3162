@@ -43,7 +43,7 @@ class RestaurantDetails {
       aspectsSummary: json['aspectsSummary'],
       averageScoresByYear: json['average_scores_by_year'],
       totalPagesOfReviews: json['totalPagesOfReviews'],
-      totalPagesOfRecommendedRestaurants: 12,
+      totalPagesOfRecommendedRestaurants: 5,
     );
   }
 }

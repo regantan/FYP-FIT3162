@@ -6,7 +6,7 @@ import 'package:fyp_fit3161_team8_web_app/widgets/restaurant_card.dart';
 import 'package:fyp_fit3161_team8_web_app/restaurant_details_page.dart';
 
 Future<List<Restaurant>> fetchRecommendedRestaurant(int restaurantId, int page) async {
-  final response = await http.get(Uri.parse('http://127.0.0.1:8079/api/recommended_restaurants/kl/${page}'));
+  final response = await http.get(Uri.parse('http://127.0.0.1:8079/api/similar_restaurants/${restaurantId}/${page}'));
 
   if (response.statusCode == 200) {
     final List<dynamic> data = json.decode(response.body);

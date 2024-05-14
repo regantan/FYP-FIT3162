@@ -46,65 +46,65 @@ Future<Map<String, dynamic>> fetchTotalPagesOfRestaurants(String city) async {
   final response = await http.get(Uri.parse('http://127.0.0.1:8079/api/number_of_restaurants/${city}'));
 
   if (response.statusCode == 200) {
-    //final Map<String, dynamic> data = json.decode(response.body);
+    final Map<String, dynamic> data = json.decode(response.body);
 
     // TEST DATA
-    final Map<String, dynamic> data;
-    if (city == "kl") {
-      data = {
-        "totalPagesOfRestaurants": 51,
-        "restaurants": [
-          {
-            "restaurantId": 1,
-            "restaurant_name": "Iketaru Restaurant",
-          },
-          {
-            "restaurantId": 2,
-            "restaurant_name": "Ishin Japanese Dining",
-          },
-          {
-            "restaurantId": 3,
-            "restaurant_name": "Chambers Grill",
-          },
-        ],
-      };
-    } else if (city == "rome") {
-      data = {
-        "totalPagesOfRestaurants": 22,
-        "restaurants": [
-          {
-            "restaurantId": 1,
-            "restaurant_name": "Adesso Vineria-bistrot",
-          },
-          {
-            "restaurantId": 2,
-            "restaurant_name": "La Fata Ignorante - Rooftop Restaurant & Bar",
-          },
-          {
-            "restaurantId": 3,
-            "restaurant_name": "Ad Hoc Ristorante (Circo Massimo)",
-          },
-        ],
-      };
-    } else {
-      data = {
-        "totalPagesOfRestaurants": 1000,
-        "restaurants": [
-          {
-            "restaurantId": 1,
-            "restaurant_name": "Iketaru Restaurant",
-          },
-          {
-            "restaurantId": 2,
-            "restaurant_name": "Ishin Japanese Dining",
-          },
-          {
-            "restaurantId": 3,
-            "restaurant_name": "Chambers Grill",
-          },
-        ],
-      };
-    }
+    // final Map<String, dynamic> data;
+    // if (city == "kl") {
+    //   data = {
+    //     "totalPagesOfRestaurants": 51,
+    //     "restaurants": [
+    //       {
+    //         "restaurantId": 1,
+    //         "restaurant_name": "Iketaru Restaurant",
+    //       },
+    //       {
+    //         "restaurantId": 2,
+    //         "restaurant_name": "Ishin Japanese Dining",
+    //       },
+    //       {
+    //         "restaurantId": 3,
+    //         "restaurant_name": "Chambers Grill",
+    //       },
+    //     ],
+    //   };
+    // } else if (city == "rome") {
+    //   data = {
+    //     "totalPagesOfRestaurants": 22,
+    //     "restaurants": [
+    //       {
+    //         "restaurantId": 1,
+    //         "restaurant_name": "Adesso Vineria-bistrot",
+    //       },
+    //       {
+    //         "restaurantId": 2,
+    //         "restaurant_name": "La Fata Ignorante - Rooftop Restaurant & Bar",
+    //       },
+    //       {
+    //         "restaurantId": 3,
+    //         "restaurant_name": "Ad Hoc Ristorante (Circo Massimo)",
+    //       },
+    //     ],
+    //   };
+    // } else {
+    //   data = {
+    //     "totalPagesOfRestaurants": 1000,
+    //     "restaurants": [
+    //       {
+    //         "restaurantId": 1,
+    //         "restaurant_name": "Iketaru Restaurant",
+    //       },
+    //       {
+    //         "restaurantId": 2,
+    //         "restaurant_name": "Ishin Japanese Dining",
+    //       },
+    //       {
+    //         "restaurantId": 3,
+    //         "restaurant_name": "Chambers Grill",
+    //       },
+    //     ],
+    //   };
+    // }
 
     final List<dynamic> restaurantInfo = data['restaurants'];
     return {

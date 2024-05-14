@@ -9,6 +9,7 @@ class Restaurant {
   final int totalReviews;
   final List<dynamic> categories;
   final String url;
+  final double? similarityScore;
 
   Restaurant({
     required this.restaurantId,
@@ -18,6 +19,7 @@ class Restaurant {
     required this.totalReviews,
     required this.categories,
     required this.url,
+    this.similarityScore,
   });
 
   factory Restaurant.fromJson(Map<String, dynamic> json) {
@@ -27,13 +29,9 @@ class Restaurant {
       coverImage: 'https://media.timeout.com/images/101591411/image.jpg',
       rating: json['star_rating'],
       totalReviews: json['no_reviews'],
-      categories: json['cuisine']
-          .substring(1, json['cuisine'].length - 1) // Remove the surrounding brackets
-          .split(',') // Split the string by commas
-          .map((item) => item.trim())
-          .map((item) => item.substring(1, item.length - 1))
-          .toList(),
+      categories: ['japan', 'seafood'],
       url: json['trip_advisor_url'],
+      similarityScore: (json['similarity_score'] as num?)?.toDouble(),
     );
   }
 }

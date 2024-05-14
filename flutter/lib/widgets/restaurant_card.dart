@@ -113,12 +113,17 @@ class RestaurantCard extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                       ),
                       SizedBox(height: 5),
-                      Expanded(
-                        child: Text(
-                          restaurant.categories.join(', '),
+                      Text(
+                        restaurant.categories.join(', '),
+                        style: style,
+                      ),
+                      if (restaurant.similarityScore != null) ...[
+                        SizedBox(height: 5),
+                        Text(
+                          'Similarity Score: ${restaurant.similarityScore!.toStringAsFixed(2)}',
                           style: style,
                         ),
-                      ),
+                      ],
                     ],
                   ),
                 ),
