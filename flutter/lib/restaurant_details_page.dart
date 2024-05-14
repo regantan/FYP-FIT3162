@@ -211,28 +211,31 @@ class _RestaurantDetailsPageState extends State<RestaurantDetailsPage> {
                                       ),
                                       children: restaurantDetails.aspectsSummary
                                           .where((aspect) => aspect['aspectName'] != null && aspect['aspectName'].isNotEmpty)
-                                          .map((aspectSummary) => Container(
-                                        width: 240,
-                                        height: 50,
-                                        decoration: BoxDecoration(
-                                          color: getColorFromPositivity(aspectSummary['positivity']),
-                                          borderRadius: BorderRadius.circular(20.0),
-                                        ),
-                                        child: Padding(
-                                          padding: const EdgeInsets.only(left: 15.0, right: 15.0),
-                                          child: Center(
-                                            child: Text(
-                                              '${aspectSummary['aspectName'].replaceAll(RegExp(r'[#]'), ': ').trim()} | ${aspectSummary['positivity']}',
-                                              style: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 12,
-                                                fontWeight: FontWeight.bold,
-                                                overflow: TextOverflow.ellipsis,
+                                          .map((aspectSummary) => Tooltip(
+                                        message: '${aspectSummary['aspectName'].replaceAll(RegExp(r'[#]'), ': ').trim()} | ${aspectSummary['positivity']}',
+                                        child: Container(
+                                          width: 240,
+                                          height: 50,
+                                          decoration: BoxDecoration(
+                                            color: getColorFromPositivity(aspectSummary['positivity']),
+                                            borderRadius: BorderRadius.circular(20.0),
+                                          ),
+                                          child: Padding(
+                                            padding: const EdgeInsets.only(left: 15.0, right: 15.0),
+                                            child: Center(
+                                              child: Text(
+                                                '${aspectSummary['aspectName'].replaceAll(RegExp(r'[#]'), ': ').trim()} | ${aspectSummary['positivity']}',
+                                                style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 12,
+                                                  fontWeight: FontWeight.bold,
+                                                  overflow: TextOverflow.ellipsis,
+                                                ),
                                               ),
                                             ),
                                           ),
                                         ),
-                                      )).toList(),
+                                          )).toList(),
                                     ),
                                   ),
                                 ),
