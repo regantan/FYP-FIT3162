@@ -71,7 +71,7 @@ class home(Resource):
 @api.route('/api/recommended_restaurants/<string:location>/<int:page>')
 @api.doc(params={'location': 'The location for which to find restaurants'})
 class recommended_restaurants(Resource):
-    @api.marshal_list_with(recommended_restaurant_model)
+    # @api.marshal_list_with(recommended_restaurant_model)
     def get(self, location, page):
         per_page = 10
         offset = (page - 1) * per_page  
@@ -117,95 +117,7 @@ class recommended_restaurants(Resource):
         # print(restaurants_data)
         # print(jsonify(restaurants_data))
         cursor.close()
-        return restaurants_data
-
-# @api.route('/api/restaurant_details/<int:restaurant_id>')
-# class restaurant_details(Resource):
-#     def get(self,restaurant_id):
-#         cursor = mysql.connection.cursor()
-#         cursor.execute("SELECT id, restaurant_name, cuisine, star_rating, no_reviews, url FROM restaurant_info WHERE id = %s", (restaurant_id,))
-#         row = cursor.fetchone()
-
-#         # Fetch positivity for each aspect from quadruples
-#         cursor.execute("""
-#             SELECT category, AVG(CASE WHEN polarity = 'positive' THEN 1 ELSE 0 END) AS positivity
-#             FROM quadruples
-#             JOIN reviews ON quadruples.review_id = reviews.id
-#             WHERE reviews.restaurant = %s
-#             GROUP BY category
-#         """, (row[1],))  # Assuming restaurant name is the link between tables
-#         aspect_data = cursor.fetchall()
-
-#         # Prepare aspects summary from the fetched data
-#         aspects_summary = [
-#             {'aspectName': aspect[0], 'positivity': round(aspect[1], 2)}
-#             for aspect in aspect_data
-#         ]
-
-#         cursor.close()
-
-#         # Prepare the response
-#         if row:
-#             restaurant = {
-#                 'id': row[0],
-#                 'restaurant_name': row[1],
-#                 'cuisine': row[2],
-#                 'star_rating': float(row[3]) if isinstance(row[3], Decimal) else row[3],
-#                 'no_reviews': float(row[4]) if isinstance(row[4], Decimal) else row[4],
-#                 'trip_advisor_url': row[5],
-#                 'aspectsSummary': aspects_summary,
-#                 'totalPagesOfReviews': 20  # Static value or calculated dynamically
-#             }
-#         else:
-#             restaurant = {}
-#         return jsonify(restaurant)
-    
-
-# @api.route('/api/restaurant_details/<int:restaurant_id>')
-# class RestaurantDetails(Resource):
-#     def get(self, restaurant_id):
-#         cursor = mysql.connection.cursor()
-#         cursor.execute("SELECT id, restaurant_name, cuisine, star_rating, no_reviews, url FROM restaurant_info WHERE id = %s", (restaurant_id,))
-#         row = cursor.fetchone()
-
-#         if row:
-#             restaurant_name = row[1]  # Ensuring we have the restaurant name before querying aspects
-
-#             # Fetch positivity for each aspect from quadruples
-#             cursor.execute("""
-#                 SELECT COALESCE(category, 'Uncategorized') AS category, AVG(CASE WHEN polarity = 'positive' THEN 1 ELSE 0 END) AS positivity
-#                 FROM quadruples
-#                 JOIN reviews ON quadruples.review_id = reviews.id
-#                 WHERE reviews.restaurant = %s
-#                 GROUP BY category
-#             """, (restaurant_name,))
-#             aspect_data = cursor.fetchall()
-
-#             # Prepare aspects summary from the fetched data
-#             aspects_summary = [
-#                 {'aspectName': aspect[0], 'positivity': round(aspect[1], 2) if aspect[1] is not None else 0}
-#                 for aspect in aspect_data
-#             ]
-
-#             # Close the cursor
-#             cursor.close()
-
-#             # Prepare the response
-#             restaurant = {
-#                 'id': row[0],
-#                 'restaurant_name': row[1],
-#                 'cuisine': row[2],
-#                 'star_rating': float(row[3]) if isinstance(row[3], Decimal) else row[3],
-#                 'no_reviews': float(row[4]) if isinstance(row[4], Decimal) else row[4],
-#                 'trip_advisor_url': row[5],
-#                 'aspectsSummary': aspects_summary,
-#                 'totalPagesOfReviews': 20
-#             }
-#         else:
-#             restaurant = {}
-#             cursor.close()
-
-#         return jsonify(restaurant)
+        return jsonify(restaurants_data)
 
 @api.route('/api/restaurant_details/<int:restaurant_id>')
 class RestaurantDetails(Resource):
