@@ -143,41 +143,44 @@ class RestaurantDetails(Resource):
             aspect_data = cursor.fetchall()
 
             # Fetch average scores of aspects per year
-            cursor.execute("""
+            cursor.execute("""    
                 SELECT
-                IF(category = '' OR category IS NULL, 'Uncategorized', category) AS category,
-                YEAR(reviews.date) AS year,
-                AVG(
-                    CASE 
-                        WHEN polarity = 'positive' THEN 1 
-                        WHEN polarity = 'neutral' THEN 0 
-                        WHEN polarity = 'negative' THEN -1 
-                    END
-                ) AS average_polarity
+                    IF(category = '' OR category IS NULL, 'Uncategorized', category) AS category,
+                    YEAR(reviews.date) + (QUARTER(reviews.date) - 1) / 4.0 AS year_quarter,
+                    AVG(
+                        CASE 
+                            WHEN polarity = 'positive' THEN 1 
+                            WHEN polarity = 'neutral' THEN 0 
+                            WHEN polarity = 'negative' THEN -1 
+                        END
+                    ) AS average_polarity
                 FROM quadruples
                 JOIN reviews ON quadruples.review_id = reviews.id
                 WHERE reviews.restaurant = %s
-                GROUP BY category, YEAR(reviews.date)
+                GROUP BY category, YEAR(reviews.date) + (QUARTER(reviews.date) - 1) / 4.0
             """, (restaurant_name,))
             yearly_aspect_data = cursor.fetchall()
 
-            # Prepare average scores of aspects per year for JSON output
+            # Prepare average scores of aspects per quarter for JSON output
             average_scores = {}
             for aspect in yearly_aspect_data:
                 if aspect[0] not in average_scores:
                     average_scores[aspect[0]] = {
                         "aspect_name": aspect[0],
-                        "years": [],
+                        "quarters": [],
                         "average_polarity": []
                     }
-                average_scores[aspect[0]]["years"].append(aspect[1])
+                # Convert quarter value to float and round to 2 decimal places
+                quarter_value = float(round(aspect[1], 2))
+                print(quarter_value)
+                average_scores[aspect[0]]["quarters"].append(quarter_value)
                 average_scores[aspect[0]]["average_polarity"].append(float(round(aspect[2], 2)))
 
-            # Sorting years and syncing polarities
+            # Sorting quarters and syncing polarities
             for aspect, data in average_scores.items():
-                years_and_polarities = sorted(zip(data["years"], data["average_polarity"]), key=lambda x: x[0])  # Sort by year
-                data["years"], data["average_polarity"] = zip(*years_and_polarities)  # Unzip sorted tuples back to lists
-            
+                quarters_and_polarities = sorted(zip(data["quarters"], data["average_polarity"]), key=lambda x: x[0])  # Sort by quarters
+                data["quarters"], data["average_polarity"] = zip(*quarters_and_polarities)  # Unzip sorted tuples back to lists
+
             # Convert dict to list for JSON output
             average_scores_list = list(average_scores.values())
 
