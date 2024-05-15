@@ -78,7 +78,7 @@ class recommended_restaurants(Resource):
 
         cursor = mysql.connection.cursor()
 
-        cursor.execute("SELECT id, restaurant_name, cuisine, star_rating, url FROM restaurant_info WHERE location = %s LIMIT %s OFFSET %s", (location, per_page, offset))
+        cursor.execute("SELECT id, restaurant_name, cuisine, star_rating, url FROM restaurant_info WHERE location = %s ORDER BY restaurant_name LIMIT %s OFFSET %s", (location, per_page, offset))
         restaurants = cursor.fetchall()
         
         # Initialize a list to hold the final restaurant data
@@ -127,17 +127,18 @@ class RestaurantDetails(Resource):
                 SELECT
                 IF(category = '' OR category IS NULL, 'Uncategorized', category) AS category,
                 AVG(
-                    CASE 
-                        WHEN polarity = 'positive' THEN 1 
-                        WHEN polarity = 'neutral' THEN 0 
-                        WHEN polarity = 'negative' THEN -1 
-                        ELSE NULL 
+                    CASE
+                        WHEN polarity = 'positive' THEN 1
+                        WHEN polarity = 'neutral' THEN 0
+                        WHEN polarity = 'negative' THEN -1
+                        ELSE NULL
                     END
                 ) AS average_polarity
                 FROM quadruples
                 JOIN reviews ON quadruples.review_id = reviews.id
                 WHERE reviews.restaurant = %s
                 GROUP BY category
+                ORDER BY category
             """, (restaurant_name,))
             aspect_data = cursor.fetchall()
 
@@ -260,6 +261,7 @@ class Reviews(Resource):
                     q.aspect
                 FROM quadruples q
                 WHERE q.review_id IN (%s)
+                ORDER BY q.category, q.aspect, q.opinion
             """ % ','.join(['%s'] * len(review_ids)), tuple(review_ids))
             aspects_data = cursor.fetchall()
         else:
@@ -394,7 +396,7 @@ class Search(Resource):
         offset = (page - 1) * per_page
         try:
             cursor = mysql.connection.cursor()
-            query = "SELECT id, restaurant_name, cuisine, star_rating, url FROM restaurant_info WHERE restaurant_name LIKE %s AND location = %s LIMIT %s OFFSET %s"
+            query = "SELECT id, restaurant_name, cuisine, star_rating, url FROM restaurant_info WHERE restaurant_name LIKE %s AND location = %s ORDER BY restaurant_name LIMIT %s OFFSET %s"
             cursor.execute(query, (f"%{name}%", location, per_page, offset))
             restaurants = cursor.fetchall()
             # Initialize a list to hold the final restaurant data
