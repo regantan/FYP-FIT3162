@@ -211,7 +211,7 @@ class _RestaurantDetailsPageState extends State<RestaurantDetailsPage> {
                                       children: restaurantDetails.aspectsSummary
                                           .where((aspect) => aspect['aspectName'] != null && aspect['aspectName'].isNotEmpty)
                                           .map((aspectSummary) => Tooltip(
-                                        message: '${aspectSummary['aspectName'].replaceAll(RegExp(r'[#]'), ': ').trim()} | ${aspectSummary['positivity']}',
+                                        message: '${aspectSummary['aspectName'].replaceAll(RegExp(r'[#]'), ': ').trim()} | ${aspectSummary['positivity']*100}%',
                                         child: Container(
                                           width: 240,
                                           height: 50,
@@ -223,7 +223,7 @@ class _RestaurantDetailsPageState extends State<RestaurantDetailsPage> {
                                             padding: const EdgeInsets.only(left: 15.0, right: 15.0),
                                             child: Center(
                                               child: Text(
-                                                '${aspectSummary['aspectName'].replaceAll(RegExp(r'[#]'), ': ').trim()} | ${aspectSummary['positivity']}',
+                                                '${aspectSummary['aspectName'].replaceAll(RegExp(r'[#]'), ': ').trim()} | ${aspectSummary['positivity']*100}%',
                                                 style: TextStyle(
                                                   color: Colors.white,
                                                   fontSize: 12,
