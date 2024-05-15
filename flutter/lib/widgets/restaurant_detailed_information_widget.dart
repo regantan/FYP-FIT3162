@@ -183,7 +183,7 @@ class _RestaurantDetailedInformationWidgetState extends State<RestaurantDetailed
           ),
           Align(
             alignment: Alignment.centerRight,
-            child: Text('Quarter', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            child: Text('Year', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
           ),
         ],
       )
@@ -198,6 +198,8 @@ class AspectsOverTimeLineChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String? lastYear;
+
     return Expanded(
       child: Center(
         child: Expanded(
@@ -249,33 +251,40 @@ class AspectsOverTimeLineChart extends StatelessWidget {
                     sideTitles: SideTitles(
                       showTitles: true,
                       reservedSize: 40,
-                      interval: 0.5,
+                      interval: 1,
                       getTitlesWidget: (double value, TitleMeta meta) {
-                        final quarter = (value % 1) * 4;
+                        //final quarter = (value % 1) * 4;
                         final year = value.toInt();
-                        String quarterLabel;
-                        switch (quarter.toInt()) {
-                          case 0:
-                            quarterLabel = 'Q1';
-                            break;
-                          case 1:
-                            quarterLabel = 'Q2';
-                            break;
-                          case 2:
-                            quarterLabel = 'Q3';
-                            break;
-                          case 3:
-                            quarterLabel = 'Q4';
-                            break;
-                          default:
-                            quarterLabel = '';
+                        // String quarterLabel;
+                        // switch (quarter.toInt()) {
+                        //   case 0:
+                        //     quarterLabel = 'Q1';
+                        //     break;
+                        //   case 1:
+                        //     quarterLabel = 'Q2';
+                        //     break;
+                        //   case 2:
+                        //     quarterLabel = 'Q3';
+                        //     break;
+                        //   case 3:
+                        //     quarterLabel = 'Q4';
+                        //     break;
+                        //   default:
+                        //     quarterLabel = '';
+                        // }
+
+                        String displayText = '';
+                        if (lastYear != '$year') {
+                          displayText = '$year';
+                          lastYear = '$year';
                         }
+
                         return Transform.rotate(
                           angle: -0.7, // Rotate the text
                           child: Padding(
                             padding: const EdgeInsets.only(top: 15.0),
                             child: Text(
-                              '$year $quarterLabel',
+                              '$displayText',
                               style: TextStyle(
                                 color: Colors.black,
                                 fontSize: 12, // You can adjust the font size as well
