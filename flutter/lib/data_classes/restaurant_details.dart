@@ -1,5 +1,5 @@
 /**
- * The following is the data class for the detailed information of a restaurant
+ * The following is the data class for the detailed information of a restaurant.
  */
 class RestaurantDetails {
   final int restaurantId;
