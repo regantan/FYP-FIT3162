@@ -33,6 +33,7 @@ class App extends StatelessWidget {
         home: HomePage(
           title: 'RestoReview',
         ),
+        debugShowCheckedModeBanner: false,
       ),
     );
   }
