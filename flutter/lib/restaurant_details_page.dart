@@ -146,6 +146,7 @@ class _RestaurantDetailsPageState extends State<RestaurantDetailsPage> {
                 child: Text('No restaurant details available.'),
               );
             } else {
+              // Storing restaurant details
               final RestaurantDetails? restaurantDetails = snapshot.data;
 
               return SingleChildScrollView(
