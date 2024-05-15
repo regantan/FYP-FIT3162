@@ -37,22 +37,23 @@ class _RestaurantDetailedInformationWidgetState extends State<RestaurantDetailed
   }
 
   List<DropdownMenuItem<String>> getDropdownMenuItems() {
-    return widget.restaurantDetails.averageScoresByYear
+    return widget.restaurantDetails.averageScoresByQuarter
         .map((data) => DropdownMenuItem<String>(
       value: data['aspect_name'],
       child: Text(data['aspect_name'].replaceAll('#', ': ')),
-    )).toList();
+    ))
+        .toList();
   }
 
   void updateChartData() {
-    var aspectData = widget.restaurantDetails.averageScoresByYear
+    var aspectData = widget.restaurantDetails.averageScoresByQuarter
         .firstWhere((data) => data['aspect_name'] == selectedAspect, orElse: () => null);
 
     if (aspectData != null) {
       lineChartData = List.generate(
-        aspectData['years'].length,
+        aspectData['quarters'].length,
             (index) => FlSpot(
-          aspectData['years'][index].toDouble(),
+          aspectData['quarters'][index].toDouble(),
           aspectData['average_polarity'][index],
         ),
       );
@@ -197,6 +198,8 @@ class AspectsOverTimeLineChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String? lastYear;
+
     return Expanded(
       child: Center(
         child: Expanded(
@@ -204,47 +207,152 @@ class AspectsOverTimeLineChart extends StatelessWidget {
             LineChartData(
               minY: -1,
               maxY: 1,
-              gridData: FlGridData(show: true),
+              gridData: FlGridData(
+                show: true,
+                drawVerticalLine: true,
+                getDrawingVerticalLine: (value) {
+                  return FlLine(
+                    color: Colors.grey,
+                    strokeWidth: 1,
+                    dashArray: [5, 5],
+                  );
+                },
+                drawHorizontalLine: true,
+                getDrawingHorizontalLine: (value) {
+                  return FlLine(
+                    color: Colors.grey,
+                    strokeWidth: 1,
+                    dashArray: [5, 5],
+                  );
+                },
+              ),
               titlesData: FlTitlesData(
                 show: true,
-                leftTitles: AxisTitles(sideTitles: SideTitles(
-                  showTitles: true,
-                  reservedSize: 20,
-                  interval: 1,
-                  getTitlesWidget: (double value, TitleMeta meta) {
-                    return Text('${value.toInt()}',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 16,
-                        ));
-                  },
-                )),
-                bottomTitles: AxisTitles(sideTitles: SideTitles(
-                  showTitles: true,
-                  reservedSize: 20,
-                  interval: 1,
-                  getTitlesWidget: (double value, TitleMeta meta) {
-                    return Text('${value.toInt()}',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 16,
-                        ));
-                  },
-                )),
+                leftTitles: AxisTitles(
+                    sideTitles: SideTitles(
+                      showTitles: true,
+                      reservedSize: 40,
+                      interval: 0.5,
+                      getTitlesWidget: (double value, TitleMeta meta) {
+                        return Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: Align(
+                            alignment: Alignment.centerRight,
+                            child: Text('${value.toDouble()}',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 16,
+                                )),
+                          ),
+                        );
+                      },
+                    )),
+                bottomTitles: AxisTitles(
+                    sideTitles: SideTitles(
+                      showTitles: true,
+                      reservedSize: 40,
+                      interval: 1,
+                      getTitlesWidget: (double value, TitleMeta meta) {
+                        //final quarter = (value % 1) * 4;
+                        final year = value.toInt();
+                        // String quarterLabel;
+                        // switch (quarter.toInt()) {
+                        //   case 0:
+                        //     quarterLabel = 'Q1';
+                        //     break;
+                        //   case 1:
+                        //     quarterLabel = 'Q2';
+                        //     break;
+                        //   case 2:
+                        //     quarterLabel = 'Q3';
+                        //     break;
+                        //   case 3:
+                        //     quarterLabel = 'Q4';
+                        //     break;
+                        //   default:
+                        //     quarterLabel = '';
+                        // }
+
+                        String displayText = '';
+                        if (lastYear != '$year') {
+                          displayText = '$year';
+                          lastYear = '$year';
+                        }
+
+                        return Transform.rotate(
+                          angle: -0.7, // Rotate the text
+                          child: Padding(
+                            padding: const EdgeInsets.only(top: 15.0),
+                            child: Text(
+                              '$displayText',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 12, // You can adjust the font size as well
+                              ),
+                            ),
+                          ),
+                        );
+                      },
+                    )),
                 rightTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
                 topTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
               ),
               borderData: FlBorderData(show: true),
               lineBarsData: [
                 LineChartBarData(
-                    spots: dataSpots,
-                    isCurved: false,
-                    color: Colors.black,
-                    barWidth: 2,
-                    isStrokeCapRound: true,
-                    dotData: FlDotData(show: true),
+                  spots: dataSpots,
+                  isCurved: false,
+                  color: Colors.black,
+                  barWidth: 2,
+                  isStrokeCapRound: true,
+                  dotData: FlDotData(show: true),
+                  belowBarData: BarAreaData(show: false),
                 ),
               ],
+              lineTouchData: LineTouchData(
+                touchTooltipData: LineTouchTooltipData(
+                  getTooltipItems: (List<LineBarSpot> touchedSpots) {
+                    return touchedSpots.map((spot) {
+                      final quarter = (spot.x % 1) * 4;
+                      final year = spot.x.toInt();
+                      String quarterLabel;
+                      switch (quarter.toInt()) {
+                        case 0:
+                          quarterLabel = 'Q1';
+                          break;
+                        case 1:
+                          quarterLabel = 'Q2';
+                          break;
+                        case 2:
+                          quarterLabel = 'Q3';
+                          break;
+                        case 3:
+                          quarterLabel = 'Q4';
+                          break;
+                        default:
+                          quarterLabel = '';
+                      }
+                      return LineTooltipItem(
+                        'Year: $year\nQuarter: $quarterLabel\nPolarity: ${spot.y}',
+                        TextStyle(color: Colors.white),
+                      );
+                    }).toList();
+                  },
+                ),
+                handleBuiltInTouches: true,
+                touchCallback: (FlTouchEvent touchEvent, LineTouchResponse? touchResponse) {},
+                mouseCursorResolver: (FlTouchEvent touchEvent, LineTouchResponse? response) {
+                  return response == null || response.lineBarSpots == null
+                      ? MouseCursor.defer
+                      : SystemMouseCursors.click;
+                },
+                getTouchedSpotIndicator: (LineChartBarData barData, List<int> indicators) {
+                  return indicators.map((int index) {
+                    final line = FlLine(color: Colors.black, strokeWidth: 2);
+                    return TouchedSpotIndicatorData(line, FlDotData(show: true));
+                  }).toList();
+                },
+              ),
             ),
           ),
         ),

@@ -11,7 +11,7 @@ class RestaurantDetails {
   final List<dynamic> categories;
   final String websiteUrl;
   final List<dynamic> aspectsSummary;
-  final List<dynamic> averageScoresByYear;
+  final List<dynamic> averageScoresByQuarter;
   final int totalPagesOfReviews;
   final int totalPagesOfRecommendedRestaurants;
 
@@ -25,7 +25,7 @@ class RestaurantDetails {
     required this.categories,
     required this.websiteUrl,
     required this.aspectsSummary,
-    required this.averageScoresByYear,
+    required this.averageScoresByQuarter,
     required this.totalPagesOfReviews,
     required this.totalPagesOfRecommendedRestaurants,
   });
@@ -41,7 +41,7 @@ class RestaurantDetails {
       categories: json['cuisine'],
       websiteUrl: json['trip_advisor_url'],
       aspectsSummary: json['aspectsSummary'],
-      averageScoresByYear: json['average_scores_by_year'],
+      averageScoresByQuarter: json['average_scores_by_year'],
       totalPagesOfReviews: json['totalPagesOfReviews'],
       totalPagesOfRecommendedRestaurants: 5,
     );
